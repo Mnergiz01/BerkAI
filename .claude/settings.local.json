@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "Bash(dotnet add reference:*)",
+      "Bash(dotnet ef migrations add:*)",
+      "Bash(dotnet build:*)",
+      "Bash(dotnet add:*)",
+      "Bash(dotnet ef database update:*)",
+      "Read(//Users/berkaysari/**)",
+      "Bash(mkdir:*)",
+      "Bash(dotnet run)",
+      "Bash(curl:*)",
+      "Bash(find:*)",
+      "Bash(TOKEN=\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjAxOWEyYmZhLWQ3ZWItN2YwOC1iMGU5LTA0OGVjM2JlYzZhMCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6InRlc3RAYmVya2FpLmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2dpdmVubmFtZSI6IlRlc3QiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zdXJuYW1lIjoiVXNlciIsIkVtYWlsQ29uZmlybWVkIjoiVHJ1ZSIsImV4cCI6MTc2MjI3OTI1OSwiaXNzIjoiQmVya0FJIiwiYXVkIjoiQmVya0FJLVVzZXJzIn0.xoa4ehA7Unw-yFVXnJvNVCKBMbvRRqXNZ9exK29S_SM\")",
+      "Bash(awk:*)",
+      "Bash(xargs kill -9)",
+      "Bash(xargs:*)",
+      "Bash(cat:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run dev:*)",
+      "Bash(components/layout/Header.tsx)",
+      "Bash(components/layout/Footer.tsx)",
+      "Bash(components/ui/Loading.tsx)",
+      "Bash(components/products/ProductCard.tsx)",
+      "Bash(lsof:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,0 +1,12 @@
+using FashionEcommerce.Domain.Enums;
+
+namespace FashionEcommerce.Application.DTOs.Categories;
+
+public class CreateCategoryDto
+{
+    public string Name { get; set; } = string.Empty;
+    public string? Description { get; set; }
+    public string? ImageUrl { get; set; }
+    public Gender Gender { get; set; }
+    public Guid? ParentCategoryId { get; set; }
+}
