@@ -1,0 +1,29 @@
+.ai-text {
+  background: linear-gradient(to right, #2563eb 0%, #2563eb 50%, #000000 50%, #000000 100%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.4s ease-in-out;
+  display: inline-block;
+}
+
+.logo-group:hover .ai-text {
+  background-position: 0% 0;
+}
+
+.ai-text-light {
+  background: linear-gradient(to right, #60a5fa 0%, #60a5fa 50%, #ffffff 50%, #ffffff 100%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.4s ease-in-out;
+  display: inline-block;
+}
+
+.logo-group:hover .ai-text-light {
+  background-position: 0% 0;
+}
