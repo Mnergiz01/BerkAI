@@ -1,5 +1,5 @@
 .ai-text {
-  background: linear-gradient(to right, #2563eb 0%, #2563eb 50%, #000000 50%, #000000 100%);
+  background: linear-gradient(to right, #FFD700 0%, #FFD700 50%, #000000 50%, #000000 100%);
   background-size: 200% 100%;
   background-position: 100% 0;
   -webkit-background-clip: text;
@@ -14,7 +14,7 @@
 }
 
 .ai-text-light {
-  background: linear-gradient(to right, #60a5fa 0%, #60a5fa 50%, #ffffff 50%, #ffffff 100%);
+  background: linear-gradient(to right, #FFD700 0%, #FFD700 50%, #ffffff 50%, #ffffff 100%);
   background-size: 200% 100%;
   background-position: 100% 0;
   -webkit-background-clip: text;

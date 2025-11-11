@@ -16,6 +16,10 @@ import { ChevronRight, Pause, Play, Sparkles } from 'lucide-react';
 export default function HomePage() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
+  const [currentImageIndexMen, setCurrentImageIndexMen] = useState(0);
+  const [currentImageIndexWomen, setCurrentImageIndexWomen] = useState(0);
+  const hoverTimeoutMenRef = useRef<NodeJS.Timeout | null>(null);
+  const hoverTimeoutWomenRef = useRef<NodeJS.Timeout | null>(null);
 
   const toggleVideo = () => {
     if (videoRef.current) {
@@ -26,6 +30,52 @@ export default function HomePage() {
       }
       setIsPlaying(!isPlaying);
     }
+  };
+
+  const handleMouseEnterMen = () => {
+    setCurrentImageIndexMen(1);
+
+    if (hoverTimeoutMenRef.current) {
+      clearTimeout(hoverTimeoutMenRef.current);
+    }
+
+    hoverTimeoutMenRef.current = setTimeout(() => {
+      setCurrentImageIndexMen(2);
+
+      hoverTimeoutMenRef.current = setTimeout(() => {
+        setCurrentImageIndexMen(0);
+      }, 800);
+    }, 800);
+  };
+
+  const handleMouseLeaveMen = () => {
+    if (hoverTimeoutMenRef.current) {
+      clearTimeout(hoverTimeoutMenRef.current);
+    }
+    setCurrentImageIndexMen(0);
+  };
+
+  const handleMouseEnterWomen = () => {
+    setCurrentImageIndexWomen(1);
+
+    if (hoverTimeoutWomenRef.current) {
+      clearTimeout(hoverTimeoutWomenRef.current);
+    }
+
+    hoverTimeoutWomenRef.current = setTimeout(() => {
+      setCurrentImageIndexWomen(2);
+
+      hoverTimeoutWomenRef.current = setTimeout(() => {
+        setCurrentImageIndexWomen(0);
+      }, 800);
+    }, 800);
+  };
+
+  const handleMouseLeaveWomen = () => {
+    if (hoverTimeoutWomenRef.current) {
+      clearTimeout(hoverTimeoutWomenRef.current);
+    }
+    setCurrentImageIndexWomen(0);
   };
   // Fetch featured products
   const { data: productsResponse, isLoading: productsLoading } = useQuery({
@@ -47,7 +97,7 @@ export default function HomePage() {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative h-[90vh] bg-gray-900 overflow-hidden -mt-16">
+        <section className="relative h-[95vh] bg-gray-900 overflow-hidden -mt-16">
           <div className="absolute inset-0 bg-black/40 z-10" />
           <video
             ref={videoRef}
@@ -59,7 +109,7 @@ export default function HomePage() {
           >
             <source src="/video.mov" type="video/mp4" />
           </video>
-          <div className="relative z-20 container mx-auto px-4 h-full flex flex-col justify-end pb-20 items-center text-white text-center">
+          <div className="relative z-20 container mx-auto px-4 h-full flex flex-col justify-end pb-10 items-center text-white text-center">
             <p className="text-sm md:text-base mb-3 uppercase tracking-[0.3em] font-light">
               Yeni
             </p>
@@ -92,38 +142,85 @@ export default function HomePage() {
         </section>
 
         {/* Categories Section */}
-        <section className="py-24 bg-white">
+        <section className="py-8 bg-white">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Link
                 href="/shop/products?gender=2"
-                className="relative h-96 group overflow-hidden"
+                className="relative w-full bg-gray-100 group overflow-hidden"
+                onMouseEnter={handleMouseEnterWomen}
+                onMouseLeave={handleMouseLeaveWomen}
               >
-                <Image
-                  src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=80"
-                  alt="Kadın"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <h2 className="text-white text-4xl font-bold">KADIN</h2>
+                <div className="relative w-full h-[93vh]">
+                  <Image
+                    src="/izel2.jpg"
+                    alt="Kadın"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-all duration-500"
+                  />
+                  <Image
+                    src="/iz3.jpg"
+                    alt="Kadın"
+                    fill
+                    className={`object-cover group-hover:scale-105 transition-all duration-700 ${
+                      currentImageIndexWomen === 1 ? 'opacity-100' : 'opacity-0'
+                    }`}
+                  />
+                  <Image
+                    src="/iz10.jpg"
+                    alt="Kadın"
+                    fill
+                    className={`object-cover group-hover:scale-105 transition-all duration-700 ${
+                      currentImageIndexWomen === 2 ? 'opacity-100' : 'opacity-0'
+                    }`}
+                  />
+
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
+                  <div className="absolute inset-0 flex items-start justify-center pt-8">
+                    <div className="relative">
+                      <h2 className="text-white text-4xl font-bold">KADIN</h2>
+                      <div className="absolute bottom-0 left-0 h-[2px] bg-white w-0 group-hover:w-full transition-all duration-700 ease-out"></div>
+                    </div>
+                  </div>
                 </div>
               </Link>
 
               <Link
                 href="/shop/products?gender=1"
-                className="relative h-96 group overflow-hidden"
+                className="relative w-full bg-gray-100 group overflow-hidden"
+                onMouseEnter={handleMouseEnterMen}
+                onMouseLeave={handleMouseLeaveMen}
               >
-                <Image
-                  src="https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?w=800&q=80"
-                  alt="Erkek"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <h2 className="text-white text-4xl font-bold">ERKEK</h2>
+                <div className="relative w-full h-[93vh]">
+                  <Image
+                    src="/ber8.jpeg"
+                    alt="Erkek"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-all duration-500"
+                  />
+                  <Image
+                    src="/berkay2.jpeg"
+                    alt="Erkek"
+                    fill
+                    className={`object-cover group-hover:scale-105 transition-all duration-700 ${
+                      currentImageIndexMen === 1 ? 'opacity-100' : 'opacity-0'
+                    }`}
+                  />
+                  <Image
+                    src="/ber10.jpeg"
+                    alt="Erkek"
+                    fill
+                    className={`object-cover group-hover:scale-105 transition-all duration-700 ${
+                      currentImageIndexMen === 2 ? 'opacity-100' : 'opacity-0'
+                    }`}
+                  />
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
+                  <div className="absolute inset-0 flex items-start justify-center pt-8">
+                    <div className="relative">
+                      <h2 className="text-white text-4xl font-bold">ERKEK</h2>
+                      <div className="absolute bottom-0 left-0 h-[2px] bg-white w-0 group-hover:w-full transition-all duration-700 ease-out"></div>
+                    </div>
+                  </div>
                 </div>
               </Link>
             </div>
@@ -154,11 +251,7 @@ export default function HomePage() {
                 />
               </div>
 
-              <div className="text-center mt-8">
-                <p className="text-sm text-gray-400">
-                  * Kaydırıcıyı sola veya sağa hareket ettirerek farkı görün
-                </p>
-              </div>
+              
             </div>
           </div>
         </section>

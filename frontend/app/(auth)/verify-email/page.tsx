@@ -17,6 +17,7 @@ export default function VerifyEmailPage() {
   const [email, setEmail] = useState('');
   const [code, setCode] = useState(['', '', '', '', '', '']);
   const [isLoading, setIsLoading] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(180); // 3 dakika = 180 saniye
 
   useEffect(() => {
     const emailParam = searchParams.get('email');
@@ -24,6 +25,27 @@ export default function VerifyEmailPage() {
       setEmail(emailParam);
     }
   }, [searchParams]);
+
+  // Geri sayım sayacı
+  useEffect(() => {
+    if (timeLeft <= 0) return;
+
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => {
+        if (prev <= 1) {
+          clearInterval(timer);
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [timeLeft]);
+
+  // Dakika ve saniyeyi hesapla
+  const minutes = Math.floor(timeLeft / 60);
+  const seconds = timeLeft % 60;
 
   const handleCodeChange = (index: number, value: string) => {
     if (value.length > 1) return;
@@ -165,24 +187,40 @@ export default function VerifyEmailPage() {
               fullWidth
               isLoading={isLoading}
               onClick={handleVerify}
+              disabled={timeLeft === 0}
             >
-              Doğrula
+              {timeLeft === 0 ? 'Süre Doldu' : 'Doğrula'}
             </Button>
 
             <div className="text-center space-y-2">
-              <p className="text-sm text-gray-600">
-                Kod gelmedi mi?{' '}
-                <button
-                  type="button"
-                  className="font-semibold text-black hover:text-gray-700 transition-colors"
-                  onClick={() => toast.success('Yeni kod gönderildi')}
-                >
-                  Tekrar gönder
-                </button>
-              </p>
-              <p className="text-xs text-gray-500">
-                Kod 15 dakika içinde geçersiz olacaktır
-              </p>
+              {timeLeft > 0 ? (
+                <div className="space-y-2">
+                  <div className="flex items-center justify-center gap-2">
+                    <div className="text-lg font-bold text-black">
+                      {String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}
+                    </div>
+                  </div>
+                       
+                </div>
+              ) : (
+                <div className="space-y-2">
+                  <p className="text-sm font-semibold text-red-600">
+                    Kodun süresi doldu
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    <button
+                      type="button"
+                      className="font-semibold text-black hover:text-gray-700 transition-colors"
+                      onClick={() => {
+                        setTimeLeft(180);
+                        toast.success('Yeni kod gönderildi');
+                      }}
+                    >
+                      Yeni kod gönder
+                    </button>
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </div>

@@ -34,11 +34,25 @@ const registerSchema = z
       )
       .refine(
         (email) => {
-          const domain = email.split('@')[1];
+          const domain = email.split('@')[1]?.toLowerCase();
+          if (!domain) return false;
+
           // Check for valid TLD
-          return /\.[a-zA-Z]{2,}$/.test(domain) && !/[^a-zA-Z0-9.-]/.test(domain);
+          if (!/\.[a-zA-Z]{2,}$/.test(domain) || /[^a-zA-Z0-9.-]/.test(domain)) {
+            return false;
+          }
+
+          // Yaygın yazım hatalarını yakala
+          const commonTypos = [
+            'gmial.com', 'gmai.com', 'gmil.com', 'gamil.com',
+            'hotmal.com', 'hotmial.com', 'hotmil.com', 'hootmail.com',
+            'yahooo.com', 'yaho.com', 'yhoo.com',
+            'outlok.com', 'outloo.com', 'outlookk.com'
+          ];
+
+          return !commonTypos.includes(domain);
         },
-        { message: 'Geçersiz e-posta domaini' }
+        { message: 'E-posta adresinde yazım hatası var gibi görünüyor. Lütfen kontrol edin.' }
       ),
     phoneNumber: z
       .string()
@@ -61,6 +75,9 @@ const registerSchema = z
         },
         { message: 'Geçerli bir telefon numarası girin' }
       ),
+    gender: z.enum(['Male', 'Female', 'PreferNotToSay'], {
+      message: 'Lütfen cinsiyet seçin',
+    }),
     password: z
       .string()
       .min(6, 'Şifre en az 6 karakter olmalıdır')
@@ -90,15 +107,18 @@ export default function RegisterPage() {
 
   const onSubmit = async (data: RegisterForm) => {
     setIsLoading(true);
+    console.log('Form data:', data);
     try {
-      const response = await registerUser({
+      const requestData = {
         firstName: data.firstName,
         lastName: data.lastName,
         email: data.email,
-        username: data.email.split('@')[0], // Generate username from email
         phoneNumber: data.phoneNumber,
+        gender: data.gender,
         password: data.password,
-      });
+      };
+      console.log('Request data:', requestData);
+      const response = await registerUser(requestData);
 
       if (response.isSuccess) {
         setRegisteredEmail(data.email);
@@ -181,6 +201,61 @@ export default function RegisterPage() {
                 )}
               />
 
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Cinsiyet
+                </label>
+                <div className="grid grid-cols-3 gap-3">
+                  <label className={`relative flex items-center justify-center px-4 py-3 border rounded-lg cursor-pointer transition-all ${
+                    errors.gender?.message ? 'border-red-500' : 'border-gray-300'
+                  }`}>
+                    <input
+                      type="radio"
+                      value="Male"
+                      {...register('gender')}
+                      className="sr-only peer"
+                    />
+                    <span className="text-sm font-medium text-gray-700 peer-checked:text-black">
+                      Erkek
+                    </span>
+                    <div className="absolute inset-0 border-2 border-black rounded-lg opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none"></div>
+                  </label>
+
+                  <label className={`relative flex items-center justify-center px-4 py-3 border rounded-lg cursor-pointer transition-all ${
+                    errors.gender?.message ? 'border-red-500' : 'border-gray-300'
+                  }`}>
+                    <input
+                      type="radio"
+                      value="Female"
+                      {...register('gender')}
+                      className="sr-only peer"
+                    />
+                    <span className="text-sm font-medium text-gray-700 peer-checked:text-black">
+                      Kadın
+                    </span>
+                    <div className="absolute inset-0 border-2 border-black rounded-lg opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none"></div>
+                  </label>
+
+                  <label className={`relative flex items-center justify-center px-4 py-3 border rounded-lg cursor-pointer transition-all ${
+                    errors.gender?.message ? 'border-red-500' : 'border-gray-300'
+                  }`}>
+                    <input
+                      type="radio"
+                      value="PreferNotToSay"
+                      {...register('gender')}
+                      className="sr-only peer"
+                    />
+                    <span className="text-xs font-medium text-gray-700 peer-checked:text-black text-center leading-tight">
+                      Belirtmek<br/>İstemiyorum
+                    </span>
+                    <div className="absolute inset-0 border-2 border-black rounded-lg opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none"></div>
+                  </label>
+                </div>
+                {errors.gender?.message && (
+                  <p className="mt-1 text-sm text-red-600">{errors.gender.message}</p>
+                )}
+              </div>
+
               <Input
                 label="Şifre"
                 type="password"
@@ -204,7 +279,7 @@ export default function RegisterPage() {
                 name="terms"
                 type="checkbox"
                 required
-                className="h-4 w-4 text-black focus:ring-2 focus:ring-black border-gray-300 rounded cursor-pointer mt-0.5"
+                className="h-4 w-4 text-black focus:ring-black border-gray-300 rounded cursor-pointer mt-0.5"
               />
               <label htmlFor="terms" className="ml-2 block text-sm text-gray-700 cursor-pointer select-none">
                 <Link href="/legal/terms" className="hover:underline font-medium text-black">
@@ -227,6 +302,18 @@ export default function RegisterPage() {
             >
               Üye Ol
             </Button>
+
+            <div className="text-center">
+              <p className="text-sm text-gray-600">
+                Zaten hesabınız var mı?{' '}
+                <Link
+                  href="/login"
+                  className="font-semibold text-black hover:text-gray-700 transition-colors"
+                >
+                  Giriş yapın
+                </Link>
+              </p>
+            </div>
           </form>
         </div>
       </div>
