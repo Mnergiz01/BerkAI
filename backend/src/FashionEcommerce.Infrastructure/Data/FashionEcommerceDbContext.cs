@@ -27,6 +27,11 @@ public class FashionEcommerceDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
+        // Gender enum'ını string olarak sakla
+        modelBuilder.Entity<User>()
+            .Property(u => u.Gender)
+            .HasConversion<string>();
+
         // Apply all configurations from the current assembly
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(FashionEcommerceDbContext).Assembly);
     }

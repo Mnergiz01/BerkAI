@@ -1,4 +1,5 @@
 using FashionEcommerce.Domain.Common;
+using FashionEcommerce.Domain.Enums;
 
 namespace FashionEcommerce.Domain.Entities;
 
@@ -9,6 +10,7 @@ public class User : BaseEntity
     public string Email { get; set; } = string.Empty;
     public string PasswordHash { get; set; } = string.Empty;
     public string? PhoneNumber { get; set; }
+    public Gender? Gender { get; set; }
     public string? ProfileImageUrl { get; set; }
     public bool IsEmailConfirmed { get; set; }
     public string? EmailConfirmationCode { get; set; }

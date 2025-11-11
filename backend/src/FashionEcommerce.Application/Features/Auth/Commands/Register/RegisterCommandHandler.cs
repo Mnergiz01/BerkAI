@@ -38,10 +38,11 @@ public class RegisterCommandHandler : IRequestHandler<RegisterCommand, Result<st
             LastName = request.RegisterDto.LastName,
             Email = request.RegisterDto.Email,
             PhoneNumber = request.RegisterDto.PhoneNumber,
+            Gender = request.RegisterDto.Gender,
             PasswordHash = passwordHash,
             IsEmailConfirmed = false,
             EmailConfirmationCode = activationCode,
-            EmailConfirmationCodeExpiry = DateTime.UtcNow.AddMinutes(15) // 15 dakika geçerli
+            EmailConfirmationCodeExpiry = DateTime.UtcNow.AddMinutes(3) // 3 dakika geçerli
         };
 
         await _unitOfWork.Users.AddAsync(user);

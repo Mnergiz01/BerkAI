@@ -3,6 +3,7 @@ using System;
 using FashionEcommerce.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace FashionEcommerce.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(FashionEcommerceDbContext))]
-    partial class FashionEcommerceDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251111213304_ConvertGenderToString")]
+    partial class ConvertGenderToString
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
