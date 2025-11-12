@@ -5,7 +5,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRef, useState } from 'react';
 import { productsApi } from '@/lib/api/products';
-import { categoriesApi } from '@/lib/api/categories';
 import ProductCard from '@/components/products/ProductCard';
 import Loading from '@/components/ui/Loading';
 import Header from '@/components/layout/Header';
@@ -83,14 +82,7 @@ export default function HomePage() {
     queryFn: () => productsApi.getAll(),
   });
 
-  // Fetch categories
-  const { data: categoriesResponse, isLoading: categoriesLoading } = useQuery({
-    queryKey: ['categories'],
-    queryFn: () => categoriesApi.getAll(),
-  });
-
   const featuredProducts = productsResponse?.data?.filter((p: any) => p.isFeatured) || [];
-  const categories = categoriesResponse?.data || [];
 
   return (
     <>
@@ -124,7 +116,7 @@ export default function HomePage() {
                 KADIN
               </Link>
               <Link
-                href="/shop/products?gender=1"
+                href="/men/special-collection"
                 className="text-white text-sm font-light uppercase tracking-[0.2em] underline underline-offset-4 hover:opacity-80 transition-opacity"
               >
                 ERKEK
@@ -186,7 +178,7 @@ export default function HomePage() {
               </Link>
 
               <Link
-                href="/shop/products?gender=1"
+                href="/men"
                 className="relative w-full bg-gray-100 group overflow-hidden"
                 onMouseEnter={handleMouseEnterMen}
                 onMouseLeave={handleMouseLeaveMen}

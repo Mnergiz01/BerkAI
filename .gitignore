@@ -39,6 +39,9 @@ yarn-error.log*
 *.swo
 *~
 
+# Claude Code
+.claude/
+
 # .NET
 backend/bin/
 backend/obj/
