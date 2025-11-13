@@ -24,7 +24,8 @@
       "Bash(components/layout/Footer.tsx)",
       "Bash(components/ui/Loading.tsx)",
       "Bash(components/products/ProductCard.tsx)",
-      "Bash(lsof:*)"
+      "Bash(lsof:*)",
+      "Bash(PGPASSWORD=123456 psql:*)"
     ],
     "deny": [],
     "ask": []

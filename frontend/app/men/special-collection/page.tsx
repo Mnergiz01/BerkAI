@@ -2,37 +2,42 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { ChevronLeft, ChevronRight, Heart } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import PageLoader from '@/components/ui/PageLoader';
 
-const products = [
-  {
-    id: 'made-in-root-sweatshirt',
-    name: 'Made in Root Sweatshirt',
-    price: 1299,
-    images: [
-      '/madeinroot/ege-on-soru-isareti.webp',
-      '/madeinroot/ege-arka-soru-isareti.webp',
-      '/madeinroot/kol-detay.webp',
-      '/madeinroot/logo-detay.webp',
-    ],
-  },
-];
+interface Product {
+  id: string;
+  name: string;
+  price: number;
+  imagePaths: string[];
+}
 
 export default function SpecialCollectionPage() {
   const [loading, setLoading] = useState(true);
+  const [products, setProducts] = useState<Product[]>([]);
   const [currentImageIndexes, setCurrentImageIndexes] = useState<Record<string, number>>({});
   const [favorites, setFavorites] = useState<Set<string>>(new Set());
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000);
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch('http://localhost:5195/api/SpecialCollection');
+        if (response.ok) {
+          const data = await response.json();
+          setProducts(data);
+        }
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      } finally {
+        setTimeout(() => {
+          setLoading(false);
+        }, 500);
+      }
+    };
 
-    return () => clearTimeout(timer);
+    fetchProducts();
   }, []);
 
   const handlePrevImage = (e: React.MouseEvent, productId: string, totalImages: number) => {
@@ -96,20 +101,18 @@ export default function SpecialCollectionPage() {
                   >
                     <div className="relative aspect-[3/4] bg-gray-100 overflow-hidden mb-3">
                       {/* Current Image */}
-                      <Image
-                        src={product.images[currentIndex]}
+                      <img
+                        src={product.imagePaths[currentIndex]}
                         alt={product.name}
-                        fill
-                        className="object-cover transition-opacity duration-300"
+                        className="w-full h-full object-cover transition-opacity duration-300"
                       />
 
                       {/* Hover Image - Show second image on hover when on first image */}
-                      {currentIndex === 0 && product.images.length > 1 && (
-                        <Image
-                          src={product.images[1]}
+                      {currentIndex === 0 && product.imagePaths.length > 1 && (
+                        <img
+                          src={product.imagePaths[1]}
                           alt={`${product.name} - Arka`}
-                          fill
-                          className="object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+                          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100"
                         />
                       )}
 
@@ -128,17 +131,17 @@ export default function SpecialCollectionPage() {
                       </button>
 
                       {/* Navigation Arrows */}
-                      {product.images.length > 1 && (
+                      {product.imagePaths.length > 1 && (
                         <>
                           <button
-                            onClick={(e) => handlePrevImage(e, product.id, product.images.length)}
+                            onClick={(e) => handlePrevImage(e, product.id, product.imagePaths.length)}
                             className="absolute left-2 top-1/2 -translate-y-1/2 z-10 transition-all opacity-0 group-hover:opacity-100"
                             aria-label="Önceki görsel"
                           >
                             <ChevronLeft className="w-6 h-6 text-white drop-shadow-lg" />
                           </button>
                           <button
-                            onClick={(e) => handleNextImage(e, product.id, product.images.length)}
+                            onClick={(e) => handleNextImage(e, product.id, product.imagePaths.length)}
                             className="absolute right-2 top-1/2 -translate-y-1/2 z-10 transition-all opacity-0 group-hover:opacity-100"
                             aria-label="Sonraki görsel"
                           >

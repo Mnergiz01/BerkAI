@@ -1,41 +1,62 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
+import { useParams } from 'next/navigation';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import PageLoader from '@/components/ui/PageLoader';
 
-const productImages = [
-  '/madeinroot/ege-on-soru-isareti.webp',
-  '/madeinroot/ege-arka-soru-isareti.webp',
-  '/madeinroot/kol-detay.webp',
-  '/madeinroot/logo-detay.webp',
-];
+interface Product {
+  id: string;
+  name: string;
+  price: number;
+  description?: string;
+  imagePaths: string[];
+  stockS: number;
+  stockM: number;
+  stockL: number;
+  stockXL: number;
+}
 
 export default function ProductDetailPage() {
+  const params = useParams();
+  const productId = params.productId as string;
+
   const [loading, setLoading] = useState(true);
+  const [product, setProduct] = useState<Product | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000);
+    const fetchProduct = async () => {
+      try {
+        const response = await fetch(`http://localhost:5195/api/SpecialCollection/${productId}`);
+        if (response.ok) {
+          const data = await response.json();
+          setProduct(data);
+        }
+      } catch (error) {
+        console.error('Error fetching product:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-    return () => clearTimeout(timer);
-  }, []);
+    fetchProduct();
+  }, [productId]);
 
   const handlePrevious = () => {
-    setCurrentImageIndex((prev) => (prev === 0 ? productImages.length - 1 : prev - 1));
+    if (!product) return;
+    setCurrentImageIndex((prev) => (prev === 0 ? product.imagePaths.length - 1 : prev - 1));
   };
 
   const handleNext = () => {
-    setCurrentImageIndex((prev) => (prev === productImages.length - 1 ? 0 : prev + 1));
+    if (!product) return;
+    setCurrentImageIndex((prev) => (prev === product.imagePaths.length - 1 ? 0 : prev + 1));
   };
 
-  if (loading) {
+  if (loading || !product) {
     return <PageLoader />;
   }
 
@@ -56,21 +77,18 @@ export default function ProductDetailPage() {
                     onMouseLeave={() => setIsHovering(false)}
                   >
                     {/* Main Image */}
-                    <Image
-                      src={productImages[currentImageIndex]}
+                    <img
+                      src={product.imagePaths[currentImageIndex]}
                       alt="Ürün görseli"
-                      fill
-                      className="object-cover transition-opacity duration-300"
-                      priority
+                      className="w-full h-full object-cover transition-opacity duration-300"
                     />
 
                     {/* Hover Image - Only show on first image */}
-                    {currentImageIndex === 0 && (
-                      <Image
-                        src={productImages[1]}
+                    {currentImageIndex === 0 && product.imagePaths.length > 1 && (
+                      <img
+                        src={product.imagePaths[1]}
                         alt="Ürün arka görseli"
-                        fill
-                        className={`object-cover transition-opacity duration-300 ${
+                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
                           isHovering ? 'opacity-100' : 'opacity-0'
                         }`}
                       />
@@ -94,13 +112,13 @@ export default function ProductDetailPage() {
 
                     {/* Image Counter */}
                     <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/70 text-white px-4 py-2 rounded-full text-sm">
-                      {currentImageIndex + 1} / {productImages.length}
+                      {currentImageIndex + 1} / {product.imagePaths.length}
                     </div>
                   </div>
 
                   {/* Thumbnail Navigation */}
                   <div className="grid grid-cols-4 gap-4 mt-4">
-                    {productImages.map((image, index) => (
+                    {product.imagePaths.map((image: string, index: number) => (
                       <button
                         key={index}
                         onClick={() => setCurrentImageIndex(index)}
@@ -110,11 +128,10 @@ export default function ProductDetailPage() {
                             : 'border-transparent hover:border-gray-300'
                         }`}
                       >
-                        <Image
+                        <img
                           src={image}
                           alt={`Thumbnail ${index + 1}`}
-                          fill
-                          className="object-cover"
+                          className="w-full h-full object-cover"
                         />
                       </button>
                     ))}
@@ -123,17 +140,18 @@ export default function ProductDetailPage() {
 
                 {/* Product Info */}
                 <div className="flex flex-col">
-                  <h2 className="text-4xl font-bold mb-4 text-black">Made in Root Sweatshirt</h2>
-                  <p className="text-2xl font-semibold mb-6 text-black">₺1,299</p>
+                  <h2 className="text-4xl font-bold mb-4 text-black">{product.name}</h2>
+                  <p className="text-2xl font-semibold mb-6 text-black">
+                    ₺{product.price.toLocaleString('tr-TR')}
+                  </p>
 
                   <div className="space-y-6">
-                    <div>
-                      <h3 className="text-lg font-semibold mb-2 text-black">Ürün Açıklaması</h3>
-                      <p className="text-gray-600 leading-relaxed">
-                        Made in Root koleksiyonundan özel tasarım sweatshirt. Premium kalite pamuklu kumaş,
-                        rahat kesim ve şık detaylarıyla günlük kullanım için ideal.
-                      </p>
-                    </div>
+                    {product.description && (
+                      <div>
+                        <h3 className="text-lg font-semibold mb-2 text-black">Ürün Açıklaması</h3>
+                        <p className="text-gray-600 leading-relaxed">{product.description}</p>
+                      </div>
+                    )}
 
                     <div>
                       <h3 className="text-lg font-semibold mb-2 text-black">Özellikler</h3>
@@ -148,10 +166,20 @@ export default function ProductDetailPage() {
                     <div>
                       <h3 className="text-lg font-semibold mb-3 text-black">Beden</h3>
                       <div className="grid grid-cols-4 gap-3">
-                        {['S', 'M', 'L', 'XL'].map((size) => (
+                        {[
+                          { size: 'S', stock: product.stockS },
+                          { size: 'M', stock: product.stockM },
+                          { size: 'L', stock: product.stockL },
+                          { size: 'XL', stock: product.stockXL },
+                        ].map(({ size, stock }) => (
                           <button
                             key={size}
-                            className="border-2 border-gray-300 hover:border-black py-3 text-center font-medium transition-colors"
+                            disabled={stock === 0}
+                            className={`border-2 py-3 text-center font-medium transition-colors ${
+                              stock === 0
+                                ? 'border-gray-200 text-gray-300 cursor-not-allowed'
+                                : 'border-gray-300 hover:border-black'
+                            }`}
                           >
                             {size}
                           </button>

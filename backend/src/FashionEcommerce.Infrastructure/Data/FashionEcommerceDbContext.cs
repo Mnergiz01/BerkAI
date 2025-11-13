@@ -1,6 +1,7 @@
 using FashionEcommerce.Domain.Common;
 using FashionEcommerce.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
 
 namespace FashionEcommerce.Infrastructure.Data;
 
@@ -12,6 +13,7 @@ public class FashionEcommerceDbContext : DbContext
     }
 
     public DbSet<User> Users { get; set; }
+    public DbSet<Admin> Admins { get; set; }
     public DbSet<Address> Addresses { get; set; }
     public DbSet<Category> Categories { get; set; }
     public DbSet<Brand> Brands { get; set; }
@@ -22,6 +24,7 @@ public class FashionEcommerceDbContext : DbContext
     public DbSet<CartItem> CartItems { get; set; }
     public DbSet<Order> Orders { get; set; }
     public DbSet<OrderItem> OrderItems { get; set; }
+    public DbSet<SpecialCollectionProduct> SpecialCollectionProducts { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -31,6 +34,14 @@ public class FashionEcommerceDbContext : DbContext
         modelBuilder.Entity<User>()
             .Property(u => u.Gender)
             .HasConversion<string>();
+
+        // SpecialCollectionProduct ImagePaths'i JSON olarak sakla
+        modelBuilder.Entity<SpecialCollectionProduct>()
+            .Property(p => p.ImagePaths)
+            .HasConversion(
+                v => JsonSerializer.Serialize(v, (JsonSerializerOptions)null),
+                v => JsonSerializer.Deserialize<List<string>>(v, (JsonSerializerOptions)null) ?? new List<string>()
+            );
 
         // Apply all configurations from the current assembly
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(FashionEcommerceDbContext).Assembly);

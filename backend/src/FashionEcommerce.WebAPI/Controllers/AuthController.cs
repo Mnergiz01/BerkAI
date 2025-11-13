@@ -1,4 +1,5 @@
 using FashionEcommerce.Application.DTOs.Auth;
+using FashionEcommerce.Application.Features.Auth.Commands.AdminLogin;
 using FashionEcommerce.Application.Features.Auth.Commands.Login;
 using FashionEcommerce.Application.Features.Auth.Commands.Register;
 using FashionEcommerce.Application.Features.Auth.Commands.VerifyEmail;
@@ -59,6 +60,23 @@ public class AuthController : ControllerBase
     public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
     {
         var command = new LoginCommand(loginDto);
+        var result = await _mediator.Send(command);
+
+        if (!result.IsSuccess)
+        {
+            return Unauthorized(result);
+        }
+
+        return Ok(result);
+    }
+
+    /// <summary>
+    /// Admin girişi - Username ve şifre ile giriş
+    /// </summary>
+    [HttpPost("admin/login")]
+    public async Task<IActionResult> AdminLogin([FromBody] AdminLoginDto adminLoginDto)
+    {
+        var command = new AdminLoginCommand(adminLoginDto);
         var result = await _mediator.Send(command);
 
         if (!result.IsSuccess)
