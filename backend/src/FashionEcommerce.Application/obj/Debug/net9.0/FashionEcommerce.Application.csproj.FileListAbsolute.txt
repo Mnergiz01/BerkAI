@@ -28,3 +28,4 @@
 /Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Application/obj/Debug/net9.0/refint/FashionEcommerce.Application.dll
 /Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Application/obj/Debug/net9.0/FashionEcommerce.Application.pdb
 /Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Application/obj/Debug/net9.0/ref/FashionEcommerce.Application.dll
+/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Application/obj/Debug/net9.0/FashionEcommerce.Application.sourcelink.json

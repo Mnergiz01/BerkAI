@@ -36,3 +36,4 @@
 /Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Infrastructure/obj/Debug/net9.0/FashionEcommerce.Infrastructure.pdb
 /Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Infrastructure/obj/Debug/net9.0/FashionEcommerce.Infrastructure.genruntimeconfig.cache
 /Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Infrastructure/obj/Debug/net9.0/ref/FashionEcommerce.Infrastructure.dll
+/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Infrastructure/obj/Debug/net9.0/FashionEcommerce.Infrastructure.sourcelink.json

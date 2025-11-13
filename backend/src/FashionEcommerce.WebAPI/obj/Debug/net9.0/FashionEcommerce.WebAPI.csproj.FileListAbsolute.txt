@@ -297,3 +297,4 @@
 /Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.dll
 /Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 /Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/obj/Debug/net9.0/FashionEcommerce.WebAPI.sourcelink.json
