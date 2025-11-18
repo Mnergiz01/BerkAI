@@ -248,37 +248,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Featured Products Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="flex items-center justify-between mb-8">
-              <h2 className="text-3xl font-bold text-black">ÖNE ÇIKAN ÜRÜNLER</h2>
-              <Link
-                href="/shop/products"
-                className="text-sm font-medium text-black hover:underline flex items-center gap-1"
-              >
-                Tümünü Gör
-                <ChevronRight className="w-4 h-4" />
-              </Link>
-            </div>
-
-            {productsLoading ? (
-              <div className="flex justify-center py-12">
-                <Loading size="lg" />
-              </div>
-            ) : featuredProducts.length > 0 ? (
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {featuredProducts.slice(0, 8).map((product) => (
-                  <ProductCard key={product.id} product={product} />
-                ))}
-              </div>
-            ) : (
-              <div className="text-center py-12">
-                <p className="text-gray-700">Henüz öne çıkan ürün bulunmuyor</p>
-              </div>
-            )}
-          </div>
-        </section>
+        
 
         {/* Benefits Section */}
         <section className="py-16 bg-white">

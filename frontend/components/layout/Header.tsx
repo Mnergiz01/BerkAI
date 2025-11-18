@@ -16,7 +16,17 @@ export function Header() {
   const [showSearch, setShowSearch] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [pathname, setPathname] = useState('');
+  const [showNavbar, setShowNavbar] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  // Get current pathname
+  useEffect(() => {
+    setPathname(window.location.pathname);
+  }, []);
+
+  // Check if we're on special collection pages
+  const isSpecialCollectionPage = pathname.includes('/special-collection');
 
   // Hydration fix for zustand persist
   useEffect(() => {
@@ -25,16 +35,39 @@ export function Header() {
     checkTokenExpiry();
   }, [checkTokenExpiry]);
 
-  // Handle scroll event for background
+  // Scroll tracking - only for special collection pages for scroll-up navbar
+  // For other pages, track normal scroll
   useEffect(() => {
-    const handleScroll = () => {
-      const offset = window.scrollY;
-      setScrolled(offset > 10);
-    };
+    if (isSpecialCollectionPage) {
+      // Special collection: scroll-up detection
+      let previousScrollY = window.scrollY;
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      const handleScroll = () => {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY < previousScrollY && currentScrollY > 100) {
+          // Scrolling up & past threshold - show navbar
+          setShowNavbar(true);
+        } else if (currentScrollY > previousScrollY || currentScrollY < 100) {
+          // Scrolling down or near top - hide navbar
+          setShowNavbar(false);
+        }
+
+        previousScrollY = currentScrollY;
+      };
+
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      return () => window.removeEventListener('scroll', handleScroll);
+    } else {
+      // Other pages: normal scroll behavior
+      const handleScroll = () => {
+        setScrolled(window.scrollY > 50);
+      };
+
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      return () => window.removeEventListener('scroll', handleScroll);
+    }
+  }, [isSpecialCollectionPage])
 
   // Close user menu when clicking outside
   useEffect(() => {
@@ -72,15 +105,21 @@ export function Header() {
     return null; // or return a loading skeleton
   }
 
+  // Special collection pages: absolute positioning with scroll-up navbar
+  // Other pages: sticky with scroll-based background
+  const shouldBeWhite = isSpecialCollectionPage ? showNavbar : scrolled;
+  const isDarkLogo = isSpecialCollectionPage ? (showNavbar ? true : true) : scrolled;
+  const headerPosition = isSpecialCollectionPage ? (showNavbar ? 'fixed' : 'absolute') : 'sticky';
+
   return (
-    <header className={`sticky top-0 z-50 w-full border-b transition-all duration-300 ${
-      scrolled ? 'bg-white shadow-sm' : 'bg-transparent border-transparent'
+    <header className={`${headerPosition} top-0 z-50 w-full transition-all duration-300 ${
+      shouldBeWhite ? 'bg-white shadow-sm border-b border-gray-200' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Center Logo */}
           <div className="absolute left-1/2 transform -translate-x-1/2">
-            <Logo variant={scrolled ? 'dark' : 'light'} />
+            <Logo variant={isDarkLogo ? 'dark' : 'light'} />
           </div>
 
           {/* Right Navigation - Icons */}
@@ -95,7 +134,7 @@ export function Header() {
                     onChange={(e) => setSearchTerm(e.target.value)}
                     placeholder="Ara..."
                     className={`w-48 px-3 py-1 text-sm border-b outline-none transition-colors ${
-                      scrolled
+                      isDarkLogo
                         ? 'text-black border-gray-300 focus:border-black placeholder:text-gray-500'
                         : 'text-white border-white/30 focus:border-white placeholder:text-white/60'
                     }`}
@@ -105,7 +144,7 @@ export function Header() {
                     type="button"
                     onClick={() => setShowSearch(false)}
                     className={`transition-colors ${
-                      scrolled ? 'text-gray-500 hover:text-black' : 'text-white/70 hover:text-white'
+                      isDarkLogo ? 'text-gray-500 hover:text-black' : 'text-white/70 hover:text-white'
                     }`}
                   >
                     ✕
@@ -115,7 +154,7 @@ export function Header() {
                 <button
                   onClick={() => setShowSearch(true)}
                   className={`transition-colors ${
-                    scrolled ? 'text-gray-700 hover:text-black' : 'text-white hover:text-white/80'
+                    isDarkLogo ? 'text-gray-700 hover:text-black' : 'text-white hover:text-white/80'
                   }`}
                   aria-label="Search"
                 >
@@ -129,7 +168,7 @@ export function Header() {
               <Link
                 href="/login"
                 className={`transition-colors ${
-                  scrolled ? 'text-gray-700 hover:text-black' : 'text-white hover:text-white/80'
+                  isDarkLogo ? 'text-gray-700 hover:text-black' : 'text-white hover:text-white/80'
                 }`}
                 aria-label="Login"
               >
@@ -141,7 +180,7 @@ export function Header() {
             <Link
               href="/favorites"
               className={`transition-colors ${
-                scrolled ? 'text-gray-700 hover:text-black' : 'text-white hover:text-white/80'
+                isDarkLogo ? 'text-gray-700 hover:text-black' : 'text-white hover:text-white/80'
               }`}
               aria-label="Favorites"
             >
@@ -152,14 +191,14 @@ export function Header() {
             <Link
               href="/cart"
               className={`relative transition-colors ${
-                scrolled ? 'text-gray-700 hover:text-black' : 'text-white hover:text-white/80'
+                isDarkLogo ? 'text-gray-700 hover:text-black' : 'text-white hover:text-white/80'
               }`}
               aria-label="Cart"
             >
               <ShoppingBag className="w-5 h-5" />
               {itemCount > 0 && (
                 <span className={`absolute -top-2 -right-2 flex h-4 w-4 items-center justify-center rounded-full text-xs transition-colors ${
-                  scrolled ? 'bg-black text-white' : 'bg-white text-black'
+                  isDarkLogo ? 'bg-black text-white' : 'bg-white text-black'
                 }`}>
                   {itemCount}
                 </span>
@@ -172,7 +211,7 @@ export function Header() {
                 <button
                   onClick={() => setShowUserMenu(!showUserMenu)}
                   className={`text-sm font-medium transition-colors ${
-                    scrolled ? 'text-gray-700 hover:text-black' : 'text-white hover:text-white/80'
+                    isDarkLogo ? 'text-gray-700 hover:text-black' : 'text-white hover:text-white/80'
                   }`}
                 >
                   {displayName}
