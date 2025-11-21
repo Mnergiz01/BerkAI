@@ -26,4 +26,5 @@ public class Product : BaseEntity
     public Brand Brand { get; set; } = null!;
     public ICollection<ProductImage> Images { get; set; } = new List<ProductImage>();
     public ICollection<ProductVariant> Variants { get; set; } = new List<ProductVariant>();
+    public ICollection<Favorite> Favorites { get; set; } = new List<Favorite>();
 }

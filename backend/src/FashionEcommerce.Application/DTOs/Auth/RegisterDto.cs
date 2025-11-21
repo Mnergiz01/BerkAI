@@ -10,4 +10,5 @@ public class RegisterDto
     public string Password { get; set; } = string.Empty;
     public string? PhoneNumber { get; set; }
     public Gender? Gender { get; set; }
+    public bool IsGoogleSignup { get; set; } = false;
 }

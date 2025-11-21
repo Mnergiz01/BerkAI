@@ -16,9 +16,11 @@ public class User : BaseEntity
     public string? EmailConfirmationCode { get; set; }
     public DateTime? EmailConfirmationCodeExpiry { get; set; }
     public DateTime? LastLoginAt { get; set; }
+    public AuthProvider AuthProvider { get; set; } = AuthProvider.Local;
 
     // Navigation properties
     public ICollection<Address> Addresses { get; set; } = new List<Address>();
     public ICollection<Order> Orders { get; set; } = new List<Order>();
     public ICollection<Cart> Carts { get; set; } = new List<Cart>();
+    public ICollection<Favorite> Favorites { get; set; } = new List<Favorite>();
 }

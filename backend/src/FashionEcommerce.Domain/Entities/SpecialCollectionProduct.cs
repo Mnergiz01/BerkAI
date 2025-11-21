@@ -16,4 +16,8 @@ public class SpecialCollectionProduct : BaseEntity
     public int StockM { get; set; } = 0;
     public int StockL { get; set; } = 0;
     public int StockXL { get; set; } = 0;
+
+    // Normal Product ile ilişki
+    public Guid? ProductId { get; set; }
+    public Product? Product { get; set; }
 }

@@ -2,23 +2,25 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronLeft, ChevronRight, Heart } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import PageLoader from '@/components/ui/PageLoader';
+import FavoriteButton from '@/components/favorites/FavoriteButton';
 
 interface Product {
   id: string;
   name: string;
   price: number;
   imagePaths: string[];
+  productId?: string; // Backend Product ID
 }
 
 export default function SpecialCollectionPage() {
   const [loading, setLoading] = useState(true);
   const [products, setProducts] = useState<Product[]>([]);
   const [currentImageIndexes, setCurrentImageIndexes] = useState<Record<string, number>>({});
-  const [favorites, setFavorites] = useState<Set<string>>(new Set());
+  const [slideDirection, setSlideDirection] = useState<Record<string, 'left' | 'right' | null>>({});
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -43,34 +45,29 @@ export default function SpecialCollectionPage() {
   const handlePrevImage = (e: React.MouseEvent, productId: string, totalImages: number) => {
     e.preventDefault();
     e.stopPropagation();
+    setSlideDirection((prev) => ({ ...prev, [productId]: 'right' }));
     setCurrentImageIndexes((prev) => ({
       ...prev,
       [productId]: ((prev[productId] || 0) - 1 + totalImages) % totalImages,
     }));
+    setTimeout(() => {
+      setSlideDirection((prev) => ({ ...prev, [productId]: null }));
+    }, 200);
   };
 
   const handleNextImage = (e: React.MouseEvent, productId: string, totalImages: number) => {
     e.preventDefault();
     e.stopPropagation();
+    setSlideDirection((prev) => ({ ...prev, [productId]: 'left' }));
     setCurrentImageIndexes((prev) => ({
       ...prev,
       [productId]: ((prev[productId] || 0) + 1) % totalImages,
     }));
+    setTimeout(() => {
+      setSlideDirection((prev) => ({ ...prev, [productId]: null }));
+    }, 200);
   };
 
-  const toggleFavorite = (e: React.MouseEvent, productId: string) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setFavorites((prev) => {
-      const newFavorites = new Set(prev);
-      if (newFavorites.has(productId)) {
-        newFavorites.delete(productId);
-      } else {
-        newFavorites.add(productId);
-      }
-      return newFavorites;
-    });
-  };
 
   if (loading) {
     return <PageLoader />;
@@ -91,44 +88,74 @@ export default function SpecialCollectionPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 pl-0">
               {products.map((product) => {
                 const currentIndex = currentImageIndexes[product.id] || 0;
-                const isFavorite = favorites.has(product.id);
+                const direction = slideDirection[product.id];
 
                 return (
                   <Link
                     key={product.id}
                     href={`/men/special-collection/${product.id}`}
                     className="group block"
+                    onMouseEnter={() => {
+                      // Update index to 1 when hovering (if on index 0)
+                      if (currentIndex === 0 && product.imagePaths.length > 1) {
+                        setCurrentImageIndexes((prev) => ({
+                          ...prev,
+                          [product.id]: 1,
+                        }));
+                      }
+                    }}
+                    onMouseLeave={() => {
+                      // Reset to 0 when mouse leaves
+                      setCurrentImageIndexes((prev) => ({
+                        ...prev,
+                        [product.id]: 0,
+                      }));
+                    }}
                   >
                     <div className="relative aspect-[3/4] bg-gray-100 overflow-hidden mb-3">
-                      {/* Current Image */}
-                      <img
-                        src={product.imagePaths[currentIndex]}
-                        alt={product.name}
-                        className="w-full h-full object-cover transition-opacity duration-300"
-                      />
+                      {/* All images stacked with conditional animation */}
+                      {product.imagePaths.map((imagePath, idx) => {
+                        const isActive = idx === currentIndex;
 
-                      {/* Hover Image - Show second image on hover when on first image */}
-                      {currentIndex === 0 && product.imagePaths.length > 1 && (
-                        <img
-                          src={product.imagePaths[1]}
-                          alt={`${product.name} - Arka`}
-                          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100"
-                        />
-                      )}
+                        // Determine animation classes based on slide direction
+                        let animationClass = '';
+                        if (direction === 'left' && isActive) {
+                          animationClass = 'animate-slideInFromRight';
+                        } else if (direction === 'right' && isActive) {
+                          animationClass = 'animate-slideInFromLeft';
+                        } else if (direction === 'left' && !isActive) {
+                          animationClass = 'animate-slideOutToLeft';
+                        } else if (direction === 'right' && !isActive) {
+                          animationClass = 'animate-slideOutToRight';
+                        }
+
+                        return (
+                          <img
+                            key={idx}
+                            src={imagePath}
+                            alt={`${product.name} - ${idx + 1}`}
+                            className={`absolute inset-0 w-full h-full object-cover ${
+                              direction
+                                ? `${animationClass} ${isActive ? 'z-20' : 'z-10'}`
+                                : isActive ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                            }`}
+                          />
+                        );
+                      })}
 
                       {/* Favorite Button */}
-                      <button
-                        onClick={(e) => toggleFavorite(e, product.id)}
-                        className="absolute top-3 right-3 z-10 transition-all"
-                        aria-label="Favorilere ekle"
-                      >
-                        <Heart
-                          className={`w-6 h-6 transition-colors drop-shadow-md ${
-                            isFavorite ? 'fill-red-500 text-red-500' : 'text-black fill-white/20'
-                          }`}
-                          strokeWidth={1.5}
+                      <div className="absolute top-3 right-3 z-10">
+                        <FavoriteButton
+                          product={{
+                            id: product.productId || product.id, // ProductId varsa onu kullan, yoksa SpecialCollection ID
+                            name: product.name,
+                            price: product.price,
+                            imageUrl: product.imagePaths[0] || '/placeholder.png',
+                            slug: product.id,
+                          }}
+                          className="shadow-md"
                         />
-                      </button>
+                      </div>
 
                       {/* Navigation Arrows */}
                       {product.imagePaths.length > 1 && (

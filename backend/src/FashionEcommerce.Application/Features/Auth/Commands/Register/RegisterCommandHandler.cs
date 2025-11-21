@@ -26,10 +26,19 @@ public class RegisterCommandHandler : IRequestHandler<RegisterCommand, Result<st
             return Result<string>.Failure("Bu email adresi zaten kullanılıyor");
         }
 
-        // 6 haneli aktivasyon kodu oluştur
-        var activationCode = new Random().Next(100000, 999999).ToString();
+        // Google ile kayıt ise email otomatik onaylı
+        bool isGoogleSignup = request.RegisterDto.IsGoogleSignup;
+        string? activationCode = null;
+        DateTime? codeExpiry = null;
 
-        // Şifre hash'le (basit örnek - production'da BCrypt kullanılmalı)
+        if (!isGoogleSignup)
+        {
+            // Normal kayıt için aktivasyon kodu oluştur
+            activationCode = new Random().Next(100000, 999999).ToString();
+            codeExpiry = DateTime.UtcNow.AddMinutes(3); // 3 dakika geçerli
+        }
+
+        // Şifre hash'le
         var passwordHash = BCrypt.Net.BCrypt.HashPassword(request.RegisterDto.Password);
 
         var user = new User
@@ -40,17 +49,22 @@ public class RegisterCommandHandler : IRequestHandler<RegisterCommand, Result<st
             PhoneNumber = request.RegisterDto.PhoneNumber,
             Gender = request.RegisterDto.Gender,
             PasswordHash = passwordHash,
-            IsEmailConfirmed = false,
+            IsEmailConfirmed = isGoogleSignup, // Google ile kayıtta direkt onaylı
             EmailConfirmationCode = activationCode,
-            EmailConfirmationCodeExpiry = DateTime.UtcNow.AddMinutes(3) // 3 dakika geçerli
+            EmailConfirmationCodeExpiry = codeExpiry,
+            AuthProvider = isGoogleSignup ? FashionEcommerce.Domain.Enums.AuthProvider.Google : FashionEcommerce.Domain.Enums.AuthProvider.Local
         };
 
         await _unitOfWork.Users.AddAsync(user);
         await _unitOfWork.SaveChangesAsync();
 
-        // Email gönder
-        await _emailService.SendActivationCodeAsync(user.Email, user.FirstName, activationCode);
+        // Email gönder (sadece normal kayıtta)
+        if (!isGoogleSignup && activationCode != null)
+        {
+            await _emailService.SendActivationCodeAsync(user.Email, user.FirstName, activationCode);
+            return Result<string>.Success($"Kayıt başarılı! {user.Email} adresine aktivasyon kodu gönderildi.");
+        }
 
-        return Result<string>.Success($"Kayıt başarılı! {user.Email} adresine aktivasyon kodu gönderildi.");
+        return Result<string>.Success("Kayıt başarılı! Google hesabınız ile giriş yapabilirsiniz.");
     }
 }

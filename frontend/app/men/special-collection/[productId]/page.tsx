@@ -1,11 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import { X, ShoppingBag, ChevronLeft, ChevronRight } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import PageLoader from '@/components/ui/PageLoader';
+import { useLocalCartStore } from '@/lib/stores/localCartStore';
 
 interface Product {
   id: string;
@@ -21,7 +22,9 @@ interface Product {
 
 export default function ProductDetailPage() {
   const params = useParams();
+  const router = useRouter();
   const productId = params.productId as string;
+  const { addItem } = useLocalCartStore();
 
   const [loading, setLoading] = useState(true);
   const [product, setProduct] = useState<Product | null>(null);
@@ -194,6 +197,18 @@ export default function ProductDetailPage() {
                           alert('Lütfen bir beden seçin');
                           return;
                         }
+
+                        // Sepete ekle
+                        addItem({
+                          id: product.id,
+                          name: product.name,
+                          price: product.price,
+                          imageUrl: product.imagePaths[0],
+                          slug: productId,
+                          selectedSize: selectedSize,
+                          quantity: 1,
+                        });
+
                         setIsOpening(true);
                         setIsCartOpen(true);
                         setTimeout(() => setIsOpening(false), 50);
@@ -284,7 +299,10 @@ export default function ProductDetailPage() {
                   ₺{product.price.toLocaleString('tr-TR')}
                 </span>
               </div>
-              <button className="w-full bg-black text-white py-3.5 text-sm font-medium hover:bg-gray-800 transition-colors rounded">
+              <button
+                onClick={() => router.push('/cart')}
+                className="w-full bg-black text-white py-3.5 text-sm font-medium hover:bg-gray-800 transition-colors rounded"
+              >
                 Ödemeye Geç
               </button>
               <button

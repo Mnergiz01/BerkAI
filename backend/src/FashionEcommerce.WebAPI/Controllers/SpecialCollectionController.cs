@@ -54,8 +54,76 @@ public class SpecialCollectionController : ControllerBase
         product.Id = Guid.NewGuid();
         product.CreatedAt = DateTime.UtcNow;
 
+        // "Special Collection" category ve brand'i bul veya oluştur
+        var category = await _context.Categories.FirstOrDefaultAsync(c => c.Name == "Special Collection");
+        if (category == null)
+        {
+            category = new Category
+            {
+                Name = "Special Collection",
+                Slug = "special-collection",
+                Gender = Domain.Enums.Gender.Male,
+                CreatedAt = DateTime.UtcNow
+            };
+            _context.Categories.Add(category);
+            await _context.SaveChangesAsync();
+        }
+
+        var brand = await _context.Brands.FirstOrDefaultAsync(b => b.Name == "Made in Root");
+        if (brand == null)
+        {
+            brand = new Brand
+            {
+                Name = "Made in Root",
+                Slug = "made-in-root",
+                CreatedAt = DateTime.UtcNow
+            };
+            _context.Brands.Add(brand);
+            await _context.SaveChangesAsync();
+        }
+
+        // Aynı zamanda Product tablosuna da ekle
+        var normalProduct = new Product
+        {
+            Name = product.Name,
+            Slug = product.Id.ToString(), // Special collection ID'sini slug olarak kullan
+            Description = product.Description ?? "",
+            Price = product.Price,
+            SKU = $"SC-{product.Id.ToString().Substring(0, 8)}",
+            StockQuantity = product.StockS + product.StockM + product.StockL + product.StockXL,
+            Gender = Domain.Enums.Gender.Male,
+            IsFeatured = true,
+            IsActive = product.IsActive,
+            CategoryId = category.Id,
+            BrandId = brand.Id,
+            CreatedAt = DateTime.UtcNow
+        };
+
+        _context.Products.Add(normalProduct);
+        await _context.SaveChangesAsync();
+
+        // İlk resmi ProductImage olarak ekle
+        if (product.ImagePaths.Any())
+        {
+            var mainImage = new ProductImage
+            {
+                ProductId = normalProduct.Id,
+                ImageUrl = product.ImagePaths[0],
+                DisplayOrder = 0,
+                IsMainImage = true,
+                CreatedAt = DateTime.UtcNow
+            };
+            _context.ProductImages.Add(mainImage);
+            await _context.SaveChangesAsync();
+        }
+
+        // ProductId'yi ayarla
+        product.ProductId = normalProduct.Id;
         _context.SpecialCollectionProducts.Add(product);
         await _context.SaveChangesAsync();
+
+        // Navigation property'leri temizle (circular reference hatası önlemek için)
+        product.Product = null;
 
         return CreatedAtAction(nameof(GetById), new { id = product.Id }, product);
     }
@@ -90,7 +158,7 @@ public class SpecialCollectionController : ControllerBase
     }
 
     /// <summary>
-    /// Ürünü sil (soft delete)
+    /// Ürünü sil (hard delete)
     /// </summary>
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(Guid id)
@@ -101,9 +169,28 @@ public class SpecialCollectionController : ControllerBase
         if (product == null)
             return NotFound();
 
-        product.IsDeleted = true;
-        product.UpdatedAt = DateTime.UtcNow;
+        // İlişkili Product varsa onu ve ProductImage'larını da sil
+        if (product.ProductId.HasValue)
+        {
+            var relatedProduct = await _context.Products
+                .Include(p => p.Images)
+                .FirstOrDefaultAsync(p => p.Id == product.ProductId.Value);
 
+            if (relatedProduct != null)
+            {
+                // ProductImage'ları sil
+                if (relatedProduct.Images.Any())
+                {
+                    _context.ProductImages.RemoveRange(relatedProduct.Images);
+                }
+
+                // Product'ı sil
+                _context.Products.Remove(relatedProduct);
+            }
+        }
+
+        // SpecialCollectionProduct'ı sil
+        _context.SpecialCollectionProducts.Remove(product);
         await _context.SaveChangesAsync();
 
         return NoContent();

@@ -3,6 +3,7 @@ using FashionEcommerce.Application.Features.Auth.Commands.AdminLogin;
 using FashionEcommerce.Application.Features.Auth.Commands.Login;
 using FashionEcommerce.Application.Features.Auth.Commands.Register;
 using FashionEcommerce.Application.Features.Auth.Commands.VerifyEmail;
+using FashionEcommerce.Application.Features.Auth.Commands.GoogleLogin;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -77,6 +78,23 @@ public class AuthController : ControllerBase
     public async Task<IActionResult> AdminLogin([FromBody] AdminLoginDto adminLoginDto)
     {
         var command = new AdminLoginCommand(adminLoginDto);
+        var result = await _mediator.Send(command);
+
+        if (!result.IsSuccess)
+        {
+            return Unauthorized(result);
+        }
+
+        return Ok(result);
+    }
+
+    /// <summary>
+    /// Google ile giriş yap
+    /// </summary>
+    [HttpPost("google-login")]
+    public async Task<IActionResult> GoogleLogin([FromBody] GoogleLoginDto googleLoginDto)
+    {
+        var command = new GoogleLoginCommand(googleLoginDto);
         var result = await _mediator.Send(command);
 
         if (!result.IsSuccess)

@@ -25,6 +25,7 @@ public class FashionEcommerceDbContext : DbContext
     public DbSet<Order> Orders { get; set; }
     public DbSet<OrderItem> OrderItems { get; set; }
     public DbSet<SpecialCollectionProduct> SpecialCollectionProducts { get; set; }
+    public DbSet<Favorite> Favorites { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -42,6 +43,11 @@ public class FashionEcommerceDbContext : DbContext
                 v => JsonSerializer.Serialize(v, (JsonSerializerOptions)null),
                 v => JsonSerializer.Deserialize<List<string>>(v, (JsonSerializerOptions)null) ?? new List<string>()
             );
+
+        // Favorite - Bir kullanıcı bir ürünü sadece bir kez favorilere ekleyebilir
+        modelBuilder.Entity<Favorite>()
+            .HasIndex(f => new { f.UserId, f.ProductId })
+            .IsUnique();
 
         // Apply all configurations from the current assembly
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(FashionEcommerceDbContext).Assembly);

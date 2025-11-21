@@ -13,6 +13,7 @@ public class UnitOfWork : IUnitOfWork
     private ICartRepository? _cartRepository;
     private IOrderRepository? _orderRepository;
     private IUserRepository? _userRepository;
+    private IFavoriteRepository? _favoriteRepository;
 
     public UnitOfWork(FashionEcommerceDbContext context)
     {
@@ -36,6 +37,9 @@ public class UnitOfWork : IUnitOfWork
 
     public IUserRepository Users =>
         _userRepository ??= new UserRepository(_context);
+
+    public IFavoriteRepository Favorites =>
+        _favoriteRepository ??= new FavoriteRepository(_context);
 
     public async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
     {

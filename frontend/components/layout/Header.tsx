@@ -5,13 +5,16 @@ import { useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { Search, User, Heart, ShoppingBag } from 'lucide-react';
 import { useAuthStore } from '@/lib/stores/authStore';
-import { useCartStore } from '@/lib/stores/cartStore';
+import { useLocalCartStore } from '@/lib/stores/localCartStore';
+import { useFavoritesStore } from '@/lib/stores/favoritesStore';
 import { Logo } from '@/components/ui/Logo';
+import { LoginDrawer } from '@/components/auth/LoginDrawer';
 
 export function Header() {
   const router = useRouter();
   const { user, isAuthenticated, clearAuth, checkTokenExpiry } = useAuthStore();
-  const { itemCount } = useCartStore();
+  const { itemCount } = useLocalCartStore();
+  const { favorites } = useFavoritesStore();
   const [searchTerm, setSearchTerm] = useState('');
   const [showSearch, setShowSearch] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
@@ -19,14 +22,16 @@ export function Header() {
   const [pathname, setPathname] = useState('');
   const [showNavbar, setShowNavbar] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showLoginDrawer, setShowLoginDrawer] = useState(false);
 
   // Get current pathname
   useEffect(() => {
     setPathname(window.location.pathname);
   }, []);
 
-  // Check if we're on special collection pages
+  // Check if we're on special collection, cart, or favorites pages
   const isSpecialCollectionPage = pathname.includes('/special-collection');
+  const isCartOrFavoritesPage = pathname.includes('/cart') || pathname.includes('/favorites');
 
   // Hydration fix for zustand persist
   useEffect(() => {
@@ -35,11 +40,11 @@ export function Header() {
     checkTokenExpiry();
   }, [checkTokenExpiry]);
 
-  // Scroll tracking - only for special collection pages for scroll-up navbar
+  // Scroll tracking - for special collection, cart, and favorites pages
   // For other pages, track normal scroll
   useEffect(() => {
-    if (isSpecialCollectionPage) {
-      // Special collection: scroll-up detection
+    if (isSpecialCollectionPage || isCartOrFavoritesPage) {
+      // Special collection, cart, favorites: scroll-up detection
       let previousScrollY = window.scrollY;
 
       const handleScroll = () => {
@@ -67,7 +72,7 @@ export function Header() {
       window.addEventListener('scroll', handleScroll, { passive: true });
       return () => window.removeEventListener('scroll', handleScroll);
     }
-  }, [isSpecialCollectionPage])
+  }, [isSpecialCollectionPage, isCartOrFavoritesPage])
 
   // Close user menu when clicking outside
   useEffect(() => {
@@ -105,11 +110,22 @@ export function Header() {
     return null; // or return a loading skeleton
   }
 
-  // Special collection pages: absolute positioning with scroll-up navbar
+  // Special collection pages: scroll-up navbar behavior
+  // Cart and favorites pages: always white with dark logo at top, then scroll behavior
   // Other pages: sticky with scroll-based background
-  const shouldBeWhite = isSpecialCollectionPage ? showNavbar : scrolled;
-  const isDarkLogo = isSpecialCollectionPage ? (showNavbar ? true : true) : scrolled;
-  const headerPosition = isSpecialCollectionPage ? (showNavbar ? 'fixed' : 'absolute') : 'sticky';
+  const shouldBeWhite = isSpecialCollectionPage
+    ? showNavbar
+    : isCartOrFavoritesPage
+      ? true  // Always white for cart/favorites
+      : scrolled;
+
+  const isDarkLogo = isSpecialCollectionPage
+    ? showNavbar
+    : isCartOrFavoritesPage
+      ? true  // Always dark for cart/favorites
+      : scrolled;
+
+  const headerPosition = (isSpecialCollectionPage || isCartOrFavoritesPage) ? (showNavbar ? 'fixed' : 'absolute') : 'sticky';
 
   return (
     <header className={`${headerPosition} top-0 z-50 w-full transition-all duration-300 ${
@@ -165,26 +181,33 @@ export function Header() {
 
             {/* Profile Icon - Only show if not authenticated */}
             {!isAuthenticated && (
-              <Link
-                href="/login"
+              <button
+                onClick={() => setShowLoginDrawer(true)}
                 className={`transition-colors ${
                   isDarkLogo ? 'text-gray-700 hover:text-black' : 'text-white hover:text-white/80'
                 }`}
                 aria-label="Login"
               >
                 <User className="w-5 h-5" />
-              </Link>
+              </button>
             )}
 
             {/* Favorites Icon */}
             <Link
               href="/favorites"
-              className={`transition-colors ${
+              className={`relative transition-colors ${
                 isDarkLogo ? 'text-gray-700 hover:text-black' : 'text-white hover:text-white/80'
               }`}
               aria-label="Favorites"
             >
               <Heart className="w-5 h-5" />
+              {favorites.length > 0 && (
+                <span className={`absolute -top-2 -right-2 flex h-4 w-4 items-center justify-center rounded-full text-xs transition-colors ${
+                  isDarkLogo ? 'bg-black text-white' : 'bg-white text-black'
+                }`}>
+                  {favorites.length}
+                </span>
+              )}
             </Link>
 
             {/* Cart Icon */}
@@ -233,6 +256,9 @@ export function Header() {
           </nav>
         </div>
       </div>
+
+      {/* Login Drawer */}
+      <LoginDrawer isOpen={showLoginDrawer} onClose={() => setShowLoginDrawer(false)} />
     </header>
   );
 }

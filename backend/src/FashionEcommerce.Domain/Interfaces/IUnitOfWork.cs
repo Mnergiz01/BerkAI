@@ -8,6 +8,7 @@ public interface IUnitOfWork : IDisposable
     ICartRepository Carts { get; }
     IOrderRepository Orders { get; }
     IUserRepository Users { get; }
+    IFavoriteRepository Favorites { get; }
 
     Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
     Task BeginTransactionAsync(CancellationToken cancellationToken = default);
