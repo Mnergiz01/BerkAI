@@ -25,7 +25,9 @@
       "Bash(components/ui/Loading.tsx)",
       "Bash(components/products/ProductCard.tsx)",
       "Bash(lsof:*)",
-      "Bash(PGPASSWORD=123456 psql:*)"
+      "Bash(PGPASSWORD=123456 psql:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []

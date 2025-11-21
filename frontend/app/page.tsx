@@ -236,8 +236,8 @@ export default function HomePage() {
 
               <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl">
                 <BeforeAfterSlider
-                  beforeImage="/mavii.png"
-                  afterImage="/beyazz.png"
+                  beforeImage="/muzo2.jpeg"
+                  afterImage="/muzo1.jpeg"
                   beforeAlt="Orijinal Fotoğraf"
                   afterAlt="AI ile Değiştirilmiş"
                 />

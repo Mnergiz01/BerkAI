@@ -17,3 +17,64 @@ body {
   color: #171717;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Slide animations for product images */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutToLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideOutToRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.animate-slideInFromRight {
+  animation: slideInFromRight 0.2s linear forwards;
+}
+
+.animate-slideInFromLeft {
+  animation: slideInFromLeft 0.2s linear forwards;
+}
+
+.animate-slideOutToLeft {
+  animation: slideOutToLeft 0.2s linear forwards;
+}
+
+.animate-slideOutToRight {
+  animation: slideOutToRight 0.2s linear forwards;
+}

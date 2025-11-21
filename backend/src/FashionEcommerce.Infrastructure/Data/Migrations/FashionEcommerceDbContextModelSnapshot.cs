@@ -287,6 +287,37 @@ namespace FashionEcommerce.Infrastructure.Data.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("FashionEcommerce.Domain.Entities.Favorite", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
+
+                    b.Property<Guid>("ProductId")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("UserId", "ProductId")
+                        .IsUnique();
+
+                    b.ToTable("Favorites");
+                });
+
             modelBuilder.Entity("FashionEcommerce.Domain.Entities.Order", b =>
                 {
                     b.Property<Guid>("Id")
@@ -650,6 +681,9 @@ namespace FashionEcommerce.Infrastructure.Data.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("numeric");
 
+                    b.Property<Guid?>("ProductId")
+                        .HasColumnType("uuid");
+
                     b.Property<int>("StockL")
                         .HasColumnType("integer");
 
@@ -667,6 +701,8 @@ namespace FashionEcommerce.Infrastructure.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ProductId");
+
                     b.ToTable("SpecialCollectionProducts");
                 });
 
@@ -675,6 +711,9 @@ namespace FashionEcommerce.Infrastructure.Data.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
+
+                    b.Property<int>("AuthProvider")
+                        .HasColumnType("integer");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
@@ -794,6 +833,25 @@ namespace FashionEcommerce.Infrastructure.Data.Migrations
                     b.Navigation("ParentCategory");
                 });
 
+            modelBuilder.Entity("FashionEcommerce.Domain.Entities.Favorite", b =>
+                {
+                    b.HasOne("FashionEcommerce.Domain.Entities.Product", "Product")
+                        .WithMany("Favorites")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("FashionEcommerce.Domain.Entities.User", "User")
+                        .WithMany("Favorites")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("FashionEcommerce.Domain.Entities.Order", b =>
                 {
                     b.HasOne("FashionEcommerce.Domain.Entities.Address", "BillingAddress")
@@ -887,6 +945,15 @@ namespace FashionEcommerce.Infrastructure.Data.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("FashionEcommerce.Domain.Entities.SpecialCollectionProduct", b =>
+                {
+                    b.HasOne("FashionEcommerce.Domain.Entities.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("FashionEcommerce.Domain.Entities.Brand", b =>
                 {
                     b.Navigation("Products");
@@ -911,6 +978,8 @@ namespace FashionEcommerce.Infrastructure.Data.Migrations
 
             modelBuilder.Entity("FashionEcommerce.Domain.Entities.Product", b =>
                 {
+                    b.Navigation("Favorites");
+
                     b.Navigation("Images");
 
                     b.Navigation("Variants");
@@ -921,6 +990,8 @@ namespace FashionEcommerce.Infrastructure.Data.Migrations
                     b.Navigation("Addresses");
 
                     b.Navigation("Carts");
+
+                    b.Navigation("Favorites");
 
                     b.Navigation("Orders");
                 });

@@ -299,3 +299,9 @@
 /Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll
 /Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/obj/Debug/net9.0/FashionEcommerce.WebAPI.sourcelink.json
 /Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/bin/Debug/net9.0/FashionEcommerce.WebAPI.staticwebassets.runtime.json
+/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/bin/Debug/net9.0/Google.Apis.dll
+/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/bin/Debug/net9.0/Google.Apis.Auth.dll
+/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/bin/Debug/net9.0/Google.Apis.Core.dll
+/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/bin/Debug/net9.0/Newtonsoft.Json.dll
+/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/bin/Debug/net9.0/System.Management.dll
+/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/bin/Debug/net9.0/runtimes/win/lib/net7.0/System.Management.dll
