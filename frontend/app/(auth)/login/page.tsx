@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -22,6 +22,8 @@ type LoginForm = z.infer<typeof loginSchema>;
 
 export default function LoginPage() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const redirectUrl = searchParams.get('redirect') || '/';
   const setAuth = useAuthStore((state) => state.setAuth);
   const [isLoading, setIsLoading] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
@@ -61,7 +63,7 @@ export default function LoginPage() {
 
         setAuth(userData, authData.token, rememberMe);
         toast.success('Başarıyla giriş yapıldı!');
-        router.push('/');
+        router.push(redirectUrl);
       } else {
         console.log('❌ No token in response');
         toast.error(authData.message || 'E-posta veya şifre hatalı');

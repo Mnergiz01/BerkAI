@@ -1,9 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useLocalCartStore } from '@/lib/stores/localCartStore';
 import { useOrdersStore } from '@/lib/stores/ordersStore';
+import { useAuthStore } from '@/lib/stores/authStore';
 import AddressForm, { AddressData } from '@/components/checkout/AddressForm';
 import PaymentForm, { PaymentData } from '@/components/checkout/PaymentForm';
 import toast from 'react-hot-toast';
@@ -12,8 +13,17 @@ export default function CheckoutPage() {
   const router = useRouter();
   const { items, totalPrice, clearCart } = useLocalCartStore();
   const { addOrder } = useOrdersStore();
+  const { isAuthenticated } = useAuthStore();
   const [currentStep, setCurrentStep] = useState(2); // Start from step 2 (Address)
   const [addressData, setAddressData] = useState<AddressData | null>(null);
+
+  // Redirect to login if not authenticated
+  useEffect(() => {
+    if (!isAuthenticated) {
+      toast.error('Sipariş vermek için giriş yapmalısınız');
+      router.push('/login?redirect=/checkout');
+    }
+  }, [isAuthenticated, router]);
 
   const handleAddressSubmit = (data: AddressData) => {
     setAddressData(data);
@@ -32,9 +42,9 @@ export default function CheckoutPage() {
         name: item.name,
         price: item.price,
         quantity: item.quantity,
-        size: item.size,
-        color: item.color,
-        image: item.image,
+        size: item.selectedSize,
+        color: '',
+        image: item.imageUrl,
       })),
       totalAmount: totalPrice + shippingCost,
       shippingCost,
@@ -53,10 +63,10 @@ export default function CheckoutPage() {
     toast.success('Siparişiniz başarıyla oluşturuldu!');
     clearCart();
 
-    // Redirect to orders page after 2 seconds
+    // Redirect to orders page (Siparişlerim)
     setTimeout(() => {
       router.push('/orders');
-    }, 2000);
+    }, 1500);
   };
 
   const shippingCost = totalPrice > 500 ? 0 : 29.99;
