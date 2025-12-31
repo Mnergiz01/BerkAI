@@ -53,6 +53,13 @@ REM Step 2: Backend setup
 echo Step 2: Setting up Backend (.NET)...
 echo --------------------------------------
 
+if not exist "backend" (
+    echo [X] backend directory not found
+    echo Please run this script from the project root directory.
+    pause
+    exit /b 1
+)
+
 cd backend
 
 echo Restoring backend dependencies...
@@ -82,6 +89,13 @@ echo.
 REM Step 3: Frontend setup
 echo Step 3: Setting up Frontend (Next.js)...
 echo -------------------------------------------
+
+if not exist "frontend" (
+    echo [X] frontend directory not found
+    echo Please run this script from the project root directory.
+    pause
+    exit /b 1
+)
 
 cd frontend
 

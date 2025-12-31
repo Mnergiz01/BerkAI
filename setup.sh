@@ -56,6 +56,12 @@ echo ""
 echo "🔧 Step 2: Setting up Backend (.NET)..."
 echo "--------------------------------------"
 
+if [ ! -d "backend" ]; then
+    echo -e "${RED}❌ backend directory not found${NC}"
+    echo "Please run this script from the project root directory."
+    exit 1
+fi
+
 cd backend
 
 echo "Restoring backend dependencies..."
@@ -83,6 +89,12 @@ echo ""
 # Step 3: Frontend setup
 echo "⚛️  Step 3: Setting up Frontend (Next.js)..."
 echo "-------------------------------------------"
+
+if [ ! -d "frontend" ]; then
+    echo -e "${RED}❌ frontend directory not found${NC}"
+    echo "Please run this script from the project root directory."
+    exit 1
+fi
 
 cd frontend
 
