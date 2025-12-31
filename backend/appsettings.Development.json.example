@@ -1,6 +1,3 @@
-# BerkAI Backend - Development Settings Example
-# Copy this file to appsettings.Development.json and fill in your values
-
 {
   "Logging": {
     "LogLevel": {
@@ -11,8 +8,7 @@
   },
   "AllowedHosts": "*",
   "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Database=BerkAI;Trusted_Connection=True;TrustServerCertificate=True;",
-    "Comment": "For PostgreSQL: Host=localhost;Database=BerkAI;Username=your_username;Password=your_password"
+    "DefaultConnection": "Server=localhost;Database=BerkAI;Trusted_Connection=True;TrustServerCertificate=True;"
   },
   "JwtSettings": {
     "SecretKey": "YOUR_SECRET_KEY_HERE_MINIMUM_32_CHARACTERS_LONG",
