@@ -3,8 +3,6 @@
 # BerkAI Project Setup Script
 # This script helps new team members set up the project quickly
 
-set -e  # Exit on error
-
 echo "🎉 Welcome to BerkAI Setup!"
 echo "=============================="
 echo ""
@@ -17,7 +15,7 @@ NC='\033[0m' # No Color
 
 # Check if commands exist
 check_command() {
-    if ! command -v $1 &> /dev/null; then
+    if ! command -v "$1" &> /dev/null; then
         echo -e "${RED}❌ $1 is not installed${NC}"
         return 1
     else
