@@ -9,8 +9,10 @@ public record SearchProductsQuery(
     string? SearchTerm,
     Guid? CategoryId,
     Guid? BrandId,
+    List<Guid>? BrandIds,
     decimal? MinPrice,
     decimal? MaxPrice,
     Gender? Gender,
-    string? SortBy
+    string? SortBy,
+    bool? IsDescending
 ) : IRequest<Result<IEnumerable<ProductDto>>>;

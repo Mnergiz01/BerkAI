@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { categoriesApi } from '@/lib/api/categories';
 import { brandsApi } from '@/lib/api/brands';
@@ -11,6 +12,19 @@ interface ProductFiltersProps {
 }
 
 export function ProductFilters({ filters, onFiltersChange }: ProductFiltersProps) {
+  const [expandedGender, setExpandedGender] = useState<'women' | 'men' | 'accessories' | null>(null);
+
+  // Auto-expand based on gender filter
+  useEffect(() => {
+    if (filters.gender === '2') {
+      setExpandedGender('women');
+    } else if (filters.gender === '1') {
+      setExpandedGender('men');
+    } else if (filters.gender === '3') {
+      setExpandedGender('accessories');
+    }
+  }, [filters.gender]);
+
   const { data: categoriesResponse } = useQuery({
     queryKey: ['categories'],
     queryFn: () => categoriesApi.getAll(),
@@ -24,211 +38,292 @@ export function ProductFilters({ filters, onFiltersChange }: ProductFiltersProps
   const categories = categoriesResponse?.data || [];
   const brands = brandsResponse?.data || [];
 
-  const handleCategoryChange = (categoryId: number) => {
+  // Group categories by gender
+  const womenCategories = categories.filter(cat =>
+    cat.gender === 'Female'
+  );
+
+  const menCategories = categories.filter(cat =>
+    cat.gender === 'Male'
+  );
+
+  const accessoriesCategories = categories.filter(cat =>
+    cat.gender === 'PreferNotToSay' && 
+    !cat.name.toLowerCase().includes('giyim') &&
+    (cat.name.toLowerCase().includes('aksesuar') ||
+     cat.name.toLowerCase().includes('çanta') ||
+     cat.name.toLowerCase().includes('ayakkabı') ||
+     cat.name.toLowerCase().includes('şapka') ||
+     cat.name.toLowerCase().includes('kemer') ||
+     cat.name.toLowerCase().includes('takı') ||
+     cat.name.toLowerCase().includes('saat') ||
+     cat.name.toLowerCase().includes('gözlük') ||
+     cat.name.toLowerCase().includes('atkı') ||
+     cat.name.toLowerCase().includes('eldiven'))
+  );
+
+  const toggleGender = (gender: 'women' | 'men' | 'accessories') => {
+    const wasExpanded = expandedGender === gender;
+    setExpandedGender(wasExpanded ? null : gender);
+
+    // Set gender filter when expanding
+    if (!wasExpanded) {
+      const genderValue = gender === 'women' ? '2' : gender === 'men' ? '1' : '3'; // Female=2, Male=1, PreferNotToSay=3
+      onFiltersChange({
+        ...filters,
+        gender: genderValue,
+        categoryId: undefined, // Clear category when switching gender
+        pageNumber: 1,
+      });
+    } else {
+      // Clear gender filter when collapsing
+      onFiltersChange({
+        ...filters,
+        gender: undefined,
+        categoryId: undefined,
+        pageNumber: 1,
+      });
+    }
+  };
+
+  const handleCategoryChange = (categoryId: string) => {
+    // Toggle category: if same category clicked, deselect it
+    const newCategoryId = filters.categoryId === categoryId ? undefined : categoryId;
     onFiltersChange({
       ...filters,
-      categoryId: categoryId === 0 ? undefined : categoryId,
+      categoryId: newCategoryId,
       pageNumber: 1,
     });
   };
 
-  const handleBrandChange = (brandId: number) => {
+  const handleBrandChange = (brandId: string) => {
+    const currentBrandIds = filters.brandIds || [];
+    let newBrandIds: string[];
+
+    // Toggle brand selection
+    if (currentBrandIds.includes(brandId)) {
+      // Remove brand if already selected
+      newBrandIds = currentBrandIds.filter(id => id !== brandId);
+    } else {
+      // Add brand if not selected
+      newBrandIds = [...currentBrandIds, brandId];
+    }
+
     onFiltersChange({
       ...filters,
-      brandId: brandId === 0 ? undefined : brandId,
+      brandIds: newBrandIds.length > 0 ? newBrandIds : undefined,
       pageNumber: 1,
     });
   };
 
-  const handlePriceChange = (minPrice?: number, maxPrice?: number) => {
-    onFiltersChange({
-      ...filters,
-      minPrice,
-      maxPrice,
-      pageNumber: 1,
-    });
-  };
-
-  const handleSortChange = (sortBy: string) => {
-    const [field, direction] = sortBy.split('_');
-    onFiltersChange({
-      ...filters,
-      sortBy: field,
-      isDescending: direction === 'desc',
-      pageNumber: 1,
-    });
-  };
-
-  const clearFilters = () => {
-    onFiltersChange({
-      pageNumber: 1,
-      pageSize: filters.pageSize || 12,
-    });
-  };
-
-  const hasActiveFilters =
-    filters.categoryId || filters.brandId || filters.minPrice || filters.maxPrice;
 
   return (
-    <div className="rounded-lg border bg-white p-6 shadow-sm">
-      <div className="mb-4 flex items-center justify-between">
-        <h2 className="text-lg font-semibold text-gray-900">Filters</h2>
-        {hasActiveFilters && (
-          <button
-            onClick={clearFilters}
-            className="text-sm text-blue-600 hover:text-blue-700"
-          >
-            Clear All
-          </button>
-        )}
-      </div>
-
-      {/* Sort By */}
-      <div className="mb-6">
-        <label className="mb-2 block text-sm font-medium text-gray-700">
-          Sort By
-        </label>
-        <select
-          value={
-            filters.sortBy
-              ? `${filters.sortBy}_${filters.isDescending ? 'desc' : 'asc'}`
-              : ''
-          }
-          onChange={(e) => handleSortChange(e.target.value)}
-          className="w-full rounded-lg border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+    <div className="bg-white flex h-full">
+      {/* Left Navigation */}
+      <div className="w-52 border-r border-gray-200">
+        {/* Women Main Section */}
+        <button
+          onClick={() => toggleGender('women')}
+          className={`w-full text-left px-6 py-5 border-b border-gray-200 hover:bg-gray-50 transition-colors ${
+            expandedGender === 'women' ? 'bg-gray-50' : ''
+          }`}
         >
-          <option value="">Default</option>
-          <option value="price_asc">Price: Low to High</option>
-          <option value="price_desc">Price: High to Low</option>
-          <option value="name_asc">Name: A to Z</option>
-          <option value="name_desc">Name: Z to A</option>
-          <option value="createdAt_desc">Newest First</option>
-        </select>
+          <span className={`text-base tracking-wide ${
+            expandedGender === 'women' ? 'font-medium text-black' : 'font-light text-gray-700'
+          }`}>
+            KADIN
+          </span>
+        </button>
+
+        {/* Men Main Section */}
+        <button
+          onClick={() => toggleGender('men')}
+          className={`w-full text-left px-6 py-5 border-b border-gray-200 hover:bg-gray-50 transition-colors ${
+            expandedGender === 'men' ? 'bg-gray-50' : ''
+          }`}
+        >
+          <span className={`text-base tracking-wide ${
+            expandedGender === 'men' ? 'font-medium text-black' : 'font-light text-gray-700'
+          }`}>
+            ERKEK
+          </span>
+        </button>
+
+        {/* Accessories Main Section */}
+        <button
+          onClick={() => toggleGender('accessories')}
+          className={`w-full text-left px-6 py-5 border-b border-gray-200 hover:bg-gray-50 transition-colors ${
+            expandedGender === 'accessories' ? 'bg-gray-50' : ''
+          }`}
+        >
+          <span className={`text-base tracking-wide ${
+            expandedGender === 'accessories' ? 'font-medium text-black' : 'font-light text-gray-700'
+          }`}>
+            AKSESUAR
+          </span>
+        </button>
       </div>
 
-      {/* Categories */}
-      <div className="mb-6">
-        <label className="mb-2 block text-sm font-medium text-gray-700">
-          Category
-        </label>
-        <div className="space-y-2">
-          <label className="flex items-center">
-            <input
-              type="radio"
-              name="category"
-              checked={!filters.categoryId}
-              onChange={() => handleCategoryChange(0)}
-              className="mr-2 h-4 w-4 text-blue-600 focus:ring-blue-500"
-            />
-            <span className="text-sm text-gray-700">All Categories</span>
-          </label>
-          {categories.map((category) => (
-            <label key={category.id} className="flex items-center">
-              <input
-                type="radio"
-                name="category"
-                checked={filters.categoryId === category.id}
-                onChange={() => handleCategoryChange(category.id)}
-                className="mr-2 h-4 w-4 text-blue-600 focus:ring-blue-500"
-              />
-              <span className="text-sm text-gray-700">{category.name}</span>
-            </label>
-          ))}
-        </div>
-      </div>
+      {/* Right Content Area */}
+      <div className="flex-1 overflow-y-auto">
+        {/* Women Sub-sections */}
+        {expandedGender === 'women' && (
+          <div className="p-8">
+            <div className="mb-8">
+              <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">Kategoriler</h3>
+              <div className="grid grid-cols-2 gap-3">
+                {womenCategories.map((category) => (
+                  <button
+                    key={category.id}
+                    onClick={() => handleCategoryChange(category.id)}
+                    className={`text-left px-4 py-3 text-sm transition-all duration-200 ${
+                      filters.categoryId === category.id
+                        ? 'bg-black text-white font-medium'
+                        : 'text-gray-700 hover:bg-gray-100 font-light'
+                    }`}
+                  >
+                    {category.name}
+                  </button>
+                ))}
+              </div>
+            </div>
 
-      {/* Brands */}
-      <div className="mb-6">
-        <label className="mb-2 block text-sm font-medium text-gray-700">
-          Brand
-        </label>
-        <div className="space-y-2">
-          <label className="flex items-center">
-            <input
-              type="radio"
-              name="brand"
-              checked={!filters.brandId}
-              onChange={() => handleBrandChange(0)}
-              className="mr-2 h-4 w-4 text-blue-600 focus:ring-blue-500"
-            />
-            <span className="text-sm text-gray-700">All Brands</span>
-          </label>
-          {brands.map((brand) => (
-            <label key={brand.id} className="flex items-center">
-              <input
-                type="radio"
-                name="brand"
-                checked={filters.brandId === brand.id}
-                onChange={() => handleBrandChange(brand.id)}
-                className="mr-2 h-4 w-4 text-blue-600 focus:ring-blue-500"
-              />
-              <span className="text-sm text-gray-700">{brand.name}</span>
-            </label>
-          ))}
-        </div>
-      </div>
-
-      {/* Price Range */}
-      <div>
-        <label className="mb-2 block text-sm font-medium text-gray-700">
-          Price Range
-        </label>
-        <div className="space-y-2">
-          <div className="flex items-center gap-2">
-            <input
-              type="number"
-              placeholder="Min"
-              value={filters.minPrice || ''}
-              onChange={(e) =>
-                handlePriceChange(
-                  e.target.value ? Number(e.target.value) : undefined,
-                  filters.maxPrice
-                )
-              }
-              className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <span className="text-gray-500">-</span>
-            <input
-              type="number"
-              placeholder="Max"
-              value={filters.maxPrice || ''}
-              onChange={(e) =>
-                handlePriceChange(
-                  filters.minPrice,
-                  e.target.value ? Number(e.target.value) : undefined
-                )
-              }
-              className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
+            <div className="border-t border-gray-200 pt-8">
+              <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">Markalar</h3>
+              <div className="grid grid-cols-2 gap-3">
+                {brands.map((brand) => {
+                  const isSelected = filters.brandIds?.includes(brand.id) || false;
+                  return (
+                    <button
+                      key={brand.id}
+                      onClick={() => handleBrandChange(brand.id)}
+                      className={`text-left px-4 py-3 text-sm transition-all duration-200 ${
+                        isSelected
+                          ? 'bg-black text-white font-medium'
+                          : 'text-gray-700 hover:bg-gray-100 font-light'
+                      }`}
+                    >
+                      {brand.name}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
           </div>
-          {/* Quick price filters */}
-          <div className="flex flex-wrap gap-2">
-            <button
-              onClick={() => handlePriceChange(undefined, 50)}
-              className="rounded-lg border border-gray-300 px-3 py-1 text-xs hover:bg-gray-50"
-            >
-              Under $50
-            </button>
-            <button
-              onClick={() => handlePriceChange(50, 100)}
-              className="rounded-lg border border-gray-300 px-3 py-1 text-xs hover:bg-gray-50"
-            >
-              $50 - $100
-            </button>
-            <button
-              onClick={() => handlePriceChange(100, 200)}
-              className="rounded-lg border border-gray-300 px-3 py-1 text-xs hover:bg-gray-50"
-            >
-              $100 - $200
-            </button>
-            <button
-              onClick={() => handlePriceChange(200, undefined)}
-              className="rounded-lg border border-gray-300 px-3 py-1 text-xs hover:bg-gray-50"
-            >
-              Over $200
-            </button>
+        )}
+
+        {/* Men Sub-sections */}
+        {expandedGender === 'men' && (
+          <div className="p-8">
+            <div className="mb-8">
+              <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">Kategoriler</h3>
+              <div className="grid grid-cols-2 gap-3">
+                {menCategories.map((category) => (
+                  <button
+                    key={category.id}
+                    onClick={() => handleCategoryChange(category.id)}
+                    className={`text-left px-4 py-3 text-sm transition-all duration-200 ${
+                      filters.categoryId === category.id
+                        ? 'bg-black text-white font-medium'
+                        : 'text-gray-700 hover:bg-gray-100 font-light'
+                    }`}
+                  >
+                    {category.name}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="border-t border-gray-200 pt-8">
+              <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">Markalar</h3>
+              <div className="grid grid-cols-2 gap-3">
+                {brands.map((brand) => {
+                  const isSelected = filters.brandIds?.includes(brand.id) || false;
+                  return (
+                    <button
+                      key={brand.id}
+                      onClick={() => handleBrandChange(brand.id)}
+                      className={`text-left px-4 py-3 text-sm transition-all duration-200 ${
+                        isSelected
+                          ? 'bg-black text-white font-medium'
+                          : 'text-gray-700 hover:bg-gray-100 font-light'
+                      }`}
+                    >
+                      {brand.name}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
           </div>
-        </div>
+        )}
+
+        {/* Accessories Sub-sections */}
+        {expandedGender === 'accessories' && (
+          <div className="p-8">
+            <div className="mb-8">
+              <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">Kategoriler</h3>
+              <div className="grid grid-cols-2 gap-3">
+                {accessoriesCategories.map((category) => (
+                  <button
+                    key={category.id}
+                    onClick={() => handleCategoryChange(category.id)}
+                    className={`text-left px-4 py-3 text-sm transition-all duration-200 ${
+                      filters.categoryId === category.id
+                        ? 'bg-black text-white font-medium'
+                        : 'text-gray-700 hover:bg-gray-100 font-light'
+                    }`}
+                  >
+                    {category.name}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="border-t border-gray-200 pt-8">
+              <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">Markalar</h3>
+              <div className="grid grid-cols-2 gap-3">
+                {brands.map((brand) => {
+                  const isSelected = filters.brandIds?.includes(brand.id) || false;
+                  return (
+                    <button
+                      key={brand.id}
+                      onClick={() => handleBrandChange(brand.id)}
+                      className={`text-left px-4 py-3 text-sm transition-all duration-200 ${
+                        isSelected
+                          ? 'bg-black text-white font-medium'
+                          : 'text-gray-700 hover:bg-gray-100 font-light'
+                      }`}
+                    >
+                      {brand.name}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/*             isSelected
+                          ? 'bg-black text-white font-medium'
+                          : 'text-gray-700 hover:bg-gray-100 font-light'
+                      }`}
+                    >
+                      {brand.name}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Empty state when nothing is selected */}
+        {!expandedGender && (
+          <div className="flex items-center justify-center h-full">
+            <p className="text-gray-400 text-sm font-light">Bir kategori seçin</p>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -70,13 +70,26 @@ public class ProductsController : ControllerBase
         [FromQuery] string? q,
         [FromQuery] Guid? categoryId,
         [FromQuery] Guid? brandId,
+        [FromQuery] string? brandIds,
         [FromQuery] decimal? minPrice,
         [FromQuery] decimal? maxPrice,
         [FromQuery] Gender? gender,
         [FromQuery] string? sortBy,
+        [FromQuery] bool? isDescending,
         CancellationToken cancellationToken)
     {
-        var query = new SearchProductsQuery(q, categoryId, brandId, minPrice, maxPrice, gender, sortBy);
+        // Parse comma-separated brand IDs
+        List<Guid>? brandIdsList = null;
+        if (!string.IsNullOrWhiteSpace(brandIds))
+        {
+            brandIdsList = brandIds.Split(',', StringSplitOptions.RemoveEmptyEntries)
+                .Select(id => Guid.TryParse(id.Trim(), out var guid) ? guid : (Guid?)null)
+                .Where(id => id.HasValue)
+                .Select(id => id!.Value)
+                .ToList();
+        }
+
+        var query = new SearchProductsQuery(q, categoryId, brandId, brandIdsList, minPrice, maxPrice, gender, sortBy, isDescending);
         var result = await _mediator.Send(query, cancellationToken);
         return Ok(result);
     }

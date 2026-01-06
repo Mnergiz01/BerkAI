@@ -12,6 +12,11 @@ export const productsApi = {
     return response.data;
   },
 
+  getSpecialCollectionById: async (id: string) => {
+    const response = await apiClient.get<ApiResponse<Product>>(`/SpecialCollection/${id}`);
+    return response.data;
+  },
+
   search: async (params: ProductSearchParams) => {
     const response = await apiClient.get<ApiResponse<Product[]>>('/products/search', { params });
     return response.data;

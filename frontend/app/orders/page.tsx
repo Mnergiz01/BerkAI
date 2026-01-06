@@ -78,7 +78,7 @@ export default function OrdersPage() {
                 İlk siparişinizi vererek alışverişe başlayın!
               </p>
               <button
-                onClick={() => router.push('/shop/products')}
+                onClick={() => router.push('/products')}
                 className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors"
               >
                 Alışverişe Başla
@@ -145,7 +145,9 @@ export default function OrdersPage() {
                         <div className="flex-1 min-w-0">
                           <h4 className="font-medium truncate">{item.name}</h4>
                           <div className="flex flex-wrap gap-3 mt-1 text-sm text-gray-600">
-                            {item.size && <span>Beden: {item.size}</span>}
+                            {item.size && (
+                              <span>{item.size.match(/^\d+$/) ? 'Numara' : 'Beden'}: {item.size}</span>
+                            )}
                             {item.color && <span>Renk: {item.color}</span>}
                             <span>Adet: {item.quantity}</span>
                           </div>

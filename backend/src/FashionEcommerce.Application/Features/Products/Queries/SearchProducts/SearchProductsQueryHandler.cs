@@ -41,6 +41,11 @@ public class SearchProductsQueryHandler : IRequestHandler<SearchProductsQuery, R
             query = query.Where(p => p.BrandId == request.BrandId.Value);
         }
 
+        if (request.BrandIds != null && request.BrandIds.Any())
+        {
+            query = query.Where(p => request.BrandIds.Contains(p.BrandId));
+        }
+
         if (request.MinPrice.HasValue)
         {
             query = query.Where(p => p.Price >= request.MinPrice.Value);
@@ -57,14 +62,23 @@ public class SearchProductsQueryHandler : IRequestHandler<SearchProductsQuery, R
         }
 
         // Sıralama
-        query = request.SortBy?.ToLower() switch
+        if (!string.IsNullOrWhiteSpace(request.SortBy))
         {
-            "price_asc" => query.OrderBy(p => p.Price),
-            "price_desc" => query.OrderByDescending(p => p.Price),
-            "name" => query.OrderBy(p => p.Name),
-            "newest" => query.OrderByDescending(p => p.CreatedAt),
-            _ => query.OrderBy(p => p.Name)
-        };
+            var isDescending = request.IsDescending ?? false;
+
+            query = request.SortBy.ToLower() switch
+            {
+                "price" => isDescending ? query.OrderByDescending(p => p.Price) : query.OrderBy(p => p.Price),
+                "name" => isDescending ? query.OrderByDescending(p => p.Name) : query.OrderBy(p => p.Name),
+                "createdat" => isDescending ? query.OrderByDescending(p => p.CreatedAt) : query.OrderBy(p => p.CreatedAt),
+                _ => query.OrderBy(p => p.Name)
+            };
+        }
+        else
+        {
+            // Varsayılan sıralama: En yeni ürünler
+            query = query.OrderByDescending(p => p.CreatedAt);
+        }
 
         var productDtos = _mapper.Map<IEnumerable<ProductDto>>(query.ToList());
         return Result<IEnumerable<ProductDto>>.Success(productDtos);

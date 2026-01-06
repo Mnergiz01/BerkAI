@@ -2,65 +2,139 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
-import { useMutation } from '@tanstack/react-query';
-import toast from 'react-hot-toast';
+import { useRouter } from 'next/navigation';
+import { Heart } from 'lucide-react';
 import type { Product } from '@/types/api';
-import { formatPrice } from '@/lib/utils/format';
-import { addToCart } from '@/lib/api/cart';
-import { useCartStore } from '@/lib/stores/cartStore';
 import { useAuthStore } from '@/lib/stores/authStore';
-import { Button } from '@/components/ui/Button';
+import { useFavoritesStore } from '@/lib/stores/favoritesStore';
+import toast from 'react-hot-toast';
+import { useState } from 'react';
 
 interface ProductCardProps {
   product: Product;
+  onFavoriteAdded?: () => void;
 }
 
-export function ProductCard({ product }: ProductCardProps) {
-  const [quantity, setQuantity] = useState(1);
+const SIZES = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
+const SHOE_SIZES = ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45'];
+
+export function ProductCard({ product, onFavoriteAdded }: ProductCardProps) {
+  const router = useRouter();
   const { isAuthenticated } = useAuthStore();
-  const { setCart } = useCartStore();
+  const { addFavorite, removeFavorite, isFavorite } = useFavoritesStore();
+  const [selectedSize, setSelectedSize] = useState<string | null>(null);
 
-  const addToCartMutation = useMutation({
-    mutationFn: () => addToCart({ productId: product.id, quantity }),
-    onSuccess: (cart) => {
-      setCart(cart);
-      toast.success('Added to cart!');
-      setQuantity(1);
-    },
-    onError: (error: any) => {
-      toast.error(error.message || 'Failed to add to cart');
-    },
-  });
+  // Fallback image based on product category and name - MOVED TO TOP
+  const getFallbackImage = () => {
+    const name = product.name.toLowerCase();
+    if (name.includes('elbise')) return 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=800';
+    if (name.includes('bluz')) return 'https://images.unsplash.com/photo-1564859228273-274232fdb516?w=800';
+    if (name.includes('pantolon') || name.includes('jean')) return 'https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=800';
+    if (name.includes('etek')) return 'https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=800';
+    if (name.includes('ceket')) return 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800';
+    if (name.includes('ayakkabı')) return 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800';
+    if (name.includes('t-shirt') || name.includes('tshirt')) return 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800';
+    if (name.includes('gömlek')) return 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800';
+    if (name.includes('kazak')) return 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800';
+    if (name.includes('çanta')) return 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=800';
+    if (name.includes('saat')) return 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800';
+    if (name.includes('gözlük')) return 'https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=800';
+    return 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=800'; // Default fashion image
+  };
 
-  const handleAddToCart = (e: React.MouseEvent) => {
+  const displayImage = product.imageUrl || getFallbackImage();
+
+  const handleToggleFavorite = (e: React.MouseEvent) => {
     e.preventDefault();
-    if (!isAuthenticated) {
-      toast.error('Please login to add items to cart');
-      return;
+
+    if (isFavorite(product.id)) {
+      removeFavorite(product.id);
+      toast.success('Favorilerden çıkarıldı');
+    } else {
+      addFavorite({
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        imageUrl: displayImage, // Use displayImage instead of product.imageUrl
+        slug: product.slug || product.id,
+      });
+      toast.success('Favorilere eklendi!');
+      // Notify parent to open drawer
+      if (onFavoriteAdded) {
+        onFavoriteAdded();
+      }
     }
-    addToCartMutation.mutate();
+  };
+
+  const handleSizeClick = (e: React.MouseEvent, size: string) => {
+    e.preventDefault();
+    setSelectedSize(size);
+    // Navigate to product page with size parameter
+    router.push(`/product/${product.id}?size=${size}`);
   };
 
   const isOutOfStock = product.stockQuantity === 0;
+  const isFavorited = isFavorite(product.id);
+
+  // Determine if product is shoe, clothing, or accessory based on category and name
+  const categoryLower = product.categoryName?.toLowerCase() || '';
+  const nameLower = product.name?.toLowerCase() || '';
+  const isShoe = categoryLower.includes('ayakkabı') ||
+                 categoryLower.includes('bot') ||
+                 categoryLower.includes('spor ayakkabı') ||
+                 nameLower.includes('ayakkabı') ||
+                 nameLower.includes('bot');
+  const isAccessory = categoryLower.includes('aksesuar') ||
+                      categoryLower.includes('çanta') ||
+                      categoryLower.includes('kemer') ||
+                      categoryLower.includes('şapka') ||
+                      categoryLower.includes('takı') ||
+                      categoryLower.includes('saat') ||
+                      categoryLower.includes('gözlük') ||
+                      categoryLower.includes('atkı') ||
+                      categoryLower.includes('eldiven') ||
+                      nameLower.includes('çanta') ||
+                      nameLower.includes('saat') ||
+                      nameLower.includes('gözlük') ||
+                      nameLower.includes('şapka') ||
+                      nameLower.includes('kemer') ||
+                      nameLower.includes('atkı') ||
+                      nameLower.includes('eldiven');
+
+  // Don't show sizes for accessories
+  const shouldShowSizes = !isAccessory && !isOutOfStock;
+  const sizeLabel = isShoe ? 'NUMARA SEÇ' : 'BEDEN SEÇ';
 
   return (
-    <div className="group relative overflow-hidden rounded-lg border bg-white shadow-sm transition-all hover:shadow-lg">
-      <Link href={`/products/${product.id}`}>
+    <Link href={`/product/${product.id}`} className="group block">
+      <div className="relative">
+        {/* Favorite Button */}
+        <button
+          onClick={handleToggleFavorite}
+          className="absolute right-2 top-2 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-white rounded-full p-1.5 shadow-sm hover:shadow-md"
+          aria-label={isFavorited ? 'Favorilerden çıkar' : 'Favorilere ekle'}
+        >
+          <Heart
+            className={`h-4 w-4 transition-colors ${
+              isFavorited ? 'fill-black text-black' : 'text-gray-700'
+            }`}
+          />
+        </button>
+
         {/* Product Image */}
-        <div className="relative aspect-square overflow-hidden bg-gray-100">
-          {product.imageUrl ? (
+        <div className="relative aspect-3/4 overflow-hidden bg-gray-100 mb-3">
+          {displayImage ? (
             <Image
-              src={product.imageUrl}
+              src={displayImage}
               alt={product.name}
               fill
-              className="object-cover transition-transform group-hover:scale-105"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
             />
           ) : (
             <div className="flex h-full items-center justify-center">
               <svg
-                className="h-24 w-24 text-gray-300"
+                className="h-16 w-16 text-gray-300"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -74,72 +148,62 @@ export function ProductCard({ product }: ProductCardProps) {
               </svg>
             </div>
           )}
+
+          {/* Size Selection Bar - Slide up from bottom on hover */}
+          {shouldShowSizes && (
+            <div className="absolute bottom-0 left-0 right-0 bg-black/40 backdrop-blur-md transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out py-3 px-2">
+              <p className="text-white text-[10px] mb-2 text-center tracking-wider uppercase opacity-80">{sizeLabel}</p>
+              <div className="flex flex-wrap gap-1.5 justify-center">
+                {(isShoe ? SHOE_SIZES : SIZES).map((size) => (
+                  <button
+                    key={size}
+                    onClick={(e) => handleSizeClick(e, size)}
+                    className={`px-3 py-1.5 text-xs font-medium tracking-wider transition-all duration-200 ${
+                      selectedSize === size
+                        ? 'bg-white text-black'
+                        : 'bg-white/20 hover:bg-white/30 text-white border border-white/30'
+                    }`}
+                  >
+                    {size}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
           {isOutOfStock && (
-            <div className="absolute inset-0 flex items-center justify-center bg-black/50">
-              <span className="rounded bg-red-600 px-3 py-1 text-sm font-semibold text-white">
-                Out of Stock
+            <div className="absolute inset-0 flex items-center justify-center bg-white/80">
+              <span className="text-xs font-medium text-gray-700 uppercase tracking-wide">
+                Tükendi
               </span>
             </div>
           )}
         </div>
 
         {/* Product Info */}
-        <div className="p-4">
-          {/* Brand & Category */}
-          <div className="mb-2 flex items-center justify-between text-xs text-gray-700">
-            {product.brandName && <span>{product.brandName}</span>}
-            {product.categoryName && <span>{product.categoryName}</span>}
-          </div>
-
+        <div className="space-y-1">
           {/* Product Name */}
-          <h3 className="mb-2 line-clamp-2 text-lg font-semibold text-gray-900">
+          <h3 className="text-sm font-normal text-black line-clamp-2 leading-tight">
             {product.name}
           </h3>
 
-          {/* Product Description */}
-          <p className="mb-3 line-clamp-2 text-sm text-gray-800">
-            {product.description}
-          </p>
-
-          {/* Price & Stock */}
-          <div className="mb-4 flex items-center justify-between">
-            <span className="text-2xl font-bold text-blue-600">
-              {formatPrice(product.price)}
-            </span>
-            {!isOutOfStock && (
-              <span className="text-sm text-gray-700">
-                {product.stockQuantity} in stock
-              </span>
-            )}
-          </div>
-        </div>
-      </Link>
-
-      {/* Add to Cart Button */}
-      {!isOutOfStock && (
-        <div className="border-t p-4">
+          {/* Price */}
           <div className="flex items-center gap-2">
-            <input
-              type="number"
-              min="1"
-              max={product.stockQuantity}
-              value={quantity}
-              onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value) || 1))}
-              className="w-16 rounded border border-gray-300 px-2 py-1 text-center"
-              onClick={(e) => e.preventDefault()}
-            />
-            <Button
-              onClick={handleAddToCart}
-              className="flex-1"
-              isLoading={addToCartMutation.isPending}
-              disabled={!isAuthenticated}
-            >
-              {isAuthenticated ? 'Add to Cart' : 'Login to Buy'}
-            </Button>
+            <span className="text-sm font-semibold text-black">
+              {product.price.toLocaleString('tr-TR')}₺
+            </span>
           </div>
+
+          {/* Category or Brand (optional) */}
+          {product.categoryName && (
+            <p className="text-xs text-gray-500">
+              {product.categoryName}
+            </p>
+          )}
         </div>
-      )}
-    </div>
+      </div>
+    </Link>
   );
 }
+
 export default ProductCard;

@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
+import { getProductImage } from '@/lib/utils/format';
 
 export interface FavoriteProduct {
   id: string;
@@ -16,6 +17,7 @@ interface FavoritesState {
   removeFavorite: (productId: string) => void;
   isFavorite: (productId: string) => boolean;
   clearFavorites: () => void;
+  fixImageUrls: () => void;
 }
 
 export const useFavoritesStore = create<FavoritesState>()(
@@ -33,6 +35,14 @@ export const useFavoritesStore = create<FavoritesState>()(
       isFavorite: (productId) =>
         get().favorites.some((p) => p.id === productId),
       clearFavorites: () => set({ favorites: [] }),
+      fixImageUrls: () => {
+        const favorites = get().favorites;
+        const fixedFavorites = favorites.map((fav) => ({
+          ...fav,
+          imageUrl: getProductImage(fav.imageUrl, fav.name),
+        }));
+        set({ favorites: fixedFavorites });
+      },
     }),
     {
       name: 'favorites-storage',

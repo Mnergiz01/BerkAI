@@ -1,127 +1,128 @@
 'use client';
 
-import { useState } from 'react';
 import { X, Heart } from 'lucide-react';
-import { useFavoritesStore } from '@/lib/stores/favoritesStore';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import Link from 'next/link';
+import { useFavoritesStore } from '@/lib/stores/favoritesStore';
+import { useEffect } from 'react';
+import { getProductImage } from '@/lib/utils/format';
 
 interface FavoritesDrawerProps {
   isOpen: boolean;
   onClose: () => void;
-  onLoginClick: () => void;
 }
 
-export default function FavoritesDrawer({ isOpen, onClose, onLoginClick }: FavoritesDrawerProps) {
-  const favorites = useFavoritesStore((state) => state.favorites);
-  const removeFavorite = useFavoritesStore((state) => state.removeFavorite);
+export function FavoritesDrawer({ isOpen, onClose }: FavoritesDrawerProps) {
+  const router = useRouter();
+  const { favorites, removeFavorite } = useFavoritesStore();
+
+  // Close on escape key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    if (isOpen) {
+      window.addEventListener('keydown', handleEscape);
+      return () => window.removeEventListener('keydown', handleEscape);
+    }
+  }, [isOpen, onClose]);
+
+  const handleGoToFavorites = () => {
+    onClose();
+    router.push('/favorites');
+  };
+
+  if (!isOpen) return null;
 
   return (
     <>
-      {/* Overlay */}
+      {/* Backdrop */}
       <div
-        className={`fixed inset-0 bg-black/50 z-40 transition-opacity duration-500 ${
-          isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
-        }`}
+        className="fixed inset-0 bg-black/50 z-50 transition-opacity duration-300 animate-in fade-in"
         onClick={onClose}
       />
 
       {/* Drawer */}
-      <div
-        className={`fixed top-0 right-0 h-full w-full md:w-[850px] bg-white z-50 shadow-2xl transform transition-transform duration-500 ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
-        } ${!isOpen ? 'pointer-events-none' : ''}`}
-      >
-        <div className="flex flex-col h-full">
-          {/* Header */}
-          <div className="flex items-center justify-between p-6 border-b">
-            <div className="flex items-center gap-2">
-              <Heart className="w-6 h-6 text-red-500" />
-              <h2 className="text-2xl font-bold">Favorilerim</h2>
+      <div className="fixed right-0 top-0 h-full w-full max-w-md bg-white shadow-2xl z-50 flex flex-col transition-transform duration-300 ease-out animate-in slide-in-from-right">
+        {/* Header */}
+        <div className="flex items-center justify-between p-6 border-b">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center">
+              <Heart className="w-5 h-5 text-white fill-white" />
             </div>
-            <button
-              onClick={onClose}
-              className="p-2 hover:bg-gray-100 rounded-full transition-colors"
-            >
-              <X className="w-6 h-6" />
-            </button>
+            <div>
+              <h2 className="text-lg font-semibold">Favorilere Eklendi</h2>
+              <p className="text-sm text-gray-500">{favorites.length} ürün</p>
+            </div>
           </div>
+          <button
+            onClick={onClose}
+            className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
 
-          {/* Content */}
-          <div className="flex-1 overflow-y-auto p-6">
-            {/* Message for non-logged in users */}
-            <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-              <p className="text-sm text-blue-900 mb-3">
-                <strong>Artık favorilerinizi kaybetmeyin!</strong>
-                <br />
-                Seçiminizi kaydetmek için Oturum Açın veya Hesap Oluşturun
-              </p>
-              <button
-                onClick={() => {
-                  onClose();
-                  onLoginClick();
-                }}
-                className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                Giriş Yap
-              </button>
+        {/* Content */}
+        <div className="flex-1 overflow-y-auto p-6">
+          {favorites.length === 0 ? (
+            <div className="text-center py-12">
+              <Heart className="w-16 h-16 mx-auto text-gray-300 mb-4" />
+              <p className="text-gray-500">Favori ürününüz yok</p>
             </div>
-
-            {/* Favorites List */}
-            {favorites.length === 0 ? (
-              <div className="text-center py-12">
-                <Heart className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-                <p className="text-gray-500">Henüz favori ürününüz yok</p>
-              </div>
-            ) : (
-              <div className="grid grid-cols-1 gap-4">
-                {favorites.map((product) => (
-                  <div
-                    key={product.id}
-                    className="flex gap-4 p-4 border rounded-lg hover:shadow-md transition-shadow"
-                  >
-                    <Link href={`/products/${product.slug}`} className="relative w-24 h-24 flex-shrink-0">
-                      <Image
-                        src={product.imageUrl}
-                        alt={product.name}
-                        fill
-                        className="object-cover rounded-lg"
-                      />
-                    </Link>
-                    <div className="flex-1">
-                      <Link href={`/products/${product.slug}`}>
-                        <h3 className="font-semibold hover:text-blue-600 transition-colors">
-                          {product.name}
-                        </h3>
-                      </Link>
-                      <div className="mt-2">
-                        {product.discountPrice ? (
-                          <div className="flex items-center gap-2">
-                            <span className="text-lg font-bold text-red-600">
-                              {product.discountPrice.toFixed(2)} TL
-                            </span>
-                            <span className="text-sm text-gray-500 line-through">
-                              {product.price.toFixed(2)} TL
-                            </span>
-                          </div>
-                        ) : (
-                          <span className="text-lg font-bold">
-                            {product.price.toFixed(2)} TL
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                    <button
-                      onClick={() => removeFavorite(product.id)}
-                      className="p-2 hover:bg-gray-100 rounded-full transition-colors h-fit"
-                    >
-                      <X className="w-5 h-5 text-gray-500" />
-                    </button>
+          ) : (
+            <div className="space-y-4">
+              {favorites.slice(0, 5).map((item) => {
+                const displayImage = getProductImage(item.imageUrl, item.name);
+                return (
+                <div key={item.id} className="flex gap-4">
+                  <div className="w-20 h-20 bg-gray-100 rounded overflow-hidden flex-shrink-0">
+                    <Image
+                      src={displayImage}
+                      alt={item.name}
+                      width={80}
+                      height={80}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                ))}
-              </div>
-            )}
-          </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-sm font-medium line-clamp-2">{item.name}</h3>
+                    <p className="text-sm font-semibold mt-1">
+                      {item.price.toLocaleString('tr-TR')}₺
+                    </p>
+                  </div>
+                  <button
+                    onClick={() => removeFavorite(item.id)}
+                    className="text-gray-400 hover:text-red-500 transition-colors"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
+                </div>
+                );
+              })}
+              {favorites.length > 5 && (
+                <p className="text-sm text-gray-500 text-center py-2">
+                  +{favorites.length - 5} ürün daha
+                </p>
+              )}
+            </div>
+          )}
+        </div>
+
+        {/* Footer */}
+        <div className="border-t p-6 space-y-4">
+          <button
+            onClick={handleGoToFavorites}
+            className="w-full bg-black text-white py-3 hover:bg-gray-800 transition-colors font-medium"
+          >
+            Tüm Favorileri Gör
+          </button>
+          <button
+            onClick={onClose}
+            className="w-full border border-black text-black py-3 hover:bg-black hover:text-white transition-colors font-medium"
+          >
+            Alışverişe Devam Et
+          </button>
         </div>
       </div>
     </>

@@ -2,20 +2,16 @@
 
 import { useState, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { useSearchParams, useRouter } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 import { productsApi } from '@/lib/api/products';
+import { categoriesApi } from '@/lib/api/categories';
+import { brandsApi } from '@/lib/api/brands';
 import { ProductSearchParams } from '@/types/api';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
 import ProductCard from '@/components/products/ProductCard';
-import ProductFilters from '@/components/products/ProductFilters';
 import Loading from '@/components/ui/Loading';
-import { Filter, X } from 'lucide-react';
 
 export default function ProductsPage() {
-  const router = useRouter();
   const searchParams = useSearchParams();
-  const [showFilters, setShowFilters] = useState(false);
 
   // Parse filters from URL
   const [filters, setFilters] = useState<ProductSearchParams>(() => {
@@ -24,6 +20,12 @@ export default function ProductsPage() {
     if (searchParams.get('q')) params.q = searchParams.get('q')!;
     if (searchParams.get('categoryId')) params.categoryId = searchParams.get('categoryId')!;
     if (searchParams.get('brandId')) params.brandId = searchParams.get('brandId')!;
+    if (searchParams.get('brandIds')) {
+      const brandIds = searchParams.get('brandIds')!.split(',').filter(Boolean);
+      if (brandIds.length > 0) {
+        params.brandIds = brandIds;
+      }
+    }
     if (searchParams.get('minPrice')) params.minPrice = Number(searchParams.get('minPrice'));
     if (searchParams.get('maxPrice')) params.maxPrice = Number(searchParams.get('maxPrice'));
     if (searchParams.get('gender')) params.gender = searchParams.get('gender')!;
@@ -35,8 +37,8 @@ export default function ProductsPage() {
   // Convert search params to filters
   const apiFilters: any = {
     ...filters,
-    categoryId: filters.categoryId ? Number(filters.categoryId) : undefined,
-    brandId: filters.brandId ? Number(filters.brandId) : undefined,
+    categoryId: filters.categoryId || undefined,
+    brandId: filters.brandId || undefined,
   };
 
   // Fetch products
@@ -45,166 +47,204 @@ export default function ProductsPage() {
     queryFn: () => productsApi.search(apiFilters),
   });
 
+  // Fetch categories and brands for filters
+  const { data: categoriesResponse } = useQuery({
+    queryKey: ['categories'],
+    queryFn: () => categoriesApi.getAll(),
+  });
+
+  const { data: brandsResponse } = useQuery({
+    queryKey: ['brands'],
+    queryFn: () => brandsApi.getAll(),
+  });
+
   const products = productsResponse?.data || [];
+  const categories = categoriesResponse?.data || [];
+  const brands = brandsResponse?.data || [];
 
-  // Update URL when filters change
+  // Sync filters with URL params
   useEffect(() => {
-    const params = new URLSearchParams();
-    Object.entries(filters).forEach(([key, value]) => {
-      if (value !== undefined && value !== null && value !== '') {
-        params.set(key, String(value));
-      }
-    });
-    router.push(`/shop/products?${params.toString()}`, { scroll: false });
-  }, [filters, router]);
+    const params: ProductSearchParams = {};
 
-  const handleFilterChange = (newFilters: any) => {
-    // Convert numeric filters back to strings for URL params
-    const searchParams: ProductSearchParams = {
-      ...newFilters,
-      categoryId: newFilters.categoryId ? String(newFilters.categoryId) : undefined,
-      brandId: newFilters.brandId ? String(newFilters.brandId) : undefined,
-    };
-    setFilters(searchParams);
+    if (searchParams.get('q')) params.q = searchParams.get('q')!;
+    if (searchParams.get('categoryId')) params.categoryId = searchParams.get('categoryId')!;
+    if (searchParams.get('brandId')) params.brandId = searchParams.get('brandId')!;
+    if (searchParams.get('brandIds')) {
+      const brandIds = searchParams.get('brandIds')!.split(',').filter(Boolean);
+      if (brandIds.length > 0) {
+        params.brandIds = brandIds;
+      }
+    }
+    if (searchParams.get('minPrice')) params.minPrice = Number(searchParams.get('minPrice'));
+    if (searchParams.get('maxPrice')) params.maxPrice = Number(searchParams.get('maxPrice'));
+    if (searchParams.get('gender')) params.gender = searchParams.get('gender')!;
+    if (searchParams.get('sortBy')) params.sortBy = searchParams.get('sortBy')!;
+
+    setFilters(params);
+  }, [searchParams]);
+
+  const handleFilterChange = (key: string, value: any) => {
+    setFilters({
+      ...filters,
+      [key]: value || undefined,
+    });
   };
 
   const handleSortChange = (sortBy: string) => {
-    setFilters({ ...filters, sortBy: sortBy as any });
+    if (!sortBy) {
+      const { sortBy: _, isDescending: __, ...rest } = filters;
+      setFilters(rest);
+      return;
+    }
+
+    const [field, direction] = sortBy.split('_');
+    setFilters({
+      ...filters,
+      sortBy: field as any,
+      isDescending: direction === 'desc',
+    });
   };
 
   const activeFilterCount = Object.keys(filters).filter(
-    (key) => key !== 'sortBy' && filters[key as keyof ProductSearchParams] !== undefined
+    (key) => key !== 'sortBy' && key !== 'isDescending' && filters[key as keyof ProductSearchParams] !== undefined
   ).length;
 
   return (
-    <>
-      <Header />
-      <main className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-8">
-          <div className="flex gap-8">
-            {/* Sidebar Filters - Desktop */}
-            <aside className="hidden lg:block w-64 flex-shrink-0">
-              <div className="sticky top-24">
-                <ProductFilters filters={apiFilters} onFiltersChange={handleFilterChange} />
-              </div>
-            </aside>
-
-            {/* Products Grid */}
-            <div className="flex-1">
-              {/* Toolbar */}
-              <div className="bg-white p-4 mb-6 flex items-center justify-between">
-                <div className="flex items-center gap-4">
-                  {/* Mobile Filter Button */}
-                  <button
-                    onClick={() => setShowFilters(true)}
-                    className="lg:hidden flex items-center gap-2 px-4 py-2 border border-gray-300 hover:bg-gray-50"
-                  >
-                    <Filter className="w-4 h-4" />
-                    Filtrele
-                    {activeFilterCount > 0 && (
-                      <span className="bg-black text-white text-xs px-2 py-0.5 rounded-full">
-                        {activeFilterCount}
-                      </span>
-                    )}
-                  </button>
-
-                  <p className="text-sm text-gray-600">
-                    <span className="font-medium">{products.length}</span> ürün bulundu
-                  </p>
-                </div>
-
-                {/* Sort */}
-                <select
-                  value={filters.sortBy || ''}
-                  onChange={(e) => handleSortChange(e.target.value)}
-                  className="px-4 py-2 border border-gray-300 focus:outline-none focus:border-black text-sm"
-                >
-                  <option value="">Varsayılan Sıralama</option>
-                  <option value="newest">En Yeni</option>
-                  <option value="price_asc">Fiyat: Düşükten Yükseğe</option>
-                  <option value="price_desc">Fiyat: Yüksekten Düşüğe</option>
-                  <option value="name">İsim: A-Z</option>
-                </select>
-              </div>
-
-              {/* Active Filters */}
-              {activeFilterCount > 0 && (
-                <div className="bg-white p-4 mb-6 flex items-center gap-2 flex-wrap">
-                  <span className="text-sm font-medium">Aktif Filtreler:</span>
-                  {Object.entries(filters).map(([key, value]) => {
-                    if (key === 'sortBy' || value === undefined) return null;
-                    return (
-                      <button
-                        key={key}
-                        onClick={() => handleFilterChange({ ...filters, [key]: undefined })}
-                        className="flex items-center gap-1 px-3 py-1 bg-gray-100 hover:bg-gray-200 text-sm"
-                      >
-                        {key}: {String(value)}
-                        <X className="w-3 h-3" />
-                      </button>
-                    );
-                  })}
-                  <button
-                    onClick={() => setFilters({})}
-                    className="text-sm text-red-600 hover:underline ml-2"
-                  >
-                    Tümünü Temizle
-                  </button>
-                </div>
-              )}
-
-              {/* Products Grid */}
-              {isLoading ? (
-                <div className="flex justify-center py-12">
-                  <Loading size="lg" />
-                </div>
-              ) : products.length > 0 ? (
-                <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
-                  {products.map((product) => (
-                    <ProductCard key={product.id} product={product} />
-                  ))}
-                </div>
-              ) : (
-                <div className="bg-white p-12 text-center">
-                  <h3 className="text-xl font-bold mb-2">Ürün bulunamadı</h3>
-                  <p className="text-gray-600 mb-4">
-                    Arama kriterlerinize uygun ürün bulunamadı
-                  </p>
-                  <button
-                    onClick={() => setFilters({})}
-                    className="px-6 py-2 bg-black text-white font-medium hover:bg-gray-800"
-                  >
-                    Filtreleri Temizle
-                  </button>
-                </div>
-              )}
-            </div>
+    <main className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-8">
+        {/* Filters Section */}
+        <div className="bg-white p-6 mb-6 rounded-lg shadow-sm">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-lg font-semibold">Filtreler</h2>
+            <p className="text-sm text-gray-600">
+              <span className="font-medium">{products.length}</span> ürün bulundu
+            </p>
           </div>
-        </div>
-      </main>
 
-      {/* Mobile Filter Modal */}
-      {showFilters && (
-        <div className="fixed inset-0 z-50 lg:hidden">
-          <div className="absolute inset-0 bg-black/50" onClick={() => setShowFilters(false)} />
-          <div className="absolute inset-y-0 right-0 w-full max-w-sm bg-white overflow-y-auto">
-            <div className="p-4">
-              <button
-                onClick={() => setShowFilters(false)}
-                className="mb-4 text-gray-600 hover:text-black"
+          {/* Filter Controls */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
+            {/* Category Filter */}
+            <div>
+              <label className="text-xs font-medium text-gray-600 uppercase tracking-wider mb-2 block">
+                Kategori
+              </label>
+              <select
+                value={filters.categoryId || ''}
+                onChange={(e) => handleFilterChange('categoryId', e.target.value)}
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-black text-sm"
               >
-                ✕ Kapat
-              </button>
-              <ProductFilters
-                filters={apiFilters}
-                onFiltersChange={handleFilterChange}
+                <option value="">Tüm Kategoriler</option>
+                {categories.map((category) => (
+                  <option key={category.id} value={category.id}>
+                    {category.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Brand Filter */}
+            <div>
+              <label className="text-xs font-medium text-gray-600 uppercase tracking-wider mb-2 block">
+                Marka
+              </label>
+              <select
+                value={filters.brandId || ''}
+                onChange={(e) => handleFilterChange('brandId', e.target.value)}
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-black text-sm"
+              >
+                <option value="">Tüm Markalar</option>
+                {brands.map((brand) => (
+                  <option key={brand.id} value={brand.id}>
+                    {brand.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Min Price Filter */}
+            <div>
+              <label className="text-xs font-medium text-gray-600 uppercase tracking-wider mb-2 block">
+                Min Fiyat
+              </label>
+              <input
+                type="number"
+                value={filters.minPrice || ''}
+                onChange={(e) => handleFilterChange('minPrice', e.target.value ? Number(e.target.value) : undefined)}
+                placeholder="0 ₺"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-black text-sm"
+              />
+            </div>
+
+            {/* Max Price Filter */}
+            <div>
+              <label className="text-xs font-medium text-gray-600 uppercase tracking-wider mb-2 block">
+                Max Fiyat
+              </label>
+              <input
+                type="number"
+                value={filters.maxPrice || ''}
+                onChange={(e) => handleFilterChange('maxPrice', e.target.value ? Number(e.target.value) : undefined)}
+                placeholder="9999 ₺"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-black text-sm"
               />
             </div>
           </div>
-        </div>
-      )}
 
-      <Footer />
-    </>
+          {/* Sort and Clear Filters */}
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <label className="text-sm font-medium text-gray-700">Sırala:</label>
+              <select
+                value={filters.sortBy && filters.isDescending !== undefined ? `${filters.sortBy}_${filters.isDescending ? 'desc' : 'asc'}` : ''}
+                onChange={(e) => handleSortChange(e.target.value)}
+                className="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-black text-sm"
+              >
+                <option value="">Varsayılan Sıralama</option>
+                <option value="createdAt_desc">En Yeni</option>
+                <option value="price_asc">Fiyat: Düşükten Yükseğe</option>
+                <option value="price_desc">Fiyat: Yüksekten Düşüğe</option>
+                <option value="name_asc">İsim: A-Z</option>
+                <option value="name_desc">İsim: Z-A</option>
+              </select>
+            </div>
+
+            {activeFilterCount > 0 && (
+              <button
+                onClick={() => setFilters({})}
+                className="text-sm text-gray-600 hover:text-black underline font-medium"
+              >
+                Tüm Filtreleri Temizle ({activeFilterCount})
+              </button>
+            )}
+          </div>
+        </div>
+
+        {/* Products Grid */}
+        {isLoading ? (
+          <div className="flex justify-center py-12">
+            <Loading size="lg" />
+          </div>
+        ) : products.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {products.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+        ) : (
+          <div className="bg-white p-12 text-center rounded-lg shadow-sm">
+            <h3 className="text-xl font-bold mb-2">Ürün bulunamadı</h3>
+            <p className="text-gray-600 mb-4">
+              Arama kriterlerinize uygun ürün bulunamadı
+            </p>
+            <button
+              onClick={() => setFilters({})}
+              className="px-6 py-2 bg-black text-white font-medium hover:bg-gray-800 rounded"
+            >
+              Filtreleri Temizle
+            </button>
+          </div>
+        )}
+      </div>
+    </main>
   );
 }

@@ -7,8 +7,6 @@ import { useRef, useState } from 'react';
 import { productsApi } from '@/lib/api/products';
 import ProductCard from '@/components/products/ProductCard';
 import Loading from '@/components/ui/Loading';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
 import { BeforeAfterSlider } from '@/components/ui/BeforeAfterSlider';
 import { ChevronRight, Pause, Play, Sparkles } from 'lucide-react';
 
@@ -85,9 +83,7 @@ export default function HomePage() {
   const featuredProducts = productsResponse?.data?.filter((p: any) => p.isFeatured) || [];
 
   return (
-    <>
-      <Header />
-      <main>
+    <main>
         {/* Hero Section */}
         <section className="relative h-[95vh] bg-gray-900 overflow-hidden -mt-16">
           <div className="absolute inset-0 bg-black/40 z-10" />
@@ -110,13 +106,13 @@ export default function HomePage() {
             </h1>
             <div className="flex gap-8">
               <Link
-                href="/shop/products?gender=2"
+                href="/categories/kadin"
                 className="text-white text-sm font-light uppercase tracking-[0.2em] underline underline-offset-4 hover:opacity-80 transition-opacity"
               >
                 KADIN
               </Link>
               <Link
-                href="/men/special-collection"
+                href="/categories/erkek"
                 className="text-white text-sm font-light uppercase tracking-[0.2em] underline underline-offset-4 hover:opacity-80 transition-opacity"
               >
                 ERKEK
@@ -138,7 +134,7 @@ export default function HomePage() {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Link
-                href="/shop/products?gender=2"
+                href="/categories/kadin"
                 className="relative w-full bg-gray-100 group overflow-hidden"
                 onMouseEnter={handleMouseEnterWomen}
                 onMouseLeave={handleMouseLeaveWomen}
@@ -178,7 +174,7 @@ export default function HomePage() {
               </Link>
 
               <Link
-                href="/men"
+                href="/categories/erkek"
                 className="relative w-full bg-gray-100 group overflow-hidden"
                 onMouseEnter={handleMouseEnterMen}
                 onMouseLeave={handleMouseLeaveMen}
@@ -285,7 +281,5 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-      <Footer />
-    </>
   );
 }

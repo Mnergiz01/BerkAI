@@ -1,8 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
 import PageLoader from '@/components/ui/PageLoader';
 
 export default function MenPage() {
@@ -22,9 +20,7 @@ export default function MenPage() {
   }
 
   return (
-    <>
-      <Header />
-      <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="relative h-[60vh] bg-black flex items-center justify-center">
           <div className="text-center text-white">
@@ -45,7 +41,5 @@ export default function MenPage() {
           </div>
         </section>
       </main>
-      <Footer />
-    </>
   );
 }

@@ -108,9 +108,9 @@ export default function LoginPage() {
       <div className="max-w-md w-full">
         <div className="bg-white rounded-2xl shadow-xl p-8 sm:p-10">
           <div>
-            <Link href="/" className="flex justify-center mb-6">
+            <div className="flex justify-center mb-6">
               <Logo />
-            </Link>
+            </div>
             <h2 className="text-3xl font-bold text-gray-900 text-center">
               Hesabınıza Giriş Yapın
             </h2>

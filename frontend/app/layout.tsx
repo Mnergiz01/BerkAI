@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Bodoni_Moda, Montserrat } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/providers/Providers";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -34,7 +36,9 @@ export default function RootLayout({
     <html lang="tr" className={`${inter.className} ${bodoniModa.variable} ${montserrat.variable}`} suppressHydrationWarning>
       <body className="antialiased" suppressHydrationWarning>
         <Providers>
+          <Header />
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>

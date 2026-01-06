@@ -3,8 +3,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
 import PageLoader from '@/components/ui/PageLoader';
 import FavoriteButton from '@/components/favorites/FavoriteButton';
 
@@ -74,9 +72,7 @@ export default function SpecialCollectionPage() {
   }
 
   return (
-    <>
-      <Header />
-      <main className="min-h-screen bg-white pt-20">
+    <main className="min-h-screen bg-white pt-20">
         {/* Products Grid */}
         <section className="py-12">
           <div className="w-full pr-4">
@@ -193,7 +189,5 @@ export default function SpecialCollectionPage() {
           </div>
         </section>
       </main>
-      <Footer />
-    </>
   );
 }

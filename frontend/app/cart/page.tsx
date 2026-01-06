@@ -5,8 +5,6 @@ import { Trash2, Plus, Minus, ShoppingBag } from 'lucide-react';
 import { useLocalCartStore } from '@/lib/stores/localCartStore';
 import Link from 'next/link';
 import { toast } from 'react-hot-toast';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
 
 export default function CartPage() {
   const { items, removeItem, updateQuantity, totalPrice } = useLocalCartStore();
@@ -24,9 +22,7 @@ export default function CartPage() {
   const finalTotal = totalPrice + shippingCost;
 
   return (
-    <>
-      <Header />
-      <div className="min-h-screen bg-white pt-20">
+    <div className="min-h-screen bg-white pt-20">
         <div className="container mx-auto px-4 py-8">
           {/* Page Header */}
           <div className="mb-8">
@@ -64,28 +60,36 @@ export default function CartPage() {
                       <div className="flex gap-0">
                         {/* Product Image */}
                         <Link
-                          href={`/men/special-collection/${item.slug}`}
+                          href={`/product/${item.id}`}
                           className="w-44 h-56 bg-white overflow-hidden flex-shrink-0"
                         >
-                          <img
-                            src={item.imageUrl}
-                            alt={item.name}
-                            className="w-full h-full object-cover"
-                          />
+                          {item.imageUrl ? (
+                            <img
+                              src={item.imageUrl}
+                              alt={item.name}
+                              className="w-full h-full object-cover"
+                            />
+                          ) : (
+                            <div className="w-full h-full flex items-center justify-center bg-gray-100">
+                              <ShoppingBag className="w-16 h-16 text-gray-300" />
+                            </div>
+                          )}
                         </Link>
 
                         {/* Product Details */}
                         <div className="flex-1 flex flex-col justify-between p-6">
                           <div>
                             <Link
-                              href={`/men/special-collection/${item.slug}`}
+                              href={`/product/${item.id}`}
                               className="font-normal text-black mb-3 text-xl leading-tight hover:underline"
                             >
                               {item.name}
                             </Link>
-                            <p className="text-base text-gray-400 mb-2">
-                              Beden: {item.selectedSize}
-                            </p>
+                            {item.selectedSize && (
+                              <p className="text-base text-gray-400 mb-2">
+                                {item.selectedSize.match(/^\d+$/) ? 'Numara' : 'Beden'}: {item.selectedSize}
+                              </p>
+                            )}
                             <p className="text-base text-gray-400 mb-4">
                               Adet: {item.quantity}
                             </p>
@@ -186,7 +190,5 @@ export default function CartPage() {
           )}
         </div>
       </div>
-      <Footer />
-    </>
   );
 }

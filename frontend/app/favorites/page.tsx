@@ -7,19 +7,20 @@ import { useFavoritesStore } from '@/lib/stores/favoritesStore';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-hot-toast';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+import { getProductImage } from '@/lib/utils/format';
 
 export default function FavoritesPage() {
   const router = useRouter();
   const { user, token, isAuthenticated } = useAuthStore();
-  const { favorites, removeFavorite, clearFavorites } = useFavoritesStore();
+  const { favorites, removeFavorite, clearFavorites, fixImageUrls } = useFavoritesStore();
   const [mounted, setMounted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-  }, []);
+    // Fix any missing image URLs on mount
+    fixImageUrls();
+  }, [fixImageUrls]);
 
   // Giriş yapmış kullanıcı için backend'den favorileri çek
   useEffect(() => {
@@ -102,9 +103,7 @@ export default function FavoritesPage() {
   }
 
   return (
-    <>
-      <Header />
-      <div className="min-h-screen bg-white pt-20">
+    <div className="min-h-screen bg-white pt-20">
         <div className="container mx-auto px-4 py-8">
           {/* Page Header */}
           <div className="mb-8">
@@ -161,12 +160,14 @@ export default function FavoritesPage() {
         ) : (
           /* Favorites Grid */
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {favorites.map((product) => (
+            {favorites.map((product) => {
+              const displayImage = getProductImage(product.imageUrl, product.name);
+              return (
               <div key={product.id} className="group">
-                <Link href={`/men/special-collection/${product.slug}`} className="block">
+                <Link href={`/product/${product.id}`} className="block">
                   <div className="relative aspect-[3/4] bg-gray-100 overflow-hidden mb-3">
                     <img
-                      src={product.imageUrl}
+                      src={displayImage}
                       alt={product.name}
                       className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
@@ -205,12 +206,11 @@ export default function FavoritesPage() {
                   </div>
                 </Link>
               </div>
-            ))}
+            );
+            })}
           </div>
         )}
         </div>
       </div>
-      <Footer />
-    </>
   );
 }

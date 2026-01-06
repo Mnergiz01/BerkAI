@@ -33,15 +33,16 @@ export interface AuthResponse {
 
 // Product types
 export interface Product {
-  id: number;
+  id: string;
   name: string;
   description: string;
   price: number;
   stockQuantity: number;
   imageUrl?: string;
-  categoryId: number;
+  slug?: string;
+  categoryId: string;
   categoryName?: string;
-  brandId: number;
+  brandId: string;
   brandName?: string;
   createdAt: string;
   updatedAt: string;
@@ -57,8 +58,10 @@ export interface ProductsResponse {
 
 export interface ProductFilters {
   searchTerm?: string;
-  categoryId?: number;
-  brandId?: number;
+  categoryId?: string;
+  brandId?: string;
+  brandIds?: string[];
+  gender?: string;
   minPrice?: number;
   maxPrice?: number;
   pageNumber?: number;
@@ -74,24 +77,29 @@ export interface ProductSearchParams {
   categoryId?: string;
   brand?: string;
   brandId?: string;
+  brandIds?: string[];
   minPrice?: number;
   maxPrice?: number;
   gender?: string;
   page?: string;
+  pageNumber?: number;
   sortBy?: string;
+  isDescending?: boolean;
 }
 
 // Category types
 export interface Category {
-  id: number;
+  id: string;
   name: string;
   description?: string;
+  gender?: string;
+  imageUrl?: string;
   createdAt: string;
 }
 
 // Brand types
 export interface Brand {
-  id: number;
+  id: string;
   name: string;
   description?: string;
   createdAt: string;
@@ -118,7 +126,7 @@ export interface Cart {
 }
 
 export interface AddToCartRequest {
-  productId: number;
+  productId: string;
   quantity: number;
 }
 

@@ -70,7 +70,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/products?category=accessories" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/products?gender=3" className="text-gray-400 hover:text-white transition-colors">
                   Aksesuarlar
                 </Link>
               </li>
