@@ -1,1 +1,1979 @@
-{"Version":1,"Hash":"LAz6UaMoPnV/5iQY3H05aVloBph9j52za63fTIndzjk=","Source":"FashionEcommerce.WebAPI","BasePath":"_content/FashionEcommerce.WebAPI","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[{"Name":"FashionEcommerce.WebAPI/wwwroot","Source":"FashionEcommerce.WebAPI","ContentRoot":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/","BasePath":"_content/FashionEcommerce.WebAPI","Pattern":"**"}],"Assets":[{"Identity":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/0bb27ce6-c281-42e5-ae98-22970da75e6d.webp","SourceId":"FashionEcommerce.WebAPI","SourceType":"Discovered","ContentRoot":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/","BasePath":"_content/FashionEcommerce.WebAPI","RelativePath":"uploads/special-collection/0bb27ce6-c281-42e5-ae98-22970da75e6d#[.{fingerprint}]?.webp","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"ekwg3b9gh6","Integrity":"Ingt9gg+OEa9YQ/No+UnnrcI/84TGk39TndHwMPKk1w=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot/uploads/special-collection/0bb27ce6-c281-42e5-ae98-22970da75e6d.webp","FileLength":42256,"LastWriteTime":"2025-11-13T17:20:15+00:00"},{"Identity":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/137f611c-5577-4320-bef0-4f84d9236c0f.png","SourceId":"FashionEcommerce.WebAPI","SourceType":"Discovered","ContentRoot":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/","BasePath":"_content/FashionEcommerce.WebAPI","RelativePath":"uploads/special-collection/137f611c-5577-4320-bef0-4f84d9236c0f#[.{fingerprint}]?.png","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"lzjsoi6f8s","Integrity":"z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot/uploads/special-collection/137f611c-5577-4320-bef0-4f84d9236c0f.png","FileLength":2315850,"LastWriteTime":"2025-11-21T17:57:49+00:00"},{"Identity":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/24447809-cfdb-483e-b9c5-6321aa8bab6a.jpeg","SourceId":"FashionEcommerce.WebAPI","SourceType":"Discovered","ContentRoot":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/","BasePath":"_content/FashionEcommerce.WebAPI","RelativePath":"uploads/special-collection/24447809-cfdb-483e-b9c5-6321aa8bab6a#[.{fingerprint}]?.jpeg","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"24xximji58","Integrity":"HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot/uploads/special-collection/24447809-cfdb-483e-b9c5-6321aa8bab6a.jpeg","FileLength":183421,"LastWriteTime":"2025-11-20T15:59:44+00:00"},{"Identity":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/31895d37-f85c-425c-b968-14fa20e3e54b.webp","SourceId":"FashionEcommerce.WebAPI","SourceType":"Discovered","ContentRoot":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/","BasePath":"_content/FashionEcommerce.WebAPI","RelativePath":"uploads/special-collection/31895d37-f85c-425c-b968-14fa20e3e54b#[.{fingerprint}]?.webp","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"i07l7wa6n6","Integrity":"PuJdPMmcB/KjtJU8rheovQZjmMsT4ORilKkR5gxIjXw=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot/uploads/special-collection/31895d37-f85c-425c-b968-14fa20e3e54b.webp","FileLength":36364,"LastWriteTime":"2025-11-13T17:20:12+00:00"},{"Identity":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/3ecb7f57-9b70-4a54-8e58-3b902766d7e2.jpeg","SourceId":"FashionEcommerce.WebAPI","SourceType":"Discovered","ContentRoot":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/","BasePath":"_content/FashionEcommerce.WebAPI","RelativePath":"uploads/special-collection/3ecb7f57-9b70-4a54-8e58-3b902766d7e2#[.{fingerprint}]?.jpeg","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"24xximji58","Integrity":"HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot/uploads/special-collection/3ecb7f57-9b70-4a54-8e58-3b902766d7e2.jpeg","FileLength":183421,"LastWriteTime":"2025-11-21T18:02:27+00:00"},{"Identity":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/5230c265-b280-45d1-83c7-f770ab2a2456.jpeg","SourceId":"FashionEcommerce.WebAPI","SourceType":"Discovered","ContentRoot":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/","BasePath":"_content/FashionEcommerce.WebAPI","RelativePath":"uploads/special-collection/5230c265-b280-45d1-83c7-f770ab2a2456#[.{fingerprint}]?.jpeg","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"24xximji58","Integrity":"HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot/uploads/special-collection/5230c265-b280-45d1-83c7-f770ab2a2456.jpeg","FileLength":183421,"LastWriteTime":"2025-11-21T18:11:54+00:00"},{"Identity":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/5c7f094b-2f62-4568-88be-5b8aebff4b0b.webp","SourceId":"FashionEcommerce.WebAPI","SourceType":"Discovered","ContentRoot":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/","BasePath":"_content/FashionEcommerce.WebAPI","RelativePath":"uploads/special-collection/5c7f094b-2f62-4568-88be-5b8aebff4b0b#[.{fingerprint}]?.webp","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"a8zhqize20","Integrity":"ml5fsrFM/okYyj8YW/cZ2Rzrq4YYqyMTCFfnevCqkYE=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot/uploads/special-collection/5c7f094b-2f62-4568-88be-5b8aebff4b0b.webp","FileLength":30974,"LastWriteTime":"2025-11-13T17:20:13+00:00"},{"Identity":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/7bfc95d8-fa83-4372-9e1f-c4e4cfae50b8.png","SourceId":"FashionEcommerce.WebAPI","SourceType":"Discovered","ContentRoot":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/","BasePath":"_content/FashionEcommerce.WebAPI","RelativePath":"uploads/special-collection/7bfc95d8-fa83-4372-9e1f-c4e4cfae50b8#[.{fingerprint}]?.png","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"jwxd21whvh","Integrity":"He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot/uploads/special-collection/7bfc95d8-fa83-4372-9e1f-c4e4cfae50b8.png","FileLength":3411836,"LastWriteTime":"2025-11-21T17:57:49+00:00"},{"Identity":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/83f6bb52-4b22-4229-9194-9adfa124ee5d.webp","SourceId":"FashionEcommerce.WebAPI","SourceType":"Discovered","ContentRoot":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/","BasePath":"_content/FashionEcommerce.WebAPI","RelativePath":"uploads/special-collection/83f6bb52-4b22-4229-9194-9adfa124ee5d#[.{fingerprint}]?.webp","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"ekwg3b9gh6","Integrity":"Ingt9gg+OEa9YQ/No+UnnrcI/84TGk39TndHwMPKk1w=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot/uploads/special-collection/83f6bb52-4b22-4229-9194-9adfa124ee5d.webp","FileLength":42256,"LastWriteTime":"2025-11-13T17:20:31+00:00"},{"Identity":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/896a4ea5-7640-44b2-87b3-2bc2b917510c.webp","SourceId":"FashionEcommerce.WebAPI","SourceType":"Discovered","ContentRoot":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/","BasePath":"_content/FashionEcommerce.WebAPI","RelativePath":"uploads/special-collection/896a4ea5-7640-44b2-87b3-2bc2b917510c#[.{fingerprint}]?.webp","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"c1qzp41abn","Integrity":"cLhWYTX4z6ntmLlKUIYKyRdQBrLsbWsmw1tk+jKruWg=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot/uploads/special-collection/896a4ea5-7640-44b2-87b3-2bc2b917510c.webp","FileLength":43650,"LastWriteTime":"2025-11-13T17:20:31+00:00"},{"Identity":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/8bbb60eb-9a0f-430f-a3cb-0381ff266c00.png","SourceId":"FashionEcommerce.WebAPI","SourceType":"Discovered","ContentRoot":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/","BasePath":"_content/FashionEcommerce.WebAPI","RelativePath":"uploads/special-collection/8bbb60eb-9a0f-430f-a3cb-0381ff266c00#[.{fingerprint}]?.png","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"lzjsoi6f8s","Integrity":"z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot/uploads/special-collection/8bbb60eb-9a0f-430f-a3cb-0381ff266c00.png","FileLength":2315850,"LastWriteTime":"2025-11-21T18:11:54+00:00"},{"Identity":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/9df55d14-8df7-4a55-bcb0-1e99dfb0fb53.png","SourceId":"FashionEcommerce.WebAPI","SourceType":"Discovered","ContentRoot":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/","BasePath":"_content/FashionEcommerce.WebAPI","RelativePath":"uploads/special-collection/9df55d14-8df7-4a55-bcb0-1e99dfb0fb53#[.{fingerprint}]?.png","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"jwxd21whvh","Integrity":"He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot/uploads/special-collection/9df55d14-8df7-4a55-bcb0-1e99dfb0fb53.png","FileLength":3411836,"LastWriteTime":"2025-11-21T18:11:54+00:00"},{"Identity":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/b015c076-2985-40c5-b3df-1094b82b16e7.png","SourceId":"FashionEcommerce.WebAPI","SourceType":"Discovered","ContentRoot":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/","BasePath":"_content/FashionEcommerce.WebAPI","RelativePath":"uploads/special-collection/b015c076-2985-40c5-b3df-1094b82b16e7#[.{fingerprint}]?.png","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"lzjsoi6f8s","Integrity":"z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot/uploads/special-collection/b015c076-2985-40c5-b3df-1094b82b16e7.png","FileLength":2315850,"LastWriteTime":"2025-11-20T15:59:44+00:00"},{"Identity":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/b42a5524-5dc1-484a-bf78-d212602a2346.webp","SourceId":"FashionEcommerce.WebAPI","SourceType":"Discovered","ContentRoot":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/","BasePath":"_content/FashionEcommerce.WebAPI","RelativePath":"uploads/special-collection/b42a5524-5dc1-484a-bf78-d212602a2346#[.{fingerprint}]?.webp","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"i07l7wa6n6","Integrity":"PuJdPMmcB/KjtJU8rheovQZjmMsT4ORilKkR5gxIjXw=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot/uploads/special-collection/b42a5524-5dc1-484a-bf78-d212602a2346.webp","FileLength":36364,"LastWriteTime":"2025-11-13T17:20:31+00:00"},{"Identity":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/b7508353-d0ba-4889-9397-45a130abdaf3.png","SourceId":"FashionEcommerce.WebAPI","SourceType":"Discovered","ContentRoot":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/","BasePath":"_content/FashionEcommerce.WebAPI","RelativePath":"uploads/special-collection/b7508353-d0ba-4889-9397-45a130abdaf3#[.{fingerprint}]?.png","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"jwxd21whvh","Integrity":"He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot/uploads/special-collection/b7508353-d0ba-4889-9397-45a130abdaf3.png","FileLength":3411836,"LastWriteTime":"2025-11-20T15:59:44+00:00"},{"Identity":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/dbaf375f-5257-426b-8a3e-b1e98282042d.jpeg","SourceId":"FashionEcommerce.WebAPI","SourceType":"Discovered","ContentRoot":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/","BasePath":"_content/FashionEcommerce.WebAPI","RelativePath":"uploads/special-collection/dbaf375f-5257-426b-8a3e-b1e98282042d#[.{fingerprint}]?.jpeg","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"24xximji58","Integrity":"HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot/uploads/special-collection/dbaf375f-5257-426b-8a3e-b1e98282042d.jpeg","FileLength":183421,"LastWriteTime":"2025-11-21T17:57:49+00:00"},{"Identity":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/e68254a8-f74e-45a6-9c9f-93ec0f54cdb8.webp","SourceId":"FashionEcommerce.WebAPI","SourceType":"Discovered","ContentRoot":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/","BasePath":"_content/FashionEcommerce.WebAPI","RelativePath":"uploads/special-collection/e68254a8-f74e-45a6-9c9f-93ec0f54cdb8#[.{fingerprint}]?.webp","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"a8zhqize20","Integrity":"ml5fsrFM/okYyj8YW/cZ2Rzrq4YYqyMTCFfnevCqkYE=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot/uploads/special-collection/e68254a8-f74e-45a6-9c9f-93ec0f54cdb8.webp","FileLength":30974,"LastWriteTime":"2025-11-13T17:20:31+00:00"},{"Identity":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/e7cd5698-08d9-4347-8ad0-32a03c07d907.png","SourceId":"FashionEcommerce.WebAPI","SourceType":"Discovered","ContentRoot":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/","BasePath":"_content/FashionEcommerce.WebAPI","RelativePath":"uploads/special-collection/e7cd5698-08d9-4347-8ad0-32a03c07d907#[.{fingerprint}]?.png","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"lzjsoi6f8s","Integrity":"z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot/uploads/special-collection/e7cd5698-08d9-4347-8ad0-32a03c07d907.png","FileLength":2315850,"LastWriteTime":"2025-11-21T18:02:27+00:00"},{"Identity":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/fe4012bd-7d3a-4f14-a5fd-981b3a343cfa.png","SourceId":"FashionEcommerce.WebAPI","SourceType":"Discovered","ContentRoot":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/","BasePath":"_content/FashionEcommerce.WebAPI","RelativePath":"uploads/special-collection/fe4012bd-7d3a-4f14-a5fd-981b3a343cfa#[.{fingerprint}]?.png","AssetKind":"All","AssetMode":"All","AssetRole":"Primary","AssetMergeBehavior":"","AssetMergeSource":"","RelatedAsset":"","AssetTraitName":"","AssetTraitValue":"","Fingerprint":"jwxd21whvh","Integrity":"He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms=","CopyToOutputDirectory":"Never","CopyToPublishDirectory":"PreserveNewest","OriginalItemSpec":"wwwroot/uploads/special-collection/fe4012bd-7d3a-4f14-a5fd-981b3a343cfa.png","FileLength":3411836,"LastWriteTime":"2025-11-21T18:02:27+00:00"}],"Endpoints":[{"Route":"uploads/special-collection/0bb27ce6-c281-42e5-ae98-22970da75e6d.ekwg3b9gh6.webp","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/0bb27ce6-c281-42e5-ae98-22970da75e6d.webp","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"42256"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\"Ingt9gg+OEa9YQ/No+UnnrcI/84TGk39TndHwMPKk1w=\""},{"Name":"Last-Modified","Value":"Thu, 13 Nov 2025 17:20:15 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"ekwg3b9gh6"},{"Name":"label","Value":"uploads/special-collection/0bb27ce6-c281-42e5-ae98-22970da75e6d.webp"},{"Name":"integrity","Value":"sha256-Ingt9gg+OEa9YQ/No+UnnrcI/84TGk39TndHwMPKk1w="}]},{"Route":"uploads/special-collection/0bb27ce6-c281-42e5-ae98-22970da75e6d.webp","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/0bb27ce6-c281-42e5-ae98-22970da75e6d.webp","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"42256"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\"Ingt9gg+OEa9YQ/No+UnnrcI/84TGk39TndHwMPKk1w=\""},{"Name":"Last-Modified","Value":"Thu, 13 Nov 2025 17:20:15 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-Ingt9gg+OEa9YQ/No+UnnrcI/84TGk39TndHwMPKk1w="}]},{"Route":"uploads/special-collection/137f611c-5577-4320-bef0-4f84d9236c0f.lzjsoi6f8s.png","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/137f611c-5577-4320-bef0-4f84d9236c0f.png","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"2315850"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\"z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=\""},{"Name":"Last-Modified","Value":"Fri, 21 Nov 2025 17:57:49 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"lzjsoi6f8s"},{"Name":"label","Value":"uploads/special-collection/137f611c-5577-4320-bef0-4f84d9236c0f.png"},{"Name":"integrity","Value":"sha256-z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s="}]},{"Route":"uploads/special-collection/137f611c-5577-4320-bef0-4f84d9236c0f.png","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/137f611c-5577-4320-bef0-4f84d9236c0f.png","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"2315850"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\"z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=\""},{"Name":"Last-Modified","Value":"Fri, 21 Nov 2025 17:57:49 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s="}]},{"Route":"uploads/special-collection/24447809-cfdb-483e-b9c5-6321aa8bab6a.24xximji58.jpeg","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/24447809-cfdb-483e-b9c5-6321aa8bab6a.jpeg","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"183421"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\"HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE=\""},{"Name":"Last-Modified","Value":"Thu, 20 Nov 2025 15:59:44 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"24xximji58"},{"Name":"label","Value":"uploads/special-collection/24447809-cfdb-483e-b9c5-6321aa8bab6a.jpeg"},{"Name":"integrity","Value":"sha256-HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE="}]},{"Route":"uploads/special-collection/24447809-cfdb-483e-b9c5-6321aa8bab6a.jpeg","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/24447809-cfdb-483e-b9c5-6321aa8bab6a.jpeg","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"183421"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\"HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE=\""},{"Name":"Last-Modified","Value":"Thu, 20 Nov 2025 15:59:44 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE="}]},{"Route":"uploads/special-collection/31895d37-f85c-425c-b968-14fa20e3e54b.i07l7wa6n6.webp","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/31895d37-f85c-425c-b968-14fa20e3e54b.webp","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"36364"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\"PuJdPMmcB/KjtJU8rheovQZjmMsT4ORilKkR5gxIjXw=\""},{"Name":"Last-Modified","Value":"Thu, 13 Nov 2025 17:20:12 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"i07l7wa6n6"},{"Name":"label","Value":"uploads/special-collection/31895d37-f85c-425c-b968-14fa20e3e54b.webp"},{"Name":"integrity","Value":"sha256-PuJdPMmcB/KjtJU8rheovQZjmMsT4ORilKkR5gxIjXw="}]},{"Route":"uploads/special-collection/31895d37-f85c-425c-b968-14fa20e3e54b.webp","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/31895d37-f85c-425c-b968-14fa20e3e54b.webp","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"36364"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\"PuJdPMmcB/KjtJU8rheovQZjmMsT4ORilKkR5gxIjXw=\""},{"Name":"Last-Modified","Value":"Thu, 13 Nov 2025 17:20:12 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-PuJdPMmcB/KjtJU8rheovQZjmMsT4ORilKkR5gxIjXw="}]},{"Route":"uploads/special-collection/3ecb7f57-9b70-4a54-8e58-3b902766d7e2.24xximji58.jpeg","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/3ecb7f57-9b70-4a54-8e58-3b902766d7e2.jpeg","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"183421"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\"HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE=\""},{"Name":"Last-Modified","Value":"Fri, 21 Nov 2025 18:02:27 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"24xximji58"},{"Name":"label","Value":"uploads/special-collection/3ecb7f57-9b70-4a54-8e58-3b902766d7e2.jpeg"},{"Name":"integrity","Value":"sha256-HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE="}]},{"Route":"uploads/special-collection/3ecb7f57-9b70-4a54-8e58-3b902766d7e2.jpeg","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/3ecb7f57-9b70-4a54-8e58-3b902766d7e2.jpeg","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"183421"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\"HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE=\""},{"Name":"Last-Modified","Value":"Fri, 21 Nov 2025 18:02:27 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE="}]},{"Route":"uploads/special-collection/5230c265-b280-45d1-83c7-f770ab2a2456.24xximji58.jpeg","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/5230c265-b280-45d1-83c7-f770ab2a2456.jpeg","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"183421"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\"HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE=\""},{"Name":"Last-Modified","Value":"Fri, 21 Nov 2025 18:11:54 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"24xximji58"},{"Name":"label","Value":"uploads/special-collection/5230c265-b280-45d1-83c7-f770ab2a2456.jpeg"},{"Name":"integrity","Value":"sha256-HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE="}]},{"Route":"uploads/special-collection/5230c265-b280-45d1-83c7-f770ab2a2456.jpeg","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/5230c265-b280-45d1-83c7-f770ab2a2456.jpeg","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"183421"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\"HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE=\""},{"Name":"Last-Modified","Value":"Fri, 21 Nov 2025 18:11:54 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE="}]},{"Route":"uploads/special-collection/5c7f094b-2f62-4568-88be-5b8aebff4b0b.a8zhqize20.webp","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/5c7f094b-2f62-4568-88be-5b8aebff4b0b.webp","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"30974"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\"ml5fsrFM/okYyj8YW/cZ2Rzrq4YYqyMTCFfnevCqkYE=\""},{"Name":"Last-Modified","Value":"Thu, 13 Nov 2025 17:20:13 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"a8zhqize20"},{"Name":"label","Value":"uploads/special-collection/5c7f094b-2f62-4568-88be-5b8aebff4b0b.webp"},{"Name":"integrity","Value":"sha256-ml5fsrFM/okYyj8YW/cZ2Rzrq4YYqyMTCFfnevCqkYE="}]},{"Route":"uploads/special-collection/5c7f094b-2f62-4568-88be-5b8aebff4b0b.webp","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/5c7f094b-2f62-4568-88be-5b8aebff4b0b.webp","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"30974"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\"ml5fsrFM/okYyj8YW/cZ2Rzrq4YYqyMTCFfnevCqkYE=\""},{"Name":"Last-Modified","Value":"Thu, 13 Nov 2025 17:20:13 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-ml5fsrFM/okYyj8YW/cZ2Rzrq4YYqyMTCFfnevCqkYE="}]},{"Route":"uploads/special-collection/7bfc95d8-fa83-4372-9e1f-c4e4cfae50b8.jwxd21whvh.png","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/7bfc95d8-fa83-4372-9e1f-c4e4cfae50b8.png","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"3411836"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\"He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms=\""},{"Name":"Last-Modified","Value":"Fri, 21 Nov 2025 17:57:49 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"jwxd21whvh"},{"Name":"label","Value":"uploads/special-collection/7bfc95d8-fa83-4372-9e1f-c4e4cfae50b8.png"},{"Name":"integrity","Value":"sha256-He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms="}]},{"Route":"uploads/special-collection/7bfc95d8-fa83-4372-9e1f-c4e4cfae50b8.png","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/7bfc95d8-fa83-4372-9e1f-c4e4cfae50b8.png","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"3411836"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\"He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms=\""},{"Name":"Last-Modified","Value":"Fri, 21 Nov 2025 17:57:49 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms="}]},{"Route":"uploads/special-collection/83f6bb52-4b22-4229-9194-9adfa124ee5d.ekwg3b9gh6.webp","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/83f6bb52-4b22-4229-9194-9adfa124ee5d.webp","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"42256"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\"Ingt9gg+OEa9YQ/No+UnnrcI/84TGk39TndHwMPKk1w=\""},{"Name":"Last-Modified","Value":"Thu, 13 Nov 2025 17:20:31 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"ekwg3b9gh6"},{"Name":"label","Value":"uploads/special-collection/83f6bb52-4b22-4229-9194-9adfa124ee5d.webp"},{"Name":"integrity","Value":"sha256-Ingt9gg+OEa9YQ/No+UnnrcI/84TGk39TndHwMPKk1w="}]},{"Route":"uploads/special-collection/83f6bb52-4b22-4229-9194-9adfa124ee5d.webp","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/83f6bb52-4b22-4229-9194-9adfa124ee5d.webp","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"42256"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\"Ingt9gg+OEa9YQ/No+UnnrcI/84TGk39TndHwMPKk1w=\""},{"Name":"Last-Modified","Value":"Thu, 13 Nov 2025 17:20:31 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-Ingt9gg+OEa9YQ/No+UnnrcI/84TGk39TndHwMPKk1w="}]},{"Route":"uploads/special-collection/896a4ea5-7640-44b2-87b3-2bc2b917510c.c1qzp41abn.webp","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/896a4ea5-7640-44b2-87b3-2bc2b917510c.webp","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"43650"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\"cLhWYTX4z6ntmLlKUIYKyRdQBrLsbWsmw1tk+jKruWg=\""},{"Name":"Last-Modified","Value":"Thu, 13 Nov 2025 17:20:31 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"c1qzp41abn"},{"Name":"label","Value":"uploads/special-collection/896a4ea5-7640-44b2-87b3-2bc2b917510c.webp"},{"Name":"integrity","Value":"sha256-cLhWYTX4z6ntmLlKUIYKyRdQBrLsbWsmw1tk+jKruWg="}]},{"Route":"uploads/special-collection/896a4ea5-7640-44b2-87b3-2bc2b917510c.webp","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/896a4ea5-7640-44b2-87b3-2bc2b917510c.webp","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"43650"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\"cLhWYTX4z6ntmLlKUIYKyRdQBrLsbWsmw1tk+jKruWg=\""},{"Name":"Last-Modified","Value":"Thu, 13 Nov 2025 17:20:31 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-cLhWYTX4z6ntmLlKUIYKyRdQBrLsbWsmw1tk+jKruWg="}]},{"Route":"uploads/special-collection/8bbb60eb-9a0f-430f-a3cb-0381ff266c00.lzjsoi6f8s.png","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/8bbb60eb-9a0f-430f-a3cb-0381ff266c00.png","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"2315850"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\"z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=\""},{"Name":"Last-Modified","Value":"Fri, 21 Nov 2025 18:11:54 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"lzjsoi6f8s"},{"Name":"label","Value":"uploads/special-collection/8bbb60eb-9a0f-430f-a3cb-0381ff266c00.png"},{"Name":"integrity","Value":"sha256-z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s="}]},{"Route":"uploads/special-collection/8bbb60eb-9a0f-430f-a3cb-0381ff266c00.png","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/8bbb60eb-9a0f-430f-a3cb-0381ff266c00.png","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"2315850"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\"z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=\""},{"Name":"Last-Modified","Value":"Fri, 21 Nov 2025 18:11:54 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s="}]},{"Route":"uploads/special-collection/9df55d14-8df7-4a55-bcb0-1e99dfb0fb53.jwxd21whvh.png","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/9df55d14-8df7-4a55-bcb0-1e99dfb0fb53.png","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"3411836"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\"He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms=\""},{"Name":"Last-Modified","Value":"Fri, 21 Nov 2025 18:11:54 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"jwxd21whvh"},{"Name":"label","Value":"uploads/special-collection/9df55d14-8df7-4a55-bcb0-1e99dfb0fb53.png"},{"Name":"integrity","Value":"sha256-He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms="}]},{"Route":"uploads/special-collection/9df55d14-8df7-4a55-bcb0-1e99dfb0fb53.png","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/9df55d14-8df7-4a55-bcb0-1e99dfb0fb53.png","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"3411836"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\"He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms=\""},{"Name":"Last-Modified","Value":"Fri, 21 Nov 2025 18:11:54 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms="}]},{"Route":"uploads/special-collection/b015c076-2985-40c5-b3df-1094b82b16e7.lzjsoi6f8s.png","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/b015c076-2985-40c5-b3df-1094b82b16e7.png","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"2315850"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\"z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=\""},{"Name":"Last-Modified","Value":"Thu, 20 Nov 2025 15:59:44 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"lzjsoi6f8s"},{"Name":"label","Value":"uploads/special-collection/b015c076-2985-40c5-b3df-1094b82b16e7.png"},{"Name":"integrity","Value":"sha256-z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s="}]},{"Route":"uploads/special-collection/b015c076-2985-40c5-b3df-1094b82b16e7.png","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/b015c076-2985-40c5-b3df-1094b82b16e7.png","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"2315850"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\"z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=\""},{"Name":"Last-Modified","Value":"Thu, 20 Nov 2025 15:59:44 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s="}]},{"Route":"uploads/special-collection/b42a5524-5dc1-484a-bf78-d212602a2346.i07l7wa6n6.webp","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/b42a5524-5dc1-484a-bf78-d212602a2346.webp","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"36364"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\"PuJdPMmcB/KjtJU8rheovQZjmMsT4ORilKkR5gxIjXw=\""},{"Name":"Last-Modified","Value":"Thu, 13 Nov 2025 17:20:31 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"i07l7wa6n6"},{"Name":"label","Value":"uploads/special-collection/b42a5524-5dc1-484a-bf78-d212602a2346.webp"},{"Name":"integrity","Value":"sha256-PuJdPMmcB/KjtJU8rheovQZjmMsT4ORilKkR5gxIjXw="}]},{"Route":"uploads/special-collection/b42a5524-5dc1-484a-bf78-d212602a2346.webp","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/b42a5524-5dc1-484a-bf78-d212602a2346.webp","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"36364"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\"PuJdPMmcB/KjtJU8rheovQZjmMsT4ORilKkR5gxIjXw=\""},{"Name":"Last-Modified","Value":"Thu, 13 Nov 2025 17:20:31 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-PuJdPMmcB/KjtJU8rheovQZjmMsT4ORilKkR5gxIjXw="}]},{"Route":"uploads/special-collection/b7508353-d0ba-4889-9397-45a130abdaf3.jwxd21whvh.png","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/b7508353-d0ba-4889-9397-45a130abdaf3.png","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"3411836"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\"He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms=\""},{"Name":"Last-Modified","Value":"Thu, 20 Nov 2025 15:59:44 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"jwxd21whvh"},{"Name":"label","Value":"uploads/special-collection/b7508353-d0ba-4889-9397-45a130abdaf3.png"},{"Name":"integrity","Value":"sha256-He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms="}]},{"Route":"uploads/special-collection/b7508353-d0ba-4889-9397-45a130abdaf3.png","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/b7508353-d0ba-4889-9397-45a130abdaf3.png","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"3411836"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\"He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms=\""},{"Name":"Last-Modified","Value":"Thu, 20 Nov 2025 15:59:44 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms="}]},{"Route":"uploads/special-collection/dbaf375f-5257-426b-8a3e-b1e98282042d.24xximji58.jpeg","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/dbaf375f-5257-426b-8a3e-b1e98282042d.jpeg","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"183421"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\"HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE=\""},{"Name":"Last-Modified","Value":"Fri, 21 Nov 2025 17:57:49 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"24xximji58"},{"Name":"label","Value":"uploads/special-collection/dbaf375f-5257-426b-8a3e-b1e98282042d.jpeg"},{"Name":"integrity","Value":"sha256-HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE="}]},{"Route":"uploads/special-collection/dbaf375f-5257-426b-8a3e-b1e98282042d.jpeg","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/dbaf375f-5257-426b-8a3e-b1e98282042d.jpeg","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"183421"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\"HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE=\""},{"Name":"Last-Modified","Value":"Fri, 21 Nov 2025 17:57:49 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE="}]},{"Route":"uploads/special-collection/e68254a8-f74e-45a6-9c9f-93ec0f54cdb8.a8zhqize20.webp","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/e68254a8-f74e-45a6-9c9f-93ec0f54cdb8.webp","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"30974"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\"ml5fsrFM/okYyj8YW/cZ2Rzrq4YYqyMTCFfnevCqkYE=\""},{"Name":"Last-Modified","Value":"Thu, 13 Nov 2025 17:20:31 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"a8zhqize20"},{"Name":"label","Value":"uploads/special-collection/e68254a8-f74e-45a6-9c9f-93ec0f54cdb8.webp"},{"Name":"integrity","Value":"sha256-ml5fsrFM/okYyj8YW/cZ2Rzrq4YYqyMTCFfnevCqkYE="}]},{"Route":"uploads/special-collection/e68254a8-f74e-45a6-9c9f-93ec0f54cdb8.webp","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/e68254a8-f74e-45a6-9c9f-93ec0f54cdb8.webp","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"30974"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\"ml5fsrFM/okYyj8YW/cZ2Rzrq4YYqyMTCFfnevCqkYE=\""},{"Name":"Last-Modified","Value":"Thu, 13 Nov 2025 17:20:31 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-ml5fsrFM/okYyj8YW/cZ2Rzrq4YYqyMTCFfnevCqkYE="}]},{"Route":"uploads/special-collection/e7cd5698-08d9-4347-8ad0-32a03c07d907.lzjsoi6f8s.png","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/e7cd5698-08d9-4347-8ad0-32a03c07d907.png","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"2315850"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\"z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=\""},{"Name":"Last-Modified","Value":"Fri, 21 Nov 2025 18:02:27 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"lzjsoi6f8s"},{"Name":"label","Value":"uploads/special-collection/e7cd5698-08d9-4347-8ad0-32a03c07d907.png"},{"Name":"integrity","Value":"sha256-z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s="}]},{"Route":"uploads/special-collection/e7cd5698-08d9-4347-8ad0-32a03c07d907.png","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/e7cd5698-08d9-4347-8ad0-32a03c07d907.png","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"2315850"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\"z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=\""},{"Name":"Last-Modified","Value":"Fri, 21 Nov 2025 18:02:27 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s="}]},{"Route":"uploads/special-collection/fe4012bd-7d3a-4f14-a5fd-981b3a343cfa.jwxd21whvh.png","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/fe4012bd-7d3a-4f14-a5fd-981b3a343cfa.png","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"3411836"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\"He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms=\""},{"Name":"Last-Modified","Value":"Fri, 21 Nov 2025 18:02:27 GMT"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"}],"EndpointProperties":[{"Name":"fingerprint","Value":"jwxd21whvh"},{"Name":"label","Value":"uploads/special-collection/fe4012bd-7d3a-4f14-a5fd-981b3a343cfa.png"},{"Name":"integrity","Value":"sha256-He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms="}]},{"Route":"uploads/special-collection/fe4012bd-7d3a-4f14-a5fd-981b3a343cfa.png","AssetFile":"/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/fe4012bd-7d3a-4f14-a5fd-981b3a343cfa.png","Selectors":[],"ResponseHeaders":[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Content-Length","Value":"3411836"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\"He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms=\""},{"Name":"Last-Modified","Value":"Fri, 21 Nov 2025 18:02:27 GMT"},{"Name":"Cache-Control","Value":"no-cache"}],"EndpointProperties":[{"Name":"integrity","Value":"sha256-He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms="}]}]}
+{
+  "Version": 1,
+  "Hash": "0JecgoMNKcWg1nKdstJ4DSeYQyHRsWLeLqdd7gL1eXM=",
+  "Source": "FashionEcommerce.WebAPI",
+  "BasePath": "_content/FashionEcommerce.WebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "FashionEcommerce.WebAPI/wwwroot",
+      "Source": "FashionEcommerce.WebAPI",
+      "ContentRoot": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/",
+      "BasePath": "_content/FashionEcommerce.WebAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/0bb27ce6-c281-42e5-ae98-22970da75e6d.webp",
+      "SourceId": "FashionEcommerce.WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/",
+      "BasePath": "_content/FashionEcommerce.WebAPI",
+      "RelativePath": "uploads/special-collection/0bb27ce6-c281-42e5-ae98-22970da75e6d#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ekwg3b9gh6",
+      "Integrity": "Ingt9gg+OEa9YQ/No+UnnrcI/84TGk39TndHwMPKk1w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/special-collection/0bb27ce6-c281-42e5-ae98-22970da75e6d.webp"
+    },
+    {
+      "Identity": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/137f611c-5577-4320-bef0-4f84d9236c0f.png",
+      "SourceId": "FashionEcommerce.WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/",
+      "BasePath": "_content/FashionEcommerce.WebAPI",
+      "RelativePath": "uploads/special-collection/137f611c-5577-4320-bef0-4f84d9236c0f#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lzjsoi6f8s",
+      "Integrity": "z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/special-collection/137f611c-5577-4320-bef0-4f84d9236c0f.png"
+    },
+    {
+      "Identity": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/24447809-cfdb-483e-b9c5-6321aa8bab6a.jpeg",
+      "SourceId": "FashionEcommerce.WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/",
+      "BasePath": "_content/FashionEcommerce.WebAPI",
+      "RelativePath": "uploads/special-collection/24447809-cfdb-483e-b9c5-6321aa8bab6a#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "24xximji58",
+      "Integrity": "HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/special-collection/24447809-cfdb-483e-b9c5-6321aa8bab6a.jpeg"
+    },
+    {
+      "Identity": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/31895d37-f85c-425c-b968-14fa20e3e54b.webp",
+      "SourceId": "FashionEcommerce.WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/",
+      "BasePath": "_content/FashionEcommerce.WebAPI",
+      "RelativePath": "uploads/special-collection/31895d37-f85c-425c-b968-14fa20e3e54b#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "i07l7wa6n6",
+      "Integrity": "PuJdPMmcB/KjtJU8rheovQZjmMsT4ORilKkR5gxIjXw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/special-collection/31895d37-f85c-425c-b968-14fa20e3e54b.webp"
+    },
+    {
+      "Identity": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/3ecb7f57-9b70-4a54-8e58-3b902766d7e2.jpeg",
+      "SourceId": "FashionEcommerce.WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/",
+      "BasePath": "_content/FashionEcommerce.WebAPI",
+      "RelativePath": "uploads/special-collection/3ecb7f57-9b70-4a54-8e58-3b902766d7e2#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "24xximji58",
+      "Integrity": "HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/special-collection/3ecb7f57-9b70-4a54-8e58-3b902766d7e2.jpeg"
+    },
+    {
+      "Identity": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/5230c265-b280-45d1-83c7-f770ab2a2456.jpeg",
+      "SourceId": "FashionEcommerce.WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/",
+      "BasePath": "_content/FashionEcommerce.WebAPI",
+      "RelativePath": "uploads/special-collection/5230c265-b280-45d1-83c7-f770ab2a2456#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "24xximji58",
+      "Integrity": "HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/special-collection/5230c265-b280-45d1-83c7-f770ab2a2456.jpeg"
+    },
+    {
+      "Identity": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/5c7f094b-2f62-4568-88be-5b8aebff4b0b.webp",
+      "SourceId": "FashionEcommerce.WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/",
+      "BasePath": "_content/FashionEcommerce.WebAPI",
+      "RelativePath": "uploads/special-collection/5c7f094b-2f62-4568-88be-5b8aebff4b0b#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "a8zhqize20",
+      "Integrity": "ml5fsrFM/okYyj8YW/cZ2Rzrq4YYqyMTCFfnevCqkYE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/special-collection/5c7f094b-2f62-4568-88be-5b8aebff4b0b.webp"
+    },
+    {
+      "Identity": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/7bfc95d8-fa83-4372-9e1f-c4e4cfae50b8.png",
+      "SourceId": "FashionEcommerce.WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/",
+      "BasePath": "_content/FashionEcommerce.WebAPI",
+      "RelativePath": "uploads/special-collection/7bfc95d8-fa83-4372-9e1f-c4e4cfae50b8#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jwxd21whvh",
+      "Integrity": "He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/special-collection/7bfc95d8-fa83-4372-9e1f-c4e4cfae50b8.png"
+    },
+    {
+      "Identity": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/83f6bb52-4b22-4229-9194-9adfa124ee5d.webp",
+      "SourceId": "FashionEcommerce.WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/",
+      "BasePath": "_content/FashionEcommerce.WebAPI",
+      "RelativePath": "uploads/special-collection/83f6bb52-4b22-4229-9194-9adfa124ee5d#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ekwg3b9gh6",
+      "Integrity": "Ingt9gg+OEa9YQ/No+UnnrcI/84TGk39TndHwMPKk1w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/special-collection/83f6bb52-4b22-4229-9194-9adfa124ee5d.webp"
+    },
+    {
+      "Identity": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/896a4ea5-7640-44b2-87b3-2bc2b917510c.webp",
+      "SourceId": "FashionEcommerce.WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/",
+      "BasePath": "_content/FashionEcommerce.WebAPI",
+      "RelativePath": "uploads/special-collection/896a4ea5-7640-44b2-87b3-2bc2b917510c#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "c1qzp41abn",
+      "Integrity": "cLhWYTX4z6ntmLlKUIYKyRdQBrLsbWsmw1tk+jKruWg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/special-collection/896a4ea5-7640-44b2-87b3-2bc2b917510c.webp"
+    },
+    {
+      "Identity": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/8bbb60eb-9a0f-430f-a3cb-0381ff266c00.png",
+      "SourceId": "FashionEcommerce.WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/",
+      "BasePath": "_content/FashionEcommerce.WebAPI",
+      "RelativePath": "uploads/special-collection/8bbb60eb-9a0f-430f-a3cb-0381ff266c00#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lzjsoi6f8s",
+      "Integrity": "z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/special-collection/8bbb60eb-9a0f-430f-a3cb-0381ff266c00.png"
+    },
+    {
+      "Identity": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/9df55d14-8df7-4a55-bcb0-1e99dfb0fb53.png",
+      "SourceId": "FashionEcommerce.WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/",
+      "BasePath": "_content/FashionEcommerce.WebAPI",
+      "RelativePath": "uploads/special-collection/9df55d14-8df7-4a55-bcb0-1e99dfb0fb53#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jwxd21whvh",
+      "Integrity": "He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/special-collection/9df55d14-8df7-4a55-bcb0-1e99dfb0fb53.png"
+    },
+    {
+      "Identity": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/b015c076-2985-40c5-b3df-1094b82b16e7.png",
+      "SourceId": "FashionEcommerce.WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/",
+      "BasePath": "_content/FashionEcommerce.WebAPI",
+      "RelativePath": "uploads/special-collection/b015c076-2985-40c5-b3df-1094b82b16e7#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lzjsoi6f8s",
+      "Integrity": "z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/special-collection/b015c076-2985-40c5-b3df-1094b82b16e7.png"
+    },
+    {
+      "Identity": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/b42a5524-5dc1-484a-bf78-d212602a2346.webp",
+      "SourceId": "FashionEcommerce.WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/",
+      "BasePath": "_content/FashionEcommerce.WebAPI",
+      "RelativePath": "uploads/special-collection/b42a5524-5dc1-484a-bf78-d212602a2346#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "i07l7wa6n6",
+      "Integrity": "PuJdPMmcB/KjtJU8rheovQZjmMsT4ORilKkR5gxIjXw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/special-collection/b42a5524-5dc1-484a-bf78-d212602a2346.webp"
+    },
+    {
+      "Identity": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/b7508353-d0ba-4889-9397-45a130abdaf3.png",
+      "SourceId": "FashionEcommerce.WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/",
+      "BasePath": "_content/FashionEcommerce.WebAPI",
+      "RelativePath": "uploads/special-collection/b7508353-d0ba-4889-9397-45a130abdaf3#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jwxd21whvh",
+      "Integrity": "He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/special-collection/b7508353-d0ba-4889-9397-45a130abdaf3.png"
+    },
+    {
+      "Identity": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/dbaf375f-5257-426b-8a3e-b1e98282042d.jpeg",
+      "SourceId": "FashionEcommerce.WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/",
+      "BasePath": "_content/FashionEcommerce.WebAPI",
+      "RelativePath": "uploads/special-collection/dbaf375f-5257-426b-8a3e-b1e98282042d#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "24xximji58",
+      "Integrity": "HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/special-collection/dbaf375f-5257-426b-8a3e-b1e98282042d.jpeg"
+    },
+    {
+      "Identity": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/e68254a8-f74e-45a6-9c9f-93ec0f54cdb8.webp",
+      "SourceId": "FashionEcommerce.WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/",
+      "BasePath": "_content/FashionEcommerce.WebAPI",
+      "RelativePath": "uploads/special-collection/e68254a8-f74e-45a6-9c9f-93ec0f54cdb8#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "a8zhqize20",
+      "Integrity": "ml5fsrFM/okYyj8YW/cZ2Rzrq4YYqyMTCFfnevCqkYE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/special-collection/e68254a8-f74e-45a6-9c9f-93ec0f54cdb8.webp"
+    },
+    {
+      "Identity": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/e7cd5698-08d9-4347-8ad0-32a03c07d907.png",
+      "SourceId": "FashionEcommerce.WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/",
+      "BasePath": "_content/FashionEcommerce.WebAPI",
+      "RelativePath": "uploads/special-collection/e7cd5698-08d9-4347-8ad0-32a03c07d907#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lzjsoi6f8s",
+      "Integrity": "z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/special-collection/e7cd5698-08d9-4347-8ad0-32a03c07d907.png"
+    },
+    {
+      "Identity": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/fe4012bd-7d3a-4f14-a5fd-981b3a343cfa.png",
+      "SourceId": "FashionEcommerce.WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/",
+      "BasePath": "_content/FashionEcommerce.WebAPI",
+      "RelativePath": "uploads/special-collection/fe4012bd-7d3a-4f14-a5fd-981b3a343cfa#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jwxd21whvh",
+      "Integrity": "He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/special-collection/fe4012bd-7d3a-4f14-a5fd-981b3a343cfa.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "uploads/special-collection/0bb27ce6-c281-42e5-ae98-22970da75e6d.ekwg3b9gh6.webp",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/0bb27ce6-c281-42e5-ae98-22970da75e6d.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "42256"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ingt9gg+OEa9YQ/No+UnnrcI/84TGk39TndHwMPKk1w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ekwg3b9gh6"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/special-collection/0bb27ce6-c281-42e5-ae98-22970da75e6d.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ingt9gg+OEa9YQ/No+UnnrcI/84TGk39TndHwMPKk1w="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/0bb27ce6-c281-42e5-ae98-22970da75e6d.webp",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/0bb27ce6-c281-42e5-ae98-22970da75e6d.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "42256"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ingt9gg+OEa9YQ/No+UnnrcI/84TGk39TndHwMPKk1w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ingt9gg+OEa9YQ/No+UnnrcI/84TGk39TndHwMPKk1w="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/137f611c-5577-4320-bef0-4f84d9236c0f.lzjsoi6f8s.png",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/137f611c-5577-4320-bef0-4f84d9236c0f.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2315850"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lzjsoi6f8s"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/special-collection/137f611c-5577-4320-bef0-4f84d9236c0f.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/137f611c-5577-4320-bef0-4f84d9236c0f.png",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/137f611c-5577-4320-bef0-4f84d9236c0f.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2315850"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/24447809-cfdb-483e-b9c5-6321aa8bab6a.24xximji58.jpeg",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/24447809-cfdb-483e-b9c5-6321aa8bab6a.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "183421"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "24xximji58"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/special-collection/24447809-cfdb-483e-b9c5-6321aa8bab6a.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/24447809-cfdb-483e-b9c5-6321aa8bab6a.jpeg",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/24447809-cfdb-483e-b9c5-6321aa8bab6a.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "183421"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/31895d37-f85c-425c-b968-14fa20e3e54b.i07l7wa6n6.webp",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/31895d37-f85c-425c-b968-14fa20e3e54b.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "36364"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PuJdPMmcB/KjtJU8rheovQZjmMsT4ORilKkR5gxIjXw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "i07l7wa6n6"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/special-collection/31895d37-f85c-425c-b968-14fa20e3e54b.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PuJdPMmcB/KjtJU8rheovQZjmMsT4ORilKkR5gxIjXw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/31895d37-f85c-425c-b968-14fa20e3e54b.webp",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/31895d37-f85c-425c-b968-14fa20e3e54b.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "36364"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PuJdPMmcB/KjtJU8rheovQZjmMsT4ORilKkR5gxIjXw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PuJdPMmcB/KjtJU8rheovQZjmMsT4ORilKkR5gxIjXw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/3ecb7f57-9b70-4a54-8e58-3b902766d7e2.24xximji58.jpeg",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/3ecb7f57-9b70-4a54-8e58-3b902766d7e2.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "183421"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "24xximji58"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/special-collection/3ecb7f57-9b70-4a54-8e58-3b902766d7e2.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/3ecb7f57-9b70-4a54-8e58-3b902766d7e2.jpeg",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/3ecb7f57-9b70-4a54-8e58-3b902766d7e2.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "183421"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/5230c265-b280-45d1-83c7-f770ab2a2456.24xximji58.jpeg",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/5230c265-b280-45d1-83c7-f770ab2a2456.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "183421"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "24xximji58"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/special-collection/5230c265-b280-45d1-83c7-f770ab2a2456.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/5230c265-b280-45d1-83c7-f770ab2a2456.jpeg",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/5230c265-b280-45d1-83c7-f770ab2a2456.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "183421"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/5c7f094b-2f62-4568-88be-5b8aebff4b0b.a8zhqize20.webp",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/5c7f094b-2f62-4568-88be-5b8aebff4b0b.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30974"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ml5fsrFM/okYyj8YW/cZ2Rzrq4YYqyMTCFfnevCqkYE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "a8zhqize20"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/special-collection/5c7f094b-2f62-4568-88be-5b8aebff4b0b.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ml5fsrFM/okYyj8YW/cZ2Rzrq4YYqyMTCFfnevCqkYE="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/5c7f094b-2f62-4568-88be-5b8aebff4b0b.webp",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/5c7f094b-2f62-4568-88be-5b8aebff4b0b.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30974"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ml5fsrFM/okYyj8YW/cZ2Rzrq4YYqyMTCFfnevCqkYE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ml5fsrFM/okYyj8YW/cZ2Rzrq4YYqyMTCFfnevCqkYE="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/7bfc95d8-fa83-4372-9e1f-c4e4cfae50b8.jwxd21whvh.png",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/7bfc95d8-fa83-4372-9e1f-c4e4cfae50b8.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3411836"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jwxd21whvh"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/special-collection/7bfc95d8-fa83-4372-9e1f-c4e4cfae50b8.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/7bfc95d8-fa83-4372-9e1f-c4e4cfae50b8.png",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/7bfc95d8-fa83-4372-9e1f-c4e4cfae50b8.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3411836"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/83f6bb52-4b22-4229-9194-9adfa124ee5d.ekwg3b9gh6.webp",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/83f6bb52-4b22-4229-9194-9adfa124ee5d.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "42256"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ingt9gg+OEa9YQ/No+UnnrcI/84TGk39TndHwMPKk1w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ekwg3b9gh6"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/special-collection/83f6bb52-4b22-4229-9194-9adfa124ee5d.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ingt9gg+OEa9YQ/No+UnnrcI/84TGk39TndHwMPKk1w="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/83f6bb52-4b22-4229-9194-9adfa124ee5d.webp",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/83f6bb52-4b22-4229-9194-9adfa124ee5d.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "42256"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ingt9gg+OEa9YQ/No+UnnrcI/84TGk39TndHwMPKk1w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ingt9gg+OEa9YQ/No+UnnrcI/84TGk39TndHwMPKk1w="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/896a4ea5-7640-44b2-87b3-2bc2b917510c.c1qzp41abn.webp",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/896a4ea5-7640-44b2-87b3-2bc2b917510c.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "43650"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cLhWYTX4z6ntmLlKUIYKyRdQBrLsbWsmw1tk+jKruWg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "c1qzp41abn"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/special-collection/896a4ea5-7640-44b2-87b3-2bc2b917510c.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cLhWYTX4z6ntmLlKUIYKyRdQBrLsbWsmw1tk+jKruWg="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/896a4ea5-7640-44b2-87b3-2bc2b917510c.webp",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/896a4ea5-7640-44b2-87b3-2bc2b917510c.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "43650"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cLhWYTX4z6ntmLlKUIYKyRdQBrLsbWsmw1tk+jKruWg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cLhWYTX4z6ntmLlKUIYKyRdQBrLsbWsmw1tk+jKruWg="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/8bbb60eb-9a0f-430f-a3cb-0381ff266c00.lzjsoi6f8s.png",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/8bbb60eb-9a0f-430f-a3cb-0381ff266c00.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2315850"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lzjsoi6f8s"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/special-collection/8bbb60eb-9a0f-430f-a3cb-0381ff266c00.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/8bbb60eb-9a0f-430f-a3cb-0381ff266c00.png",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/8bbb60eb-9a0f-430f-a3cb-0381ff266c00.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2315850"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/9df55d14-8df7-4a55-bcb0-1e99dfb0fb53.jwxd21whvh.png",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/9df55d14-8df7-4a55-bcb0-1e99dfb0fb53.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3411836"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jwxd21whvh"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/special-collection/9df55d14-8df7-4a55-bcb0-1e99dfb0fb53.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/9df55d14-8df7-4a55-bcb0-1e99dfb0fb53.png",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/9df55d14-8df7-4a55-bcb0-1e99dfb0fb53.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3411836"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/b015c076-2985-40c5-b3df-1094b82b16e7.lzjsoi6f8s.png",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/b015c076-2985-40c5-b3df-1094b82b16e7.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2315850"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lzjsoi6f8s"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/special-collection/b015c076-2985-40c5-b3df-1094b82b16e7.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/b015c076-2985-40c5-b3df-1094b82b16e7.png",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/b015c076-2985-40c5-b3df-1094b82b16e7.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2315850"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/b42a5524-5dc1-484a-bf78-d212602a2346.i07l7wa6n6.webp",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/b42a5524-5dc1-484a-bf78-d212602a2346.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "36364"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PuJdPMmcB/KjtJU8rheovQZjmMsT4ORilKkR5gxIjXw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "i07l7wa6n6"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/special-collection/b42a5524-5dc1-484a-bf78-d212602a2346.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PuJdPMmcB/KjtJU8rheovQZjmMsT4ORilKkR5gxIjXw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/b42a5524-5dc1-484a-bf78-d212602a2346.webp",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/b42a5524-5dc1-484a-bf78-d212602a2346.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "36364"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PuJdPMmcB/KjtJU8rheovQZjmMsT4ORilKkR5gxIjXw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PuJdPMmcB/KjtJU8rheovQZjmMsT4ORilKkR5gxIjXw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/b7508353-d0ba-4889-9397-45a130abdaf3.jwxd21whvh.png",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/b7508353-d0ba-4889-9397-45a130abdaf3.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3411836"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jwxd21whvh"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/special-collection/b7508353-d0ba-4889-9397-45a130abdaf3.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/b7508353-d0ba-4889-9397-45a130abdaf3.png",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/b7508353-d0ba-4889-9397-45a130abdaf3.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3411836"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/dbaf375f-5257-426b-8a3e-b1e98282042d.24xximji58.jpeg",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/dbaf375f-5257-426b-8a3e-b1e98282042d.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "183421"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "24xximji58"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/special-collection/dbaf375f-5257-426b-8a3e-b1e98282042d.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/dbaf375f-5257-426b-8a3e-b1e98282042d.jpeg",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/dbaf375f-5257-426b-8a3e-b1e98282042d.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "183421"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr+ZGE="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/e68254a8-f74e-45a6-9c9f-93ec0f54cdb8.a8zhqize20.webp",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/e68254a8-f74e-45a6-9c9f-93ec0f54cdb8.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30974"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ml5fsrFM/okYyj8YW/cZ2Rzrq4YYqyMTCFfnevCqkYE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "a8zhqize20"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/special-collection/e68254a8-f74e-45a6-9c9f-93ec0f54cdb8.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ml5fsrFM/okYyj8YW/cZ2Rzrq4YYqyMTCFfnevCqkYE="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/e68254a8-f74e-45a6-9c9f-93ec0f54cdb8.webp",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/e68254a8-f74e-45a6-9c9f-93ec0f54cdb8.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30974"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ml5fsrFM/okYyj8YW/cZ2Rzrq4YYqyMTCFfnevCqkYE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ml5fsrFM/okYyj8YW/cZ2Rzrq4YYqyMTCFfnevCqkYE="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/e7cd5698-08d9-4347-8ad0-32a03c07d907.lzjsoi6f8s.png",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/e7cd5698-08d9-4347-8ad0-32a03c07d907.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2315850"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lzjsoi6f8s"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/special-collection/e7cd5698-08d9-4347-8ad0-32a03c07d907.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/e7cd5698-08d9-4347-8ad0-32a03c07d907.png",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/e7cd5698-08d9-4347-8ad0-32a03c07d907.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2315850"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-z+t8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/fe4012bd-7d3a-4f14-a5fd-981b3a343cfa.jwxd21whvh.png",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/fe4012bd-7d3a-4f14-a5fd-981b3a343cfa.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3411836"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jwxd21whvh"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/special-collection/fe4012bd-7d3a-4f14-a5fd-981b3a343cfa.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/special-collection/fe4012bd-7d3a-4f14-a5fd-981b3a343cfa.png",
+      "AssetFile": "/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.WebAPI/wwwroot/uploads/special-collection/fe4012bd-7d3a-4f14-a5fd-981b3a343cfa.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3411836"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 Jan 2026 14:31:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-He1wtlhi56SqqKr2Yp+P6U3Q1YDvWcweh0VwmL1/hms="
+        }
+      ]
+    }
+  ]
+}

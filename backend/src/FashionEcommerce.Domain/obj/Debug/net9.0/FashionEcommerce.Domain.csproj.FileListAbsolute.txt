@@ -21,3 +21,15 @@
 /Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Domain/obj/Debug/net9.0/FashionEcommerce.Domain.pdb
 /Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Domain/obj/Debug/net9.0/ref/FashionEcommerce.Domain.dll
 /Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Domain/obj/Debug/net9.0/FashionEcommerce.Domain.sourcelink.json
+/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.Domain/bin/Debug/net9.0/FashionEcommerce.Domain.deps.json
+/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.Domain/bin/Debug/net9.0/FashionEcommerce.Domain.dll
+/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.Domain/bin/Debug/net9.0/FashionEcommerce.Domain.pdb
+/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.Domain/obj/Debug/net9.0/FashionEcommerce.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.Domain/obj/Debug/net9.0/FashionEcommerce.Domain.AssemblyInfoInputs.cache
+/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.Domain/obj/Debug/net9.0/FashionEcommerce.Domain.AssemblyInfo.cs
+/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.Domain/obj/Debug/net9.0/FashionEcommerce.Domain.csproj.CoreCompileInputs.cache
+/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.Domain/obj/Debug/net9.0/FashionEcommerce.Domain.sourcelink.json
+/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.Domain/obj/Debug/net9.0/FashionEcommerce.Domain.dll
+/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.Domain/obj/Debug/net9.0/refint/FashionEcommerce.Domain.dll
+/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.Domain/obj/Debug/net9.0/FashionEcommerce.Domain.pdb
+/Users/muzaffernergiz/Desktop/Projelerim/Berkai/BerkAI/backend/src/FashionEcommerce.Domain/obj/Debug/net9.0/ref/FashionEcommerce.Domain.dll

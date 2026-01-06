@@ -1,0 +1,232 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/0bb27ce6-c281-42e5-ae98-22970da75e6d.ekwg3b9gh6.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\0bb27ce6-c281-42e5-ae98-22970da75e6d.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ekwg3b9gh6"},{"Name":"integrity","Value":"sha256-Ingt9gg\u002BOEa9YQ/No\u002BUnnrcI/84TGk39TndHwMPKk1w="},{"Name":"label","Value":"_content/FashionEcommerce.WebAPI/uploads/special-collection/0bb27ce6-c281-42e5-ae98-22970da75e6d.webp"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"42256"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022Ingt9gg\u002BOEa9YQ/No\u002BUnnrcI/84TGk39TndHwMPKk1w=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/0bb27ce6-c281-42e5-ae98-22970da75e6d.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\0bb27ce6-c281-42e5-ae98-22970da75e6d.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Ingt9gg\u002BOEa9YQ/No\u002BUnnrcI/84TGk39TndHwMPKk1w="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"42256"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022Ingt9gg\u002BOEa9YQ/No\u002BUnnrcI/84TGk39TndHwMPKk1w=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/137f611c-5577-4320-bef0-4f84d9236c0f.lzjsoi6f8s.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\137f611c-5577-4320-bef0-4f84d9236c0f.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"lzjsoi6f8s"},{"Name":"integrity","Value":"sha256-z\u002Bt8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s="},{"Name":"label","Value":"_content/FashionEcommerce.WebAPI/uploads/special-collection/137f611c-5577-4320-bef0-4f84d9236c0f.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2315850"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022z\u002Bt8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/137f611c-5577-4320-bef0-4f84d9236c0f.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\137f611c-5577-4320-bef0-4f84d9236c0f.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-z\u002Bt8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"2315850"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022z\u002Bt8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/24447809-cfdb-483e-b9c5-6321aa8bab6a.24xximji58.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\24447809-cfdb-483e-b9c5-6321aa8bab6a.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"24xximji58"},{"Name":"integrity","Value":"sha256-HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr\u002BZGE="},{"Name":"label","Value":"_content/FashionEcommerce.WebAPI/uploads/special-collection/24447809-cfdb-483e-b9c5-6321aa8bab6a.jpeg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"183421"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr\u002BZGE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/24447809-cfdb-483e-b9c5-6321aa8bab6a.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\24447809-cfdb-483e-b9c5-6321aa8bab6a.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr\u002BZGE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"183421"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr\u002BZGE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/31895d37-f85c-425c-b968-14fa20e3e54b.i07l7wa6n6.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\31895d37-f85c-425c-b968-14fa20e3e54b.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"i07l7wa6n6"},{"Name":"integrity","Value":"sha256-PuJdPMmcB/KjtJU8rheovQZjmMsT4ORilKkR5gxIjXw="},{"Name":"label","Value":"_content/FashionEcommerce.WebAPI/uploads/special-collection/31895d37-f85c-425c-b968-14fa20e3e54b.webp"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"36364"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022PuJdPMmcB/KjtJU8rheovQZjmMsT4ORilKkR5gxIjXw=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/31895d37-f85c-425c-b968-14fa20e3e54b.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\31895d37-f85c-425c-b968-14fa20e3e54b.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-PuJdPMmcB/KjtJU8rheovQZjmMsT4ORilKkR5gxIjXw="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"36364"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022PuJdPMmcB/KjtJU8rheovQZjmMsT4ORilKkR5gxIjXw=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/3ecb7f57-9b70-4a54-8e58-3b902766d7e2.24xximji58.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\3ecb7f57-9b70-4a54-8e58-3b902766d7e2.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"24xximji58"},{"Name":"integrity","Value":"sha256-HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr\u002BZGE="},{"Name":"label","Value":"_content/FashionEcommerce.WebAPI/uploads/special-collection/3ecb7f57-9b70-4a54-8e58-3b902766d7e2.jpeg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"183421"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr\u002BZGE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/3ecb7f57-9b70-4a54-8e58-3b902766d7e2.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\3ecb7f57-9b70-4a54-8e58-3b902766d7e2.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr\u002BZGE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"183421"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr\u002BZGE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/5230c265-b280-45d1-83c7-f770ab2a2456.24xximji58.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\5230c265-b280-45d1-83c7-f770ab2a2456.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"24xximji58"},{"Name":"integrity","Value":"sha256-HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr\u002BZGE="},{"Name":"label","Value":"_content/FashionEcommerce.WebAPI/uploads/special-collection/5230c265-b280-45d1-83c7-f770ab2a2456.jpeg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"183421"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr\u002BZGE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/5230c265-b280-45d1-83c7-f770ab2a2456.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\5230c265-b280-45d1-83c7-f770ab2a2456.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr\u002BZGE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"183421"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr\u002BZGE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/5c7f094b-2f62-4568-88be-5b8aebff4b0b.a8zhqize20.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\5c7f094b-2f62-4568-88be-5b8aebff4b0b.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"a8zhqize20"},{"Name":"integrity","Value":"sha256-ml5fsrFM/okYyj8YW/cZ2Rzrq4YYqyMTCFfnevCqkYE="},{"Name":"label","Value":"_content/FashionEcommerce.WebAPI/uploads/special-collection/5c7f094b-2f62-4568-88be-5b8aebff4b0b.webp"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"30974"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022ml5fsrFM/okYyj8YW/cZ2Rzrq4YYqyMTCFfnevCqkYE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/5c7f094b-2f62-4568-88be-5b8aebff4b0b.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\5c7f094b-2f62-4568-88be-5b8aebff4b0b.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ml5fsrFM/okYyj8YW/cZ2Rzrq4YYqyMTCFfnevCqkYE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"30974"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022ml5fsrFM/okYyj8YW/cZ2Rzrq4YYqyMTCFfnevCqkYE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/7bfc95d8-fa83-4372-9e1f-c4e4cfae50b8.jwxd21whvh.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\7bfc95d8-fa83-4372-9e1f-c4e4cfae50b8.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jwxd21whvh"},{"Name":"integrity","Value":"sha256-He1wtlhi56SqqKr2Yp\u002BP6U3Q1YDvWcweh0VwmL1/hms="},{"Name":"label","Value":"_content/FashionEcommerce.WebAPI/uploads/special-collection/7bfc95d8-fa83-4372-9e1f-c4e4cfae50b8.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3411836"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022He1wtlhi56SqqKr2Yp\u002BP6U3Q1YDvWcweh0VwmL1/hms=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/7bfc95d8-fa83-4372-9e1f-c4e4cfae50b8.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\7bfc95d8-fa83-4372-9e1f-c4e4cfae50b8.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-He1wtlhi56SqqKr2Yp\u002BP6U3Q1YDvWcweh0VwmL1/hms="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"3411836"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022He1wtlhi56SqqKr2Yp\u002BP6U3Q1YDvWcweh0VwmL1/hms=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/83f6bb52-4b22-4229-9194-9adfa124ee5d.ekwg3b9gh6.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\83f6bb52-4b22-4229-9194-9adfa124ee5d.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ekwg3b9gh6"},{"Name":"integrity","Value":"sha256-Ingt9gg\u002BOEa9YQ/No\u002BUnnrcI/84TGk39TndHwMPKk1w="},{"Name":"label","Value":"_content/FashionEcommerce.WebAPI/uploads/special-collection/83f6bb52-4b22-4229-9194-9adfa124ee5d.webp"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"42256"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022Ingt9gg\u002BOEa9YQ/No\u002BUnnrcI/84TGk39TndHwMPKk1w=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/83f6bb52-4b22-4229-9194-9adfa124ee5d.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\83f6bb52-4b22-4229-9194-9adfa124ee5d.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Ingt9gg\u002BOEa9YQ/No\u002BUnnrcI/84TGk39TndHwMPKk1w="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"42256"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022Ingt9gg\u002BOEa9YQ/No\u002BUnnrcI/84TGk39TndHwMPKk1w=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/896a4ea5-7640-44b2-87b3-2bc2b917510c.c1qzp41abn.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\896a4ea5-7640-44b2-87b3-2bc2b917510c.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"c1qzp41abn"},{"Name":"integrity","Value":"sha256-cLhWYTX4z6ntmLlKUIYKyRdQBrLsbWsmw1tk\u002BjKruWg="},{"Name":"label","Value":"_content/FashionEcommerce.WebAPI/uploads/special-collection/896a4ea5-7640-44b2-87b3-2bc2b917510c.webp"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"43650"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022cLhWYTX4z6ntmLlKUIYKyRdQBrLsbWsmw1tk\u002BjKruWg=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/896a4ea5-7640-44b2-87b3-2bc2b917510c.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\896a4ea5-7640-44b2-87b3-2bc2b917510c.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-cLhWYTX4z6ntmLlKUIYKyRdQBrLsbWsmw1tk\u002BjKruWg="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"43650"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022cLhWYTX4z6ntmLlKUIYKyRdQBrLsbWsmw1tk\u002BjKruWg=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/8bbb60eb-9a0f-430f-a3cb-0381ff266c00.lzjsoi6f8s.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\8bbb60eb-9a0f-430f-a3cb-0381ff266c00.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"lzjsoi6f8s"},{"Name":"integrity","Value":"sha256-z\u002Bt8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s="},{"Name":"label","Value":"_content/FashionEcommerce.WebAPI/uploads/special-collection/8bbb60eb-9a0f-430f-a3cb-0381ff266c00.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2315850"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022z\u002Bt8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/8bbb60eb-9a0f-430f-a3cb-0381ff266c00.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\8bbb60eb-9a0f-430f-a3cb-0381ff266c00.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-z\u002Bt8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"2315850"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022z\u002Bt8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/9df55d14-8df7-4a55-bcb0-1e99dfb0fb53.jwxd21whvh.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\9df55d14-8df7-4a55-bcb0-1e99dfb0fb53.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jwxd21whvh"},{"Name":"integrity","Value":"sha256-He1wtlhi56SqqKr2Yp\u002BP6U3Q1YDvWcweh0VwmL1/hms="},{"Name":"label","Value":"_content/FashionEcommerce.WebAPI/uploads/special-collection/9df55d14-8df7-4a55-bcb0-1e99dfb0fb53.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3411836"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022He1wtlhi56SqqKr2Yp\u002BP6U3Q1YDvWcweh0VwmL1/hms=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/9df55d14-8df7-4a55-bcb0-1e99dfb0fb53.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\9df55d14-8df7-4a55-bcb0-1e99dfb0fb53.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-He1wtlhi56SqqKr2Yp\u002BP6U3Q1YDvWcweh0VwmL1/hms="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"3411836"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022He1wtlhi56SqqKr2Yp\u002BP6U3Q1YDvWcweh0VwmL1/hms=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/b015c076-2985-40c5-b3df-1094b82b16e7.lzjsoi6f8s.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\b015c076-2985-40c5-b3df-1094b82b16e7.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"lzjsoi6f8s"},{"Name":"integrity","Value":"sha256-z\u002Bt8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s="},{"Name":"label","Value":"_content/FashionEcommerce.WebAPI/uploads/special-collection/b015c076-2985-40c5-b3df-1094b82b16e7.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2315850"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022z\u002Bt8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/b015c076-2985-40c5-b3df-1094b82b16e7.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\b015c076-2985-40c5-b3df-1094b82b16e7.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-z\u002Bt8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"2315850"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022z\u002Bt8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/b42a5524-5dc1-484a-bf78-d212602a2346.i07l7wa6n6.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\b42a5524-5dc1-484a-bf78-d212602a2346.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"i07l7wa6n6"},{"Name":"integrity","Value":"sha256-PuJdPMmcB/KjtJU8rheovQZjmMsT4ORilKkR5gxIjXw="},{"Name":"label","Value":"_content/FashionEcommerce.WebAPI/uploads/special-collection/b42a5524-5dc1-484a-bf78-d212602a2346.webp"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"36364"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022PuJdPMmcB/KjtJU8rheovQZjmMsT4ORilKkR5gxIjXw=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/b42a5524-5dc1-484a-bf78-d212602a2346.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\b42a5524-5dc1-484a-bf78-d212602a2346.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-PuJdPMmcB/KjtJU8rheovQZjmMsT4ORilKkR5gxIjXw="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"36364"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022PuJdPMmcB/KjtJU8rheovQZjmMsT4ORilKkR5gxIjXw=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/b7508353-d0ba-4889-9397-45a130abdaf3.jwxd21whvh.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\b7508353-d0ba-4889-9397-45a130abdaf3.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jwxd21whvh"},{"Name":"integrity","Value":"sha256-He1wtlhi56SqqKr2Yp\u002BP6U3Q1YDvWcweh0VwmL1/hms="},{"Name":"label","Value":"_content/FashionEcommerce.WebAPI/uploads/special-collection/b7508353-d0ba-4889-9397-45a130abdaf3.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3411836"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022He1wtlhi56SqqKr2Yp\u002BP6U3Q1YDvWcweh0VwmL1/hms=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/b7508353-d0ba-4889-9397-45a130abdaf3.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\b7508353-d0ba-4889-9397-45a130abdaf3.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-He1wtlhi56SqqKr2Yp\u002BP6U3Q1YDvWcweh0VwmL1/hms="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"3411836"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022He1wtlhi56SqqKr2Yp\u002BP6U3Q1YDvWcweh0VwmL1/hms=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/dbaf375f-5257-426b-8a3e-b1e98282042d.24xximji58.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\dbaf375f-5257-426b-8a3e-b1e98282042d.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"24xximji58"},{"Name":"integrity","Value":"sha256-HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr\u002BZGE="},{"Name":"label","Value":"_content/FashionEcommerce.WebAPI/uploads/special-collection/dbaf375f-5257-426b-8a3e-b1e98282042d.jpeg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"183421"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr\u002BZGE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/dbaf375f-5257-426b-8a3e-b1e98282042d.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\dbaf375f-5257-426b-8a3e-b1e98282042d.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr\u002BZGE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"183421"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022HsDcfx0opOWr67KsNgbszdiVQXgBQVODF9bzObr\u002BZGE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/e68254a8-f74e-45a6-9c9f-93ec0f54cdb8.a8zhqize20.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\e68254a8-f74e-45a6-9c9f-93ec0f54cdb8.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"a8zhqize20"},{"Name":"integrity","Value":"sha256-ml5fsrFM/okYyj8YW/cZ2Rzrq4YYqyMTCFfnevCqkYE="},{"Name":"label","Value":"_content/FashionEcommerce.WebAPI/uploads/special-collection/e68254a8-f74e-45a6-9c9f-93ec0f54cdb8.webp"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"30974"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022ml5fsrFM/okYyj8YW/cZ2Rzrq4YYqyMTCFfnevCqkYE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/e68254a8-f74e-45a6-9c9f-93ec0f54cdb8.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\e68254a8-f74e-45a6-9c9f-93ec0f54cdb8.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ml5fsrFM/okYyj8YW/cZ2Rzrq4YYqyMTCFfnevCqkYE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"30974"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022ml5fsrFM/okYyj8YW/cZ2Rzrq4YYqyMTCFfnevCqkYE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/e7cd5698-08d9-4347-8ad0-32a03c07d907.lzjsoi6f8s.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\e7cd5698-08d9-4347-8ad0-32a03c07d907.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"lzjsoi6f8s"},{"Name":"integrity","Value":"sha256-z\u002Bt8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s="},{"Name":"label","Value":"_content/FashionEcommerce.WebAPI/uploads/special-collection/e7cd5698-08d9-4347-8ad0-32a03c07d907.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2315850"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022z\u002Bt8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/e7cd5698-08d9-4347-8ad0-32a03c07d907.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\e7cd5698-08d9-4347-8ad0-32a03c07d907.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-z\u002Bt8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"2315850"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022z\u002Bt8AGxWawHVzu/SZAGucRvqdYVtCmC7yRftQsPjp7s=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/fe4012bd-7d3a-4f14-a5fd-981b3a343cfa.jwxd21whvh.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\fe4012bd-7d3a-4f14-a5fd-981b3a343cfa.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jwxd21whvh"},{"Name":"integrity","Value":"sha256-He1wtlhi56SqqKr2Yp\u002BP6U3Q1YDvWcweh0VwmL1/hms="},{"Name":"label","Value":"_content/FashionEcommerce.WebAPI/uploads/special-collection/fe4012bd-7d3a-4f14-a5fd-981b3a343cfa.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3411836"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022He1wtlhi56SqqKr2Yp\u002BP6U3Q1YDvWcweh0VwmL1/hms=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/FashionEcommerce.WebAPI/uploads/special-collection/fe4012bd-7d3a-4f14-a5fd-981b3a343cfa.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\special-collection\fe4012bd-7d3a-4f14-a5fd-981b3a343cfa.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-He1wtlhi56SqqKr2Yp\u002BP6U3Q1YDvWcweh0VwmL1/hms="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"3411836"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022He1wtlhi56SqqKr2Yp\u002BP6U3Q1YDvWcweh0VwmL1/hms=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Jan 2026 14:31:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>
